@@ -1,2 +1,3 @@
-# Teaching-and-learning
-File che scrivo o scriverò e guide varie di materie scolastiche e non
+# Teaching
+Repo di utility per varie ripetizioni
+
