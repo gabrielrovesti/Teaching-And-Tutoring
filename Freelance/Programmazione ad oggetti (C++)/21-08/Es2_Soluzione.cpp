@@ -2,11 +2,14 @@
 
 using namespace std;
 
-class Z { private: int x;
+class Z { private: 
+	int x;
 };
 
-class B { private:
-	Z x; };
+class B { 
+	private:
+		Z x; 
+};
 
 class D: public B { private:
 	Z y; public:
@@ -14,7 +17,7 @@ class D: public B { private:
 	D& operator=(const D&);
 };
 
-D& D::operator= (const D& x){
+D& D::operator=(const D& x){
 	this->B::operator=(x);
 	//mi devo occupare del campo dati
 	y= x.y;

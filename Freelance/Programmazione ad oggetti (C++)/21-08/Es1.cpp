@@ -22,3 +22,20 @@ int main(){
     if(dynamic_cast<C*>(new B()) == 0) cout << "Stroustrop";
     A* p = fun<D, B>(new D());
 }
+
+/*
+
+A <= B
+A <= C
+A <= D
+B <= A
+B <= C
+B <= D
+C <= A
+C <= B
+C <= D
+D <= A
+D <= B
+D <= C
+
+*/

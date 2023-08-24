@@ -6,7 +6,7 @@ vector<QWidget> fun(const vector<const QPaintDevice*>&v){
         if(w && w->height() > 50) throw QString("TooBig");
         if(w && w->height() <= 50 && w->hasFocus()) const_cast<QWidget*>(w)->clearFocus();
         if(b) const_cast<QAbstractButton*>(b)->setText("Pulsante");
-        if(w && !b) ret.push_back(*w);
+        if(w && !b) ret.push_back(*w); 
     }
     return ret;
 }

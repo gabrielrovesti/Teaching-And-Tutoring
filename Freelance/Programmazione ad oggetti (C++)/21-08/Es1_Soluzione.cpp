@@ -29,11 +29,11 @@ A <= C - Falso
 A <= D - Falso
 B <= A - Vero
 B <= C - Falso
-B <= D - Vero
+B <= D - Possibile
 C <= A - Vero
 C <= B - Falso
 C <= D - Possibile
 D <= A - Vero
-D <= B - Vero
+D <= B - Possibile
 D <= C - Possibile
 */
