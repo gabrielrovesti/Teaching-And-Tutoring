@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="200mm"
+   height="100mm"
+   viewBox="0 0 200 100"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="overview.svg"
+   inkscape:export-filename="/home/marco/Scrivania/progetto-unipd/slides/assets/overview.png"
+   inkscape:export-xdpi="254"
+   inkscape:export-ydpi="254">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="325.20395"
+     inkscape:cy="209.0794"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="3840"
+     inkscape:window-height="2039"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#fab409;fill-opacity:1;stroke:#805c05;stroke-width:0.999997;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect833"
+       width="9"
+       height="9.0000029"
+       x="-9.5000019"
+       y="0.49999854"
+       rx="7.9000091e-07"
+       ry="7.9000091e-07" />
+    <rect
+       style="fill:#d9810b;fill-opacity:1;stroke:#804c06;stroke-width:0.999997;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect835"
+       width="9"
+       height="9.0000029"
+       x="-9.5000019"
+       y="10.499998"
+       rx="7.9000091e-07"
+       ry="7.9000091e-07" />
+    <rect
+       style="fill:#f05800;fill-opacity:1;stroke:#802f00;stroke-width:0.999997;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect837"
+       width="9"
+       height="9.0000029"
+       x="-9.5000019"
+       y="20.499998"
+       rx="7.9000091e-07"
+       ry="7.9000091e-07" />
+    <rect
+       style="fill:#d92c0b;fill-opacity:1;stroke:#801a06;stroke-width:0.999997;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect839"
+       width="9"
+       height="9.0000029"
+       x="-9.5000019"
+       y="30.499998"
+       rx="7.9000091e-07"
+       ry="7.9000091e-07" />
+    <rect
+       style="fill:#fc0d30;fill-opacity:1;stroke:#800718;stroke-width:0.999997;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect841"
+       width="9"
+       height="9.0000029"
+       x="-9.5000019"
+       y="40.5"
+       rx="7.9000091e-07"
+       ry="7.9000091e-07" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#525252;stroke-width:0.999997;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect843"
+       width="9"
+       height="9.0000029"
+       x="-19.500002"
+       y="0.49999854"
+       rx="7.9000091e-07"
+       ry="7.9000091e-07" />
+    <rect
+       style="fill:#292929;fill-opacity:1;stroke:#000000;stroke-width:0.999997;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect845"
+       width="9"
+       height="9.0000029"
+       x="-19.500002"
+       y="10.499998"
+       rx="7.9000091e-07"
+       ry="7.9000091e-07" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#525252;stroke-width:0.999997;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect847"
+       width="9"
+       height="9.0000029"
+       x="-19.500002"
+       y="20.499998"
+       rx="7.9000091e-07"
+       ry="7.9000091e-07" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0.75;stroke:#525252;stroke-width:0.999997;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.75;paint-order:markers fill stroke"
+       id="rect849"
+       width="9"
+       height="9.0000029"
+       x="-19.500002"
+       y="30.499998"
+       rx="7.9000091e-07"
+       ry="7.9000091e-07" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0.5;stroke:#525252;stroke-width:0.999997;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5;paint-order:markers fill stroke"
+       id="rect851"
+       width="9"
+       height="9.0000029"
+       x="-19.500002"
+       y="40.5"
+       rx="7.9000091e-07"
+       ry="7.9000091e-07" />
+    <rect
+       style="fill:#d9810b;fill-opacity:0.5;stroke:#804c06;stroke-width:0.999994;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect879"
+       width="69.000008"
+       height="14.000003"
+       x="25.499994"
+       y="65.5"
+       rx="7.9000085e-07"
+       ry="7.9000097e-07" />
+    <rect
+       style="fill:#d9810b;fill-opacity:0.5;stroke:#804c06;stroke-width:0.999997;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect883"
+       width="39.000004"
+       height="14.000003"
+       x="95.5"
+       y="65.5"
+       rx="7.9000091e-07"
+       ry="7.9000097e-07" />
+    <path
+       style="fill:none;stroke:#801a06;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 15.499999,65.5 v -5.500002 l 104.752131,-25 v -5.039196"
+       id="path907"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#801a06;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 174.5,65.5 v -5.500002 l -4.75616,-25 v -5.721649"
+       id="path909"
+       sodipodi:nodetypes="cccc" />
+    <rect
+       style="fill:#fab409;fill-opacity:0.5;stroke:#805c05;stroke-width:0.999987;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect875"
+       width="99.000008"
+       height="14.00001"
+       x="20.499996"
+       y="15.499999"
+       rx="7.9000102e-07"
+       ry="7.9000091e-07" />
+    <rect
+       style="fill:#f05800;fill-opacity:0.5;stroke:#802f00;stroke-width:0.999998;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect877"
+       width="49"
+       height="14.000002"
+       x="120.5"
+       y="15.499999"
+       rx="7.9000091e-07"
+       ry="7.9000091e-07" />
+    <rect
+       style="fill:#d9810b;fill-opacity:0.5;stroke:#804c06;stroke-width:0.999997;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect885"
+       width="39.000004"
+       height="14.000003"
+       x="135.5"
+       y="65.5"
+       rx="7.9000091e-07"
+       ry="7.9000097e-07" />
+    <rect
+       style="fill:#d9810b;fill-opacity:0.5;stroke:#804c06;stroke-width:0.999997;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect887"
+       width="9.0000029"
+       height="14.000003"
+       x="15.499999"
+       y="65.5"
+       rx="7.9000091e-07"
+       ry="7.9000097e-07" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'TeX Gyre Bonum';-inkscape-font-specification:'TeX Gyre Bonum';text-align:center;text-anchor:middle;fill:#292929;fill-opacity:1;stroke-width:0.264583"
+       x="-11.971834"
+       y="58.035297"
+       id="text913"><tspan
+         sodipodi:role="line"
+         id="tspan911"
+         x="-11.971834"
+         y="58.035297"
+         style="font-size:4.23333px;fill:#292929;fill-opacity:1;stroke-width:0.264583">regular text</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'TeX Gyre Bonum';-inkscape-font-specification:'TeX Gyre Bonum';text-align:center;text-anchor:middle;fill:#292929;fill-opacity:1;stroke-width:0.264583"
+       x="-15.356379"
+       y="63.242729"
+       id="text917"><tspan
+         sodipodi:role="line"
+         id="tspan915"
+         x="-15.356379"
+         y="63.242729"
+         style="font-weight:bold;font-size:4.23333px;fill:#292929;fill-opacity:1;stroke-width:0.264583">emphasis text</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'TeX Gyre Bonum';-inkscape-font-specification:'TeX Gyre Bonum';text-align:center;text-anchor:middle;fill:#292929;fill-opacity:1;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none"
+       x="69.968246"
+       y="23.564686"
+       id="text921"><tspan
+         sodipodi:role="line"
+         id="tspan919"
+         x="69.968246"
+         y="23.564686"
+         style="font-weight:bold;font-size:4.23333px;fill:#292929;fill-opacity:1;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none">theory</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'TeX Gyre Bonum';-inkscape-font-specification:'TeX Gyre Bonum';text-align:center;text-anchor:middle;fill:#292929;fill-opacity:1;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none"
+       x="144.96825"
+       y="23.564686"
+       id="text925"><tspan
+         sodipodi:role="line"
+         id="tspan923"
+         x="144.96825"
+         y="23.564686"
+         style="font-weight:bold;font-size:4.23333px;fill:#292929;fill-opacity:1;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none">practice</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'TeX Gyre Bonum';-inkscape-font-specification:'TeX Gyre Bonum';text-align:center;text-anchor:middle;fill:#292929;fill-opacity:1;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none"
+       x="20.169333"
+       y="85.916763"
+       id="text929"><tspan
+         sodipodi:role="line"
+         id="tspan927"
+         x="20.169333"
+         y="85.916763"
+         style="font-size:4.23333px;fill:#292929;fill-opacity:1;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none">project</tspan><tspan
+         sodipodi:role="line"
+         x="20.169333"
+         y="91.208427"
+         style="font-size:4.23333px;fill:#292929;fill-opacity:1;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none"
+         id="tspan943">specification</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'TeX Gyre Bonum';-inkscape-font-specification:'TeX Gyre Bonum';text-align:center;text-anchor:middle;fill:#292929;fill-opacity:1;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none"
+       x="59.940731"
+       y="73.50753"
+       id="text933"><tspan
+         sodipodi:role="line"
+         id="tspan931"
+         x="59.940731"
+         y="73.50753"
+         style="font-size:4.23333px;fill:#292929;fill-opacity:1;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none">Qt class</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'TeX Gyre Bonum';-inkscape-font-specification:'TeX Gyre Bonum';text-align:center;text-anchor:middle;fill:#292929;fill-opacity:1;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none"
+       x="114.94073"
+       y="73.50753"
+       id="text937"><tspan
+         sodipodi:role="line"
+         id="tspan935"
+         x="114.94073"
+         y="73.50753"
+         style="font-size:4.23333px;fill:#292929;fill-opacity:1;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none">workshop</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'TeX Gyre Bonum';-inkscape-font-specification:'TeX Gyre Bonum';text-align:center;text-anchor:middle;fill:#292929;fill-opacity:1;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none"
+       x="154.94073"
+       y="73.50753"
+       id="text941"><tspan
+         sodipodi:role="line"
+         id="tspan939"
+         x="154.94073"
+         y="73.50753"
+         style="font-size:4.23333px;fill:#292929;fill-opacity:1;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none">Q&amp;A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'TeX Gyre Bonum';-inkscape-font-specification:'TeX Gyre Bonum';text-align:center;text-anchor:middle;fill:#292929;fill-opacity:1;stroke-width:0.264583"
+       x="99.993652"
+       y="8.2427301"
+       id="text947"><tspan
+         sodipodi:role="line"
+         id="tspan945"
+         x="99.993652"
+         y="8.2427301"
+         style="font-weight:bold;font-size:4.23333px;fill:#292929;fill-opacity:1;stroke-width:0.264583">Object Oriented Programming Course</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'TeX Gyre Bonum';-inkscape-font-specification:'TeX Gyre Bonum';text-align:center;text-anchor:middle;fill:#292929;fill-opacity:1;stroke-width:0.264583"
+       x="133.01144"
+       y="48.035297"
+       id="text951"><tspan
+         sodipodi:role="line"
+         id="tspan949"
+         x="133.01144"
+         y="48.035297"
+         style="font-size:4.23333px;fill:#292929;fill-opacity:1;stroke-width:0.264583">develop a project in C++ and QT</tspan></text>
+  </g>
+</svg>
