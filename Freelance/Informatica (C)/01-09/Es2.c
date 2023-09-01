@@ -10,7 +10,6 @@ int main() {
     int carburante = rand() % 1000 + 500; // Quantità iniziale di carburante (tra 500 e 1500)
 
     int giorniSimulazione;
-    printf("Benvenuto nella gestione della stazione spaziale avanzata!\n");
     printf("Inserisci il numero di giorni di simulazione: ");
     scanf("%d", &giorniSimulazione);
 
@@ -25,7 +24,7 @@ int main() {
         cibo -= consumoCibo;
         carburante -= consumoCarburante;
 
-        int guastoTecnico = rand() % 3;  // Possibilità di guasto tecnico: 0, 1 o 2
+        int guastoTecnico = rand() % 3 ;  // Possibilità di guasto tecnico: 0, 1 o 2
 
         if (guastoTecnico == 1) {
             int risorseNecessarie = rand() % 30 + 10;  // Risorse necessarie per la riparazione (tra 10 e 40)

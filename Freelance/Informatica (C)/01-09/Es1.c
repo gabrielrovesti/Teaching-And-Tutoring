@@ -49,6 +49,7 @@ int main() {
 
             case 4:
                 printf("Grazie per aver usato il gestore di inventario e vendite!\n");
+                
                 return 0;
 
             default:
