@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Nodo {
+private:
+    Nodo(string st = "***", Nodo* s = nullptr, Nodo* d = nullptr) : info(st), sx(s), dx(d) {}
+    string info;
+    Nodo* sx;
+    Nodo* dx;
+
+    friend class Tree; // Dichiarazione friend per consentire a Tree di accedere ai membri privati di Nodo
+};
+
+class Tree {
+public:
+    Tree() : radice(nullptr) {}
+    Tree(const Tree& other) : radice(copyTree(other.radice)) {} // Costruttore di copia che esegue una copia profonda
+
+    // Altri membri di Tree, se presenti
+
+private:
+    Nodo* radice;
+
+    // Funzione di supporto per la copia profonda di un sottoalbero
+    Nodo* copyTree(const Nodo* srcNode) const {
+        if (!srcNode) {
+            return nullptr;
+        } else {
+            Nodo* newNode = new Nodo(srcNode->info);
+            newNode->sx = copyTree(srcNode->sx);
+            newNode->dx = copyTree(srcNode->dx);
+            return newNode;
+        }
+    }
+};
+
+int main() {
+    // Codice di esempio per testare il costruttore di copia di Tree
+    Tree tree1;
+    tree1.radice = new Nodo("Radice");
+    
+    Tree tree2 = tree1; // Eseguirà una copia profonda dell'albero
+    
+    return 0;
+}
