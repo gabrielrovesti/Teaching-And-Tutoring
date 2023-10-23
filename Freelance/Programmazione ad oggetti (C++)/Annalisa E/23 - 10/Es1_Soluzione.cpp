@@ -112,9 +112,9 @@ int main() {
 
     // Verifichiamo l'operatore relazionale "<" ignorando il giorno della settimana
     if (data1 < data2) {
-        cout << "Data 1 è precedente a Data 2." << endl;
+        cout << "Data 1 e' precedente a Data 2." << endl;
     } else {
-        cout << "Data 2 è precedente a Data 1." << endl;
+        cout << "Data 2 e' precedente a Data 1." << endl;
     }
 
     // Aggiungiamo un giorno alla data
