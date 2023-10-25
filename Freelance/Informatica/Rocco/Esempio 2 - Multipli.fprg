@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="roves"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-25 06:29:25 "/>
+        <attribute name="created" value="cm92ZXM7TEFQVE9QLUIyTTZJU1E5OzIwMjMtMTAtMjU7IjA2OjE1OjA5ICI7MjgwMA=="/>
+        <attribute name="edited" value="cm92ZXM7TEFQVE9QLUIyTTZJU1E5OzIwMjMtMTAtMjU7IjA2OjI5OjI1ICI7MTsyOTEx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Dati due interi n e k entrambi maggiori di 0, visualizzare i primi n multipli di k"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Quanti numeri vuoi trovare?&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;Di quale numero vuoi trovare il multiplo?&quot;" newline="True"/>
+            <input variable="k"/>
+            <assign variable="i" expression="1"/>
+            <declare name="multiplo" type="Integer" array="False" size=""/>
+            <comment text="Multiplo = quel numero che ne contiene un altro un numero naturale di volte&#13;&#10;&#13;&#10;Esempio: multiplo di 4: 16, 20, 24&#13;&#10;(tutti i numeri che diviso 4 &quot;danno qualcosa&quot;&#13;&#10;&#13;&#10;"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="multiplo" expression="k * i"/>
+                <output expression="multiplo" newline="True"/>
+                <assign variable="i" expression="i + 1"/>
+            </for>
+            <comment text="Esempio del programma: &#13;&#10;&#13;&#10;Trovo 5 multipli di 2&#13;&#10;&#13;&#10;Troca 5 numeri divisibili per 2"/>
+        </body>
+    </function>
+</flowgorithm>

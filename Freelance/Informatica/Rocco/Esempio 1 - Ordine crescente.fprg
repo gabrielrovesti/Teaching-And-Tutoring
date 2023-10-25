@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="roves"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-25 06:14:28 "/>
+        <attribute name="created" value="cm92ZXM7TEFQVE9QLUIyTTZJU1E5OzIwMjMtMTAtMjU7IjA1OjM5OjU1ICI7MjgwNg=="/>
+        <attribute name="edited" value="cm92ZXM7TEFQVE9QLUIyTTZJU1E5OzIwMjMtMTAtMjU7IjA2OjE0OjI4ICI7MTsyOTA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Dati due numeri visualizzarli in ordine crescente"/>
+            <declare name="n1" type="Integer" array="False" size=""/>
+            <declare name="n2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Inserisci n1&quot;" newline="True"/>
+            <input variable="n1"/>
+            <output expression="&quot;Inserisci n2&quot;" newline="True"/>
+            <input variable="n2"/>
+            <if expression="n1 &gt; n2">
+                <then>
+                    <comment text="Vuol dire che n2 &#232; pi&#249; grande di n1 e stampiamo in ordine crescente (dal pi&#249; piccolo al pi&#249; grande)"/>
+                    <output expression="&quot;Numeri in ordine crescente&quot;" newline="True"/>
+                    <output expression="n2" newline="True"/>
+                    <output expression="n1" newline="True"/>
+                </then>
+                <else>
+                    <if expression="n1 &lt; n2">
+                        <then>
+                            <output expression="&quot;Numeri in ordine crescente&quot;" newline="True"/>
+                            <output expression="n1" newline="True"/>
+                            <output expression="n2" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
