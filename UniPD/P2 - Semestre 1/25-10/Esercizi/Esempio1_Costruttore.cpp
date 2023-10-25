@@ -2,18 +2,18 @@
 
 class E{
     private:
-    int x;
+        int x;
     public:
-    E(int z=0): x(z) {}
+        E(int z=0): x(z) {}
 };
 
 class C{
     private:
-    int z; 
-    E x;
-    const E e;
-    E& r;
-    int* const p;
+        int z; 
+        E x;
+        const E e;
+        E& r;
+        int* const p;
     public:
-    C();
+        C(): x(z), e(r), p(0);
 };
