@@ -24,10 +24,14 @@ A B::a(1);
 int main() {
 	
 	A a(2); cout << "UNO\n";
+	// A(1) A(2) UNO
 	B b; cout << "DUE\n";
+	// A(0) A(3) B() ~A DUE
 	B b2(a); cout << "TRE\n";
+	// A(0) operator double() A(2) B() ~A
 	B b3(a,a); cout << "QUATTRO\n";
 	B b4=b3; cout << "CINQUE\n";
+	// A(0) operator double() 2
 	b.F(); cout << "SEI\n";
 	b.F(3); cout << "SETTE\n";
 	return 0;
