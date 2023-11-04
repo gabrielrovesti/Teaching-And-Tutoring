@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="roves"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-04 09:50:30 "/>
+        <attribute name="created" value="cm92ZXM7TEFQVE9QLUIyTTZJU1E5OzIwMjMtMTEtMDQ7IjA5OjM4OjA2ICI7MjgwMw=="/>
+        <attribute name="edited" value="cm92ZXM7TEFQVE9QLUIyTTZJU1E5OzIwMjMtMTEtMDQ7IjA5OjUwOjMwICI7MjsyOTAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Vedere se il secondo numero &#232; maggiore di tutti"/>
+            <declare name="numero1, numero2, numero3" type="Integer" array="False" size=""/>
+            <output expression="&quot;Inserisci il primo numero&quot;" newline="True"/>
+            <input variable="numero1"/>
+            <output expression="&quot;Inserisci il secondo numero&quot;" newline="True"/>
+            <input variable="numero2"/>
+            <output expression="&quot;Inserisci il terzo numero&quot;" newline="True"/>
+            <input variable="numero3"/>
+            <comment text="Vuol dire che numero2 deve essere pi&#249; grande di numero1 E di numero3"/>
+            <comment text="Per fare l'AND --&gt; Shift + 6&#13;&#10;&#13;&#10;Congiunzione logica = devono valere pi&#249; condizioni"/>
+            <if expression="numero2 &gt; numero1 &amp;&amp; numero2 &gt; numero3">
+                <then>
+                    <output expression="&quot;Il secondo numero &#232; il pi&#249; grande&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Il secondo numero non &#232; il pi&#249; grande&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

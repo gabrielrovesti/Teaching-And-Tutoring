@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="roves"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-04 09:56:05 "/>
+        <attribute name="created" value="cm92ZXM7TEFQVE9QLUIyTTZJU1E5OzIwMjMtMTEtMDQ7IjA5OjQzOjMxICI7Mjc5Nw=="/>
+        <attribute name="edited" value="cm92ZXM7TEFQVE9QLUIyTTZJU1E5OzIwMjMtMTEtMDQ7IjA5OjU2OjA1ICI7NTsyOTE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Vedere se un certo giorno corrisponde a stare a casa da scuola&#13;&#10;(o &#232; fine settimana oppure &#232; vacanza)"/>
+            <declare name="finesettimana, vacanza" type="Boolean" array="False" size=""/>
+            <comment text="Ricordiamo che i booleani valgono solo vero (true) o falso (false)"/>
+            <output expression="&quot;Inserire se il giorno &#232; fine settimana o meno:&quot;" newline="True"/>
+            <input variable="finesettimana"/>
+            <output expression="&quot;Inserire se il giorno corrisponde ad una vacanza o meno: &quot;" newline="True"/>
+            <input variable="vacanza"/>
+            <comment text="Vediamo con un OR se O &#232; vacanza O &#232; fine settimana"/>
+            <comment text="Per fare l'OR = Shift + \&#13;&#10;&#13;&#10;Il segno si chiama in gergo &quot;pipe&quot;&#13;&#10;&#13;&#10;Disgiunzione logica = deve valere al,eno una condizione"/>
+            <if expression="vacanza == true || finesettimana == true">
+                <then>
+                    <output expression="&quot;Si, puoi stare a casa&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;No, non puoi stare a casa&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
