@@ -1,12 +1,8 @@
-/*
-Definire una classe Matrice che rappresenta una matrice di interi NxM. La classe deve avere:
-
-- Un costruttore di default che inizializza una matrice 3x3 a 0
-- Un costruttore che accetta come parametri N e M e inizializza una matrice NxM a 0
-- Un metodo per stampare la matrice
-- Operatori per l'accesso in lettura e scrittura tramite indici (i,j)
-- Operatore di uguaglianza per il confronto tra matrici
-- Costruttore di copia "profonda"
-- Overload dell'operatore = per assegnazione "profonda"
-*/
+/*Definire una classe 'Persona' i cui oggetti rappresentano anagraficamente un
+personaggio storico caratterizzato da nome, anno dI nascita e anno di morte.
+Includere opportuni costruttori, metodi di accesso ai campi e l'overloading
+dell'operatore di output come funzione esterna. Separare interfaccia ed
+implementazione della classe.
+Si definisca inoltre un esempio al metodo 'main() che usa tutti i metodi della
+classe e l'operatore di output. */
 
