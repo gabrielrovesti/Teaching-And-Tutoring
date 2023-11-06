@@ -1,0 +1,6 @@
+reset;
+model modello1.mod;
+data modello1.dat;
+option solver cplex;
+solve;
+display costo, x;
