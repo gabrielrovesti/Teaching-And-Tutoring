@@ -39,7 +39,7 @@ int main() {
 
 /*
 C(1,1) Cc C(0,1) UNO
-Cc VC VC DUE
+Cc NonDefinito NonDefinito DUE
 C(0,1) D() C(0,1) Dc ~D TRE
 QUATTRO
 ~D 
