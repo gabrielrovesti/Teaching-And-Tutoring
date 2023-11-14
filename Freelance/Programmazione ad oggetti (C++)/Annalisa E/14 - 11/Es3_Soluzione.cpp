@@ -1,115 +1,79 @@
-// Cosa stampa il Main?
-
-class N;
-
-class Smart {
-public:
-    N* p;
-    Smart(N* q = 0): p(q) {if(p) p->counter++; cout << "Smart() ";}
-    Smart(const Smart& x): p(x.p) {if(p) p->counter++; cout << "SmartCopy() ";}
-    ̃Smart() {
-    if(p) {
-        p->counter--; if(p->counter==0) delete p;
-    };
-    cout << " ̃Smart() ";
-    }
-    operator bool() {return p!=0;}
-    Smart& operator=(const Smart& x) {
-        Smart t = *this;
-        p = x.p; if(p) p->counter++;
-        cout << "Smart= ";
-        return *this;
-    }
-    N* operator->() {return p;}
-    bool operator==(const Smart& x) {return p==x.p;}
-    bool operator==(N* x) {return p==x;}
+// Cosa stampa ogni riga del Main?
+#include <iostream>
+using namespace std;
+#include <string>
+class Nodo;
+ class Smart {
+   friend class Lista;
+ private:
+   Nodo* punt;
+ public:
+   Smart(Nodo* p=0): punt(p) {} // costruttore di copia
+    ̃Smart();
+   bool operator==(const Smart& s) const {return punt==s.punt;}
+   Nodo* operator->() const {return punt;}
+   Smart& operator=(const Smart&);
 };
-
-class N {
-public:
-    string s;
-    int counter;
-    Smart next;
-    N(string x, const Smart& y) : s(x), counter(0), next(y) {cout << "N() ";}
-    ̃N() {cout << " ̃N ";}
+ class Nodo {
+   friend class Lista; friend class Smart;
+ private:
+   int x;
+   Smart next;
+ public:
+   Nodo(int z =0, const Smart& n = 0): x(z), next(n) {}
+   ̃Nodo() {cout << "  ̃N";} };
+ Smart& Smart::operator=(const Smart& s) {
+   Nodo* t = punt;
+   punt = new Nodo(s->x);
+   delete t;
+   return *this;
+ };
+Smart:: ̃Smart() {if(punt) delete punt; cout << "  ̃S";}
+ class Lista {
+ private:
+   Smart first;
+ public:
+   Lista() : first(0) {}
+   Lista(int k): first(new Nodo(k)) {if(k>0) first->next = new Nodo(k+1);}
+   void remove() {if(!(first==0)) first = first->next;}
 };
+ main() {
+   Lista x1; cout << " **1\n"; // **1 -> Crea una lista usando il costruttore a 0 parametri, allocando "smart" (r.9) ma 
+   //non stampa nulla
+   
+   Lista x2(5); cout << " **2\n"; // ~S ~S ~N ~S ~S ~S **2  -> "54" Apro e chiudo scope; chiama costruttore di lista con un 
+   //parametro (r.35), poi chiama costruttore nodo ad un parametro (r.23)
+   // poi chiamato costruttore di smart ad un intero (nello specifico ad un puntatore) (r.9) creando valore temporaneo, 
+   //poi procediamo con le inizializzazioni a r.21
+   //  poi entriamo nel corpo del costruttore: in first->next=... bisogna fare la conversione di tipo, quindi si 
+   //richiama l'operatore smart (r.13), definito r.23-28,
+   // creando un nuovo nodo che punta all'elemento corrente (r.25), poi il nodo temporaneo che puntava l'elemento corrente 
+   //viene eliminato dal distruttore di Nodo(r.22), ma dato che era nullo
+  //  Quando viene chiamato il distruttore di smart, chiama a sua volta il distruttore del nodo stampando ~N; quando il 
+   //distruttore di una classe viene invocato, al suo termine vengono invocati
+  // ricorsivamente anche i distruttori di tutti i campi che ha per valore in ordine inverso nel quale sono stati 
+   //inizializzati; infine l'ultimo valore distrutto e' quello creato all'interno 
+  // del costruttore di nodo come valore di default
+   //~S per via del first new nodo temp. r37 ~S per via di new nodo (k+1) r.37 temp. ~N r.24 viene cancellato il nodo creato con new nodo
+   // ~S distrutti i campi ridefiniti>next ~S distrutto ~S
 
-class C {
-public:
-    Smart punt;
-    C(string s="BIANCO"): punt(new N(s,0)) {}
-    void add(string s) {punt = new N(s,punt);}
-    void modify() {
-        if(punt && punt->next) punt->next = (punt->next)->next;
-    }
-    void print() {
-        while(punt) { cout << punt->s << " "; punt=punt->next; }
-    }
-};
-main() {
-    C c1; cout << " **0" << endl; /* Smart() Smartcopy() N() Smart() ~Smart() ->
-    Invochiamo costruttore a 0 parametri (r.40) passando valore di default, a seguire chiamiamo costruttore N con 2 parametri stringa e riferimento a 
-    smart (r.33), quindi serve conversione di tipo da intero a smart, quindi chiamamo costruttore smart (r.8), stampando cosi Smart();
-
-    Ora si entra nel costruttore di N con parametro smart temporaneo, segue la lista di inizializzazione, seguendo l'ordine nel quale appiaono 
-    nella classe, che stamperà solo Smartcopy per via della chiamata del costruttore di copia next (r.9);
-
-    Si entra nel corpo del costruttore di N e stampa N();
-
-    Inizializzazione di punt (r.40) che e' smart (r.8) per stampare ancora Smart();
-
-    Distrutto il valore smart temporaneo, quindi stampa ~Smart();
-    */
-    C c2("ROSSO"); cout << " **1" << endl; /* Smart() Smartcopy() N() Smart() ~Smart() ->
-    Stesso procedimento di prima, anziche' usare parametro di default, si passa ROSSO
-    */
-    C c3(c2); cout << " **2" << endl; /* Smartcopy() ->
-    Costruisco oggetto C partendo da un ogetto C, quindi usiamo costruttore di copia, ma dato che non c'è, viene usato quello di default dove tutti 
-    i campi della classe vengono inizializzati copiando dai campi dell'oggetto passato (r.9)
-    */
-    c3.add("VERDE"); cout << " **3" << endl; /* Smartcopy() N() Smart() Smartcopy() Smart= ~Smart() ~Smart() ->
-    Chiamato metodo add, che crea nuovo N con VERDE e come punt il punt corrente, sta aggiungendo un nuovo valore all'inizio della lista concatenata. 
-    Viene chiamato il costruttore di N (r.33) dove gli passiamo uno smart, quindi no valori temporanei, quindi viene chiamato il costruttore di copia per 
-    next (r.9), che stampera' Smartcopy();
-
-    Nel corpo di N, stampiamo N(), no distruttore perche' non c'erano temp;
-
-    Nell'assegnazione punt=new... viene richiamato l'operatore a r.17-21, e vuole un riferimento a smart in input, pero' stiamo passando un puntatore a 
-    nodo, quindi verrà creato un valore temp. (r.8), dunque stamperemo Smart();
-
-    alla r.18 chiamamiamo costruttore copia, quindi stampiamo Smartcopy();
-
-    Alla r.20 stampiamo Smart=;
-
-    Alla fine verra' eliminato t, quindi stampera' ~Smart();
-
-    Viene anche eliminato l'elemento per la conversione di tipo da N a smart, quindi stampiamo ancora ~Smart();
-
-    */
-    c3.add("BLU"); cout << " **4" << endl; /* /* Smartcopy() N() Smart() Smartcopy() Smart= ~Smart() ~Smart() ->
-    Stessa procedura dell'istruzione precedente
-    */
-    c3.modify(); cout << " **5" << endl; /* Smartcopy() Smart= ~Smart() ->
-    Con l'operatore bool (r.16), se punt ed il suo elemento next esistono, tolgono l'elemento next in mezzo
-    L'assegnazione punt->next=... richiama l'operatore smart (r.17), costruendo smart t e stampando Smartcopy();
-
-    Stampiamo Smart=;
-
-    Cancelliamo t, quindi stampa ~Smart();
-    */
-    c1=c3; cout << " **6" << endl; /* Smartcopy() Smart= ~Smart() ->
-    Assegnazione implicita di 2 oggetti già inizializzati, quindi verra' chiamata l'assegnazione di default e non il costruttore di copia,
-    quindi chiamo operatore Smart (r.17), quindi Smartcopy();
-
-    Stampo Smart=;
-
-    Cancello t quindi ~Smart()
-    */
-    c1.print(); cout << " **7" << endl; /* -> BLU Smartcopy() Smart= ~Smart() ROSSO Smartcopy() Smart= ~Smart()
-    */
-    c2.print(); cout << " **8" << endl; /* -> ROSSO Smartcopy() Smart= ~Smart()
-    */
-    c3.print(); cout << " **9" << endl; /* -> BLU Smartcopy() Smart= ~Smart() ROSSO Smartcopy() Smart= ~Smart()
-    */
+   Lista* p = new Lista(3); cout << " **3\n"; //  ~S ~S ~N ~S ~S ~S **3 -> Stampiamo ~S perche viene creato il valore temp. 
+   //all'interno di costruttore di nodo (r.21), finito first viene cancellato ; nel corpo del 
+   //corpo del distruttore di lista eseguiamo l'espressione creando un nuovo nodo, causando la creazione di uno smart temp. (r.21),
+   //poi esegue first->next che e' di tipo smart perche l'operatore ->
+   // ritorna un * (r.12), poi viene dereferenziato ed il nodo next e' di tipo smart, dato che i 2 tipi non coincidono pero' 
+   //esiste un tipo di conversione, viene chiamato r.9 con new Nodo(k+1); 
+   
+   delete p; cout << " **4\n"; // ~N ~N ~S ~S ~S **4 -> P punta riga con 2 nodi, cancella poi una lista, chiamando il distruttore di lista che non è ridefinito, quindi chiama quello di default (r.34), siamo in r.31, punt non e' nullo
+   // cancellando punt, che esso a sua volta e' un nodo, invocando cosi il distruttore di nodo (r.24), ricorsivamente chiama i distruttori dei suoi campi in ordine inverso, quindi smart (r.31), dove punt contiene qualcosa (4)
+   // cancellando nodo 4, distruttore di nodo invocato; poi chiama distruttore nextr che e' smart, che ha il valore di default, putnatore nullo; poi si torna al distruttore di smart, per finire con la chiamata implicita 
+   // dell'istruttore di lista
+   
+   Lista x3(0); cout << " **5\n"; // ~S **5 -> creata lista con valore 0, quindi nel costruttore (r.37), viene eseguito solo first, dove crea il nuovo nodo (r.) passato come temporaneo per poi essere eliminato (r.23)
+   
+   x2.remove(); cout << " **6\n"; // ~S ~S ~N ~S ~S ~S **6 -> chiamato remove(r.38), confronto tra interi che non sono 
+   //compatibili, quindi serve conversione di tipo, assegnando un val temporaneo da 0 in smart, effettuato il confronto che da false
+   // poi viene eliminato il temp., si entra nel corpo dell'if, essendo due valori smart, non viene creato elemento temp.,
+   //si entra in r.31, creato elemento temp. e distrutto successivamente; delete t causa chiamata distruttore
+   // di nodo, poi chiama distruttore del suo next, a sua volta chiama distruttore del suo elemento
 }
-    // Al suo termine, il programma stamperà, per aver eliminato c1,c2,c3 -> ~Smart() ~Smart() ~Smart()

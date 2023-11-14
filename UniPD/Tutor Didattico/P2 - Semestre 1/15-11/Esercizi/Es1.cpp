@@ -4,7 +4,7 @@ class A{
 }
 
 template<class T>
-ckass C{
+class C{
     public:
     static A s;
 }

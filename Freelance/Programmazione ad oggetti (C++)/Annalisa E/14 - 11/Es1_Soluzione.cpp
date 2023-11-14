@@ -1,64 +1,97 @@
-// Definire un template di classe Vettore<T, sz> in modo da produrre le stampe date
+#include <iostream>
+#include <string>
+#include <vector>
 
-#include<iostream>
-using namespace std;
+using namespace std; 
 
-// Soluzione 1
-template <class T = int, unsigned int _size = 0>
-class Vettore {
-private:
-  T* a;
-public:
-  Vettore(const T& x=T()):
-    a(_size==0 ? nullptr :  new T[_size]) {
-    for(int i=0; i<_size; ++i) a[i]=x;
-  }   
-  Vettore(const Vettore& v): a(_size == 0 ? nullptr : new T[_size]) {
-    for(int i=0; i<_size; ++i) a[i]=v.a[i];
-  }
-  Vettore& operator=(const Vettore& v) {
-    if(this != &v) {
-      delete[] a;
-      a = _size == 0 ? nullptr : new T[_size];
-      for(int i=0; i<_size; ++i) a[i]=v.a[i];
-    }
-    return *this;
-  }
-  ~Vettore() { delete[] a;}
-  
-  const T& operator[](unsigned int i) const {
-    return a[i];
-  }
-  T& operator[](unsigned int i) {
-    return a[i];
-  }
-    
-  const T& operator*() const {
-    return a[0];
-  }
-  T& operator*() {
-    return a[0];
-  }
+template <class T>
+class Dizionario{
+    public:
+        bool insert(string, const T&);
+        bool erase(string);
+        T* findValue(string);
+        vector<string> findKey(const T&);
+        T* operator[](string);
+        bool operator==(const Dizionario);
+        int index(string);
+    private:
+        vector<string> keys;
+        vector<T> values;
 };
 
-
-template <class T, unsigned int sz>
-std::ostream& operator<<(std::ostream& os, const Vettore<T,sz>& v) {
-  for(int i=0; i<sz; ++i) os << v[i] << ' '; 
-  return os;
+template <class T>
+ostream& operator<<(ostream& os, const Dizionario<T>& dict){
+    for(int i=0; i<dict.keys.size(); i++){
+        os << "Chiave: " << dict.keys[i] << " e valore: " << dict.values[i] << "\n\t";
+    }
+    return os;
 }
 
-// Parte di codice fornita
-
-int main() {
-  Vettore<int,4> v1(2); Vettore< Vettore<int,3> ,3> v2(3);
-  Vettore<int,4> v3(v1); Vettore<int,4> v4; v3[2]=6;
-  *v1=9;
-  v4=v1;
-  v4[3]=5;
-  std::cout << v1 << std::endl; // 9 2 2 2
-  std::cout<<v2<<std::endl;     // 3 3 3  3 3 3  3 3 3
-  std::cout << v3 << std::endl; // 2 2 6 2
-  std::cout << v4 << std::endl; // 9 2 2 5
+template <class T>
+int Dizionario<T>::index(string key){
+    for(int k=0; k<keys.size(); k++){
+        if(values[k]==key) return k;
+        else return -1;
+    }
 }
 
+template <class T>
+bool Dizionario<T>::insert(string key, const T& val){
+    int index_found=index(key);
+
+    if(!index_found) return false;
+    else{
+        keys.push_back(key);
+        values.push_back(val);
+        return true;
+    }
+}
+
+template <class T>
+bool Dizionario<T>::erase(string key){
+    int index_found=index(key);
+
+    if(!index_found) return false;
+    else{
+        keys.erase(keys.begin()+index);
+        values.erase(values.begin()+index);
+        return true;
+    }
+}
+
+template <class T>
+T* Dizionario<T>::operator[](string key){
+    int indice=index(key);
+    if(indice)   return &values[key];
+    else return 0;
+}
+
+template <class T>
+vector<string> Dizionario<T>::findKey(const T& t){
+    vector<string> v;
+    for(int i=0; i<keys.size(); i++){
+        if(t == values[i])  v.push_back(keys[i]);
+    }
+    return v;
+}
+
+template <class T>
+T* Dizionario<T>::findValue(string key){
+    for(int i=0; i<values.size(); i++){
+        if(key == keys[i])  return &values[i];
+    }
+    return 0;
+}
+
+template <class T>
+bool Dizionario<T>::operator==(const Dizionario dict){
+    if(keys.size() != dict.keys.size()) return false;
+    for(int i=0; i<keys.size(); i++){
+        if(keys[i] != dict.keys[i]) return false;
+    }
+    return true;
+}
+
+int main(){
+
+}

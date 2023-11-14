@@ -1,42 +1,28 @@
-//dichiarazione incompleta
-template<class T> class D;
+#include <iostream>
+#include <string>
 
-template<class T1, class T2>
-class C{
-    //amicizia associata
-    friend class D<T1>;
-    private;
-    T1 t1; T2 t2;
-};
+using namespace std;
 
 template <class T>
-class D{
+class C{
+    template <class V>
+    friend void fun(C<V>);
+    private:
+        T x;
     public:
-        void m(){C<T, T> c;
-            cout << c.t1 << c.t2;
-        }
-        void n(){C<Tint, T> c;
-            cout << c.t1 << c.t2;
-        }
-        void o(){C<T, int> c;
-            cout << c.t1 << c.t2;
-        }
-        void p(){C<int, int> c;
-            cout << c.t1 << c.t2;
-        }
-        void q(){C<int, double> c;
-            cout << c.t1 << c.t2;
-        }
-        void r(){C<char, double> c;
-            cout << c.t1 << c.t2;
-        }
+        C(T y): x(y) {}
 };
 
+template<class T>
+void fun(C<T> t){
+    cout << t.x < " ";
+    C<double> c(3.1);
+    cout << c.x << endl;
+}
+
 int main(){
-    D<char> d; d.m();
-    D<char> d; d.n();
-    D<char> d; d.o();
-    D<char> d; d.p();
-    D<char> d; d.q();
-    D<char> d; d.r();
+    C<int> c(4);
+    C<string> s("blob");
+    fun(c);
+    fun(s);
 }
