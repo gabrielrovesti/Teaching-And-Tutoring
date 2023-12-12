@@ -1,3 +1,5 @@
 # Teaching
-Repo di utility per varie ripetizioni
+Organizzazione materiale didattico per miei insegnamenti, tutorati e guide
+
+
 
