@@ -1,0 +1,76 @@
+<mxfile host="Electron" modified="2023-11-22T15:27:11.988Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="2VAb-gXXnUcTCCuYcyUo" version="22.0.3" type="device">
+  <diagram name="Pagina-1" id="CSZt2zSHPFvdoy04SB6O">
+    <mxGraphModel dx="1750" dy="1035" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-1" value="Illuminismo" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-2" value="- Epoca basata sulla ragione che rischiara l&#39;ignoranza&lt;br&gt;&lt;br&gt;- Rende l&#39;uomo autonomo sottoponendo la realtà &lt;i&gt;a libero esame&lt;/i&gt;&lt;br&gt;&lt;br&gt;- Decisione di attuare le potenzialità dell&#39;uomo" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="270" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-3" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="JSXlj0DJb5cIhg9nwVLa-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="260" as="sourcePoint" />
+            <mxPoint x="230" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-4" value="Opinioni&lt;br&gt;&lt;br&gt;- Filosofo Immanuel Kant&lt;br&gt;&lt;br&gt;Uso della ragione/intelligenza come condizione per uscire dalla propria minorità = uso di senso critico e di coraggio&lt;br&gt;&lt;br&gt;- Filosofo Pierre Bayle&lt;br&gt;&lt;br&gt;Messa in discussione dei dogmi della religione e affermazione dell&#39;ateismo = non credere in nessuna religione come forma di autonomia" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="280" width="330" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-5" value="- Scartiamo tutto quello che non fa parte dell&#39;esperienza dei sensi&lt;br&gt;&lt;br&gt;- Religione naturale (deismo) = credo in quello che vedo con i sensi e non farlo significa accettare i dogmi&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="470" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-6" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="229.5" y="470" as="sourcePoint" />
+            <mxPoint x="229.5" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-7" value="Diffusione del sapere attraverso canali specializzati alla diffusione della scienza e della tecnica = Enciclopedia (Diderot/D&#39;Alembert)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="507.5" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-8" value="Cosmopolitismo = poter discutere con tutti essendo cittadini di mondo e avere il segno di fratellanza universale in quanto si ha l&#39;unione fra tutti i popoli" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="670" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-10" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="229.5" y="680" as="sourcePoint" />
+            <mxPoint x="229.5" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-11" value="Cesare Beccaria&lt;br&gt;&lt;br&gt;Giurista gesuita esperto di legislazione penale&lt;br&gt;&lt;br&gt;Autore di &quot;Dei delitti e delle pene&quot;&lt;br&gt;&lt;br&gt;Studio sulla pena di morte e la tortura, discutendo a livello razionale come la violenza sia inutile a livello di risoluzione dei problemi e non ha senso a livello penale&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="760" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-12" value="Mentalità laica (priva di religione)&lt;br&gt;senza fanatismo/fondemntalismo religioso (quindi, impugnare le armi per volere di Dio o pretesti religiosi)&lt;br&gt;&lt;br&gt;Spirito di tolleranza (rispetto) tra gli uomini" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="190" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-13" value="Filosofo Voltaire&lt;br&gt;&lt;br&gt;Trattato sula tolleranza = discussione sull&#39;importanza della libertà di pensiero&lt;br&gt;&lt;br&gt;Nascita degli intellettuali impegnati (interessat a portare il progresso generale)&lt;br&gt;&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="380" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-14" value="Filosofo Montesquieu&lt;br&gt;&lt;br&gt;Romanzo epistolare (raccolta di lettere) tra Asia ed Europa con raccolta di nuovi punti di vista risvegliando la ragione critica&lt;br&gt;&lt;br&gt;Autonomia tra tradizione e ragione&lt;br&gt;&lt;br&gt;Affinità tra culture occidentali e orientali (Bibbia/Corano)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="570" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-15" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="JSXlj0DJb5cIhg9nwVLa-13" target="JSXlj0DJb5cIhg9nwVLa-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1140" y="440" as="sourcePoint" />
+            <mxPoint x="1190" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-16" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="JSXlj0DJb5cIhg9nwVLa-14" target="JSXlj0DJb5cIhg9nwVLa-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1140" y="440" as="sourcePoint" />
+            <mxPoint x="1190" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JSXlj0DJb5cIhg9nwVLa-17" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="JSXlj0DJb5cIhg9nwVLa-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1140" y="440" as="sourcePoint" />
+            <mxPoint x="1220" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

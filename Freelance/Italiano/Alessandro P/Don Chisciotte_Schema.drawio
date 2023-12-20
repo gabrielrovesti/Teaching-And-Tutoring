@@ -1,0 +1,58 @@
+<mxfile host="Electron" modified="2023-10-29T11:16:48.423Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="9_5hkHEP4nDeQisQTXN9" version="22.0.3" type="device">
+  <diagram name="Pagina-1" id="L0RKP73ELEkKzpf2K_hG">
+    <mxGraphModel dx="1635" dy="478" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GeOyJdwSWAbwFlYLXUe8-1" value="Don Chisciotte, un cavaliere errante idealista, e il suo scudiero Sancho Panza si imbattono in una serie di mulini a vento. Don Chisciotte, convinto che siano giganti malvagi, decide di attaccarli per proteggere la giustizia. Sancho Panza cerca di farlo ragionare, ma Don Chisciotte è determinato. Nel suo tentativo di combattere i mulini a vento, viene invece travolto dal vento e ferito. Questo episodio è noto per mostrare l&#39;ideale cavalleresco di Don Chisciotte, che vede ciò che vuole vedere anziché la realtà oggettiva, dimostrando l&#39;ironia e la follia presenti nel romanzo di Cervantes." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="140" width="380" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GeOyJdwSWAbwFlYLXUe8-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="GeOyJdwSWAbwFlYLXUe8-2" target="GeOyJdwSWAbwFlYLXUe8-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GeOyJdwSWAbwFlYLXUe8-2" value="Opera: L&#39;avventura dei mulini a vento&lt;br&gt;Autore: Miguel de Cervantes" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="250" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GeOyJdwSWAbwFlYLXUe8-3" value="Protagonisti:&amp;nbsp;&lt;br&gt;Don Chisciotte&lt;br&gt;Sancio Panza" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="350" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GeOyJdwSWAbwFlYLXUe8-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="GeOyJdwSWAbwFlYLXUe8-2" target="GeOyJdwSWAbwFlYLXUe8-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="360" as="sourcePoint" />
+            <mxPoint x="360" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GeOyJdwSWAbwFlYLXUe8-5" value="Lotta di Don Chisciotte contro i mulini a vento visti come giganti" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="460" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GeOyJdwSWAbwFlYLXUe8-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="GeOyJdwSWAbwFlYLXUe8-6" target="GeOyJdwSWAbwFlYLXUe8-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GeOyJdwSWAbwFlYLXUe8-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="GeOyJdwSWAbwFlYLXUe8-6" target="GeOyJdwSWAbwFlYLXUe8-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GeOyJdwSWAbwFlYLXUe8-6" value="Don Chisciotte: Visione pratica della guerra come strumento di conoscenza del mondo&lt;br&gt;&lt;br&gt;Sancio: Riportare alla ragione e &quot;alla volontà di Dio&quot; (come ragionerebbe il popolo) il buon Don Chisciotte&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="250" width="310" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="GeOyJdwSWAbwFlYLXUe8-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="GeOyJdwSWAbwFlYLXUe8-3" target="GeOyJdwSWAbwFlYLXUe8-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="420" as="sourcePoint" />
+            <mxPoint x="430" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GeOyJdwSWAbwFlYLXUe8-10" value="Don Chisciotte rimane ferito da questi mulini e Sancio, provando a riportare al lume della ragione il cavaliere, prepara il rancio a Chisciotte" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="205" y="570" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="GeOyJdwSWAbwFlYLXUe8-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="319.62" y="530" as="sourcePoint" />
+            <mxPoint x="319.62" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GeOyJdwSWAbwFlYLXUe8-12" value="Genere: Letteratura cavalleresca (tono comico, ma anche tragico)&lt;br&gt;&lt;br&gt;Protagonista: Idealista, gentiluomo, uomo pratico" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="400" width="310" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
