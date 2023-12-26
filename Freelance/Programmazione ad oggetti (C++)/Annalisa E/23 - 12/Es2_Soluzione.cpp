@@ -19,7 +19,7 @@ Button** Fun(const Container& c){
           
            if(mi && mi->getContainers().size() > 1) mi->setEnabled(false);
            
-           a[cont++] = dynamic_cast<Button*>(v[i]);  
+           b[cont++] = dynamic_cast<Button*>(v[i]);  
         }
     }
     return b;

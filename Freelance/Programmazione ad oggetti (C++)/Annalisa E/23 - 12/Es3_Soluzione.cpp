@@ -76,12 +76,5 @@ int main()
     //(p1->j())->k(); cout << endl; non compila const
     cout <<"non compila"; cout << endl;
     cout <<"8:"; cout << endl;
-    //(dynamic_cast<const F*>(p1->j()))->g();cout << endl;
-    cout <<"undefined"; cout << endl;
-    cout <<"9:"; cout << endl;
-    //(dynamic_cast<E*>(p5)->j(); 
-    //error: cannot 'dynamic_cast' 'p5' (of type 'const class B*') to type 'class E*' (conversion casts away constness)
-    cout <<"non compila"; cout << endl;
-    cout <<"10:"; cout << endl;
-    (dynamic_cast<C*>(const_cast<B*>(p6)))->k(); cout << endl; //F::k E::g
+    (dynamic_cast<const F*>(p1->j()))->g();cout << endl;
 }
