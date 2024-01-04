@@ -66,8 +66,8 @@ int main()
 /*
 B::k  A::n 
 A::f  B::g  A::r 
-A::k  C::r  A::m  A::g  C::r 
-A::f A::g C::r
+A::m  C::r  A::m  A::g  C::r 
+A::f  A::g  C::r
 A::g
 A::n  A::m  A::g  C::r 
 A::n  A::n  A::g 
