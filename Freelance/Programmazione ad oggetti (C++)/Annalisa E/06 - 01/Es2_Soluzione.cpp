@@ -48,7 +48,7 @@ int main() {
 	Fun(*pd); cout << endl;
 	Fun<D>(*pd); cout << endl;
 	Fun<D>(e); cout << endl;
-	//Fun<E>(*pd); cout << endl;
+	Fun<E>(*pd); cout << endl;
 	Fun<E>(e); cout << endl;
 	//Fun<E>(d1); cout << endl;
 	Fun<A>(c); cout << endl;
