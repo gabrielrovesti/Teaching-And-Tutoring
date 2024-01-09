@@ -1,0 +1,12 @@
+B <= A - Vero
+D <= A - Vero
+B <= D - Falso
+D <= B - Falso
+C <= B - Falso
+C <= D - Possibile
+C <= A - Falso
+D <= C - Possibile
+B <= C - Possibile
+A <= B - Falso
+A <= C - Falso
+A <= D - Falso
