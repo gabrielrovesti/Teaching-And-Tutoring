@@ -1,0 +1,21 @@
+- Se ho una situazione di una gerarchia in cui cancello dalla classe base;
+
+A* pa5 = pf;
+A* pa5 = new F();
+
+Cancelliamo solo con A (con la base perché li costruisce tutti)
+Questo funziona se alcuni dei sottotipi sono stati creati con ereditarietà multipla
+Ma c'è anche il distruttore virtuale
+
+- Se ho una situazione in cui devo assegnare l'oggetto a qualcosa di costruito
+
+F* pf = new F();
+B* pb = pf;
+
+Cancelliamo partendo dal tipo dinamico (al contrario della costruzione)
+
+- Se ho una situazione in cui uso il costruttore
+B* pb = new E();
+
+Mi basta cancellare usando solo il tipo statico, perché E() (o il sottotipo)
+per ereditarietà sono costruiti "comunque" usando il tipo statico
