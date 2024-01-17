@@ -1,0 +1,42 @@
+Regole distruttori
+
+- Se ho B* p7 con distruttore virtuale, in "automatico" viene cancellato tutto sotto
+- Se ho puntatore = altro puntatore oppure puntatore = new classe allora uso il tipo dinamico e cancello all'indietro
+
+B* b; 	delete b1; // ~B()
+B* b = f/new F() // ~B() ~C() ~D() ~E() ~F()
+
+Regole costruttori
+
+B* b; // B()
+B* b = d / new D(); // B() C() D()
+
+NB - se tracciati!
+
+Errori su const/this
+
+- Se ho const classe * e ho il metodo Classe * (che non ha const) e ritorna this è errore
+
+const B* p1 = new E();
+
+virtual B* j() {return *this};
+
+(p1->j())->k();
+
+- Se ho classe * e ho il metodo const Classe * (che ha il const) e ritorna this è errore
+
+B* p1 = new E();
+
+virtual const B* j() {return *this};
+
+(p1->j())->k();
+
+// Caso overriding implicito (15/02/2021 - 3 Appello 2020)
+
+B* q4 = new D();
+
+dentro B --> A* n()/z()
+dentro D --> B* n()/z()
+
+// Anche se non c'è virtual
+
