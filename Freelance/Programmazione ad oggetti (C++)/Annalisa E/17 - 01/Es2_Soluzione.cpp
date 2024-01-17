@@ -14,14 +14,23 @@ class C : public B {
 };
 
 class D : virtual public A {
+    private:
+        int x;
     protected:
-    D();
+        D(int x1): x(x1) {};
 }
 
 class E : public C, public D {
-    E& operator=(const E& e){
-        C::operator=(e);
-        D::operator=(e);
-        return *this;
-    }
+    private:
+        int x;
+    public:
+        E& operator=(const E& e){
+            C::operator=(e);
+            D::operator=(e);
+
+            x = e.x;
+
+            return *this;
+
+        }
 }
