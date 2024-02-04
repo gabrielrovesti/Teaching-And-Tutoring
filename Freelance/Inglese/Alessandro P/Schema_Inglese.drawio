@@ -1,0 +1,46 @@
+<mxfile host="Electron" modified="2023-11-12T11:07:42.046Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="t_2GFSLCLSdt_AI-_nlN" version="22.0.3" type="device">
+  <diagram name="Pagina-1" id="L0RKP73ELEkKzpf2K_hG">
+    <mxGraphModel dx="1036" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hfivBvCCWop89HF0Ksew-1" value="&lt;b&gt;&lt;u&gt;Binary Sistem&lt;br&gt;&lt;/u&gt;&lt;/b&gt;(Binary = formed by 0 and 1)&lt;br&gt;Byte (B) = formed by 8 bits" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="160" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hfivBvCCWop89HF0Ksew-2" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;How to get a binary number&lt;br&gt;&lt;br&gt;1) Factorize the number (divide the number always per 2 - recursively)&lt;br&gt;&lt;br&gt;2) Do the code on the right&lt;br&gt;&lt;br&gt;3) Write the number&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="110" width="180" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="hfivBvCCWop89HF0Ksew-3" value="129 in Binary&lt;br&gt;&lt;br&gt;129 : 2 = 64 (1)&lt;br&gt;64: 2 = 32 (0)&lt;br&gt;32 : 2 = 16 (0)&lt;br&gt;16 : 2 = 8 (0)&lt;br&gt;8 : 2 = 4 (0)&lt;br&gt;4 : 2 = 2 (0)&lt;br&gt;2 : 2 = 1 (0) -&amp;gt; 1&lt;br&gt;&lt;br&gt;You take the numbers from bottom to top&lt;br&gt;&lt;br&gt;1000001" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="390" y="80" width="140" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="hfivBvCCWop89HF0Ksew-5" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=-0.001;entryY=0.474;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="hfivBvCCWop89HF0Ksew-2" target="hfivBvCCWop89HF0Ksew-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="150" as="sourcePoint" />
+            <mxPoint x="320" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hfivBvCCWop89HF0Ksew-6" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="hfivBvCCWop89HF0Ksew-1" target="hfivBvCCWop89HF0Ksew-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="185" as="sourcePoint" />
+            <mxPoint x="400" y="185" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hfivBvCCWop89HF0Ksew-7" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;ASCII&lt;br&gt;&lt;br&gt;2^8 = 256 characters&lt;br&gt;&lt;br&gt;Each character you type it&#39;s encoded via a bit &lt;br&gt;(link:&lt;a href=&quot;https://www.asc.ohio-state.edu/demarneffe.1/LING5050/material/ASCII-Table.png&quot;&gt;ASCII-Table.png (1968×1292) (ohio-state.edu)&lt;/a&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="220" width="230" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="hfivBvCCWop89HF0Ksew-9" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.ictpower.it/wp-content/uploads/2016/06/byte-e-multipli.jpg;" parent="1" vertex="1">
+          <mxGeometry x="550" y="110" width="250" height="101.43" as="geometry" />
+        </mxCell>
+        <mxCell id="hfivBvCCWop89HF0Ksew-11" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;u&gt;Analogue vs Digital technology&lt;br&gt;&lt;/u&gt;&lt;br&gt;&lt;b&gt;Analogue &lt;/b&gt;= Signals of variable eletric pulses&lt;br&gt;&lt;b&gt;Digital &lt;/b&gt;= Translated and encoded into bits&lt;br&gt;&lt;br&gt;- Analog are continuous signals, use more energy&lt;br&gt;&lt;br&gt;- Digital are discrete signals and use energy in a reduced way, are more efficient and can overcome obstacles&lt;br&gt;&lt;br&gt;You need &lt;i&gt;analogue to digital converter&lt;/i&gt; = audio/photo to bits and then to digital signals&lt;br&gt;You need&amp;nbsp;&lt;i style=&quot;border-color: var(--border-color);&quot;&gt;digital to analogue converter&lt;/i&gt;&amp;nbsp;= to understand computer output&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="360" width="360" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="hfivBvCCWop89HF0Ksew-12" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;u&gt;Evolution of computers (history)&lt;br&gt;&lt;/u&gt;&lt;br&gt;Some examples of calculators iovertime able to compute formulas and numbers via mechanical systems, punch cards, etc.&lt;br&gt;&lt;br&gt;First (1) Generation: vacuum tube (ENIAC/UNIVAC)&lt;br&gt;Second (2) Generation: transistors and assembly&lt;br&gt;Third (3) Generation: Integrated circuits&lt;br&gt;Fourth (4) Generation: Single-chip computers&lt;br&gt;Fifth (5) Generation: parallel processing/AI/nanotecynology&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="360" width="360" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="hfivBvCCWop89HF0Ksew-13" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;u&gt;Present and future of computers&lt;br&gt;&lt;/u&gt;&lt;br&gt;Current generation revolves on ULSI (Ultra Large-Scale Integration) = billions of circuits on a single chips allowing faster processing&lt;br&gt;&lt;br&gt;Sixth (6) Generation: AI computers solving problems efficiently&lt;br&gt;&lt;br&gt;Future generations: &lt;br&gt;- neurons rather than physical (intelligent as human beings)&lt;br&gt;- connected with other devices at the same time (IoT - Internet of Things)&lt;br&gt;- operations over RNA/DNA (biological operations)&lt;br&gt;- different ways of communication (voice/image recognition, emotion sensing, etc.)&lt;br&gt;- brain/computer interface (BCI), acquirijng brain signals and analyzing them&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="600" width="420" height="210" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
