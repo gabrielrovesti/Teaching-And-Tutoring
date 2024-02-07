@@ -1,0 +1,48 @@
+# File .mod
+
+set I; #operai
+set J; #progetti
+
+param P{J};
+param C{I,J};
+param F{I};
+param R{J};
+param N;
+param M{I};
+
+var x{I,J} >=0 integer;
+var y{I} binary;
+var z{I} binary;
+
+maximize fo: sum{j in J} P[j] * z[j] - sum{i in I, j in J} C[i,j] * x[i,j] - sum{i in I} F[i] * y[i]; 
+s.t. v1{j in J}: sum{i in I} x[i,j] >= R[j] * z[j];
+s.t. v2: sum{i in I, j in J} x[i,j] <= N;
+s.t. v3{i in I}: sum{j in J} x[i,j] <= M[i] * y[i];
+
+# File .dat
+
+set I := op1 op2 op3;
+set J := prog1 prog2 prog3 prog4;
+
+param C{I,J};
+
+param P := prog1 10 prog2 20 prog3 30 prog4 40;
+param F := op1 25 op2 50 op3 75;
+param R := prog1 20 prog2 40 prog3 60 prog4 80;
+param M := op1 5 op2 10 op3 15;
+param N := 3000;
+
+param C: prog1 prog2 prog3 prog4 :=
+op1	 5     10    15    20
+op2      25    30    35    40
+op3      45    50    55    60
+;
+
+# File .run
+
+reset;
+option solver cplex;
+model file.mod;
+data file.dat;
+solve;
+display fo, x, y;

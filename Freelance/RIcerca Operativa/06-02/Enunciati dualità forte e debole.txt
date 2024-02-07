@@ -1,0 +1,7 @@
+Enunciato dualità forte
+
+- Se un problema di PL ha soluzione ottima finita, il corrispondente problema duale ha soluzione ottima finita e i valori coincidono
+
+Enunciato dualità debole
+
+- Se un problema di PL è illimitato, il corrispondente problema duale ha soluzione ottima finita da un certo punto in poi e i valori coincidono 
