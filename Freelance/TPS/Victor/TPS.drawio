@@ -1,0 +1,247 @@
+<mxfile host="app.diagrams.net" modified="2024-02-22T17:04:45.638Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="QZYyaQB-EL9vMvzyrTIo" version="23.1.5" type="device" pages="4">
+  <diagram name="Gestione memoria" id="WB4txIWI_5tVA_oEHt0l">
+    <mxGraphModel dx="1564" dy="1313" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-5" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="hqEBrJj6SvVDZ8Znejsx-1" target="hqEBrJj6SvVDZ8Znejsx-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-6" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="hqEBrJj6SvVDZ8Znejsx-1" target="hqEBrJj6SvVDZ8Znejsx-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-1" value="Gestione memoria" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="519" y="-202" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-2" value="Protezione" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="295" y="-50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-3" value="Allocazione" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="747" y="-42" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-4" value="Trasparenza" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="519" y="-46" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-7" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.608;entryY=0.05;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="hqEBrJj6SvVDZ8Znejsx-1" target="hqEBrJj6SvVDZ8Znejsx-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-15" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="hqEBrJj6SvVDZ8Znejsx-9" target="hqEBrJj6SvVDZ8Znejsx-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-17" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="hqEBrJj6SvVDZ8Znejsx-9" target="hqEBrJj6SvVDZ8Znejsx-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-34" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="hqEBrJj6SvVDZ8Znejsx-9" target="hqEBrJj6SvVDZ8Znejsx-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-9" value="Politiche gestione&lt;br&gt;=&lt;br&gt;Dare spazio ai processi" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="133" y="40" width="149" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-10" value="Allocazione singola&lt;br&gt;&lt;br&gt;(Un solo processo attivo)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-48" y="177" width="166" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-12" value="Allocazione a partizioni&lt;br&gt;&lt;br&gt;(Ogni processo ha un suo pezzo in memoria indipendente)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="307" y="172" width="137" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-22" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="hqEBrJj6SvVDZ8Znejsx-19" target="hqEBrJj6SvVDZ8Znejsx-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-23" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="hqEBrJj6SvVDZ8Znejsx-19" target="hqEBrJj6SvVDZ8Znejsx-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-19" value="Gestione memoria&lt;br&gt;&lt;br&gt;- Partizioni (parti)&lt;br&gt;- Adatte/disponibili a processi" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="292" width="248" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-20" value="Statica&lt;br&gt;&lt;br&gt;(Memoria suddivisa in partizioni fisse)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-14" y="453" width="166" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-21" value="Dinamica&lt;br&gt;(Suddivisione in memoria in base ai processi)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="328" y="450.5" width="137" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-30" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="hqEBrJj6SvVDZ8Znejsx-26" target="hqEBrJj6SvVDZ8Znejsx-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-31" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="hqEBrJj6SvVDZ8Znejsx-26" target="hqEBrJj6SvVDZ8Znejsx-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-32" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="hqEBrJj6SvVDZ8Znejsx-26" target="hqEBrJj6SvVDZ8Znejsx-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-26" value="Allocazioni" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="663" y="279" width="248" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-27" value="First fit&amp;nbsp;&lt;br&gt;&lt;br&gt;(Allocazione prima area libera)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="549" y="440" width="166" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-28" value="Worst fit&lt;br&gt;&lt;br&gt;(Allocazione nell’area più grande)&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="902" y="435" width="137" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-29" value="Best fit&lt;br&gt;&lt;br&gt;(Allocazione nella migliore area libera)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="437.5" width="137" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="hqEBrJj6SvVDZ8Znejsx-33" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.006;entryY=0.645;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="hqEBrJj6SvVDZ8Znejsx-19" target="hqEBrJj6SvVDZ8Znejsx-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="rCyhMccL7VqaXQ1r_68B" name="CPU">
+    <mxGraphModel dx="1123" dy="967" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pmaDduMfLUgnfYESlEfu-4" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="pmaDduMfLUgnfYESlEfu-1" target="pmaDduMfLUgnfYESlEfu-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-1" value="CPU (Processore)&lt;br&gt;Central Processing Unit" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="93" y="-5" width="201" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-2" value="Elabora istruzioni (aritmetico-logiche) da 1 ad 8 bit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="136" y="98" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-8" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="pmaDduMfLUgnfYESlEfu-3" target="pmaDduMfLUgnfYESlEfu-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-11" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="pmaDduMfLUgnfYESlEfu-3" target="pmaDduMfLUgnfYESlEfu-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-3" value="Registri &lt;br&gt;&lt;br&gt;(memorie più veloci della CPU)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="134.75" y="186" width="126.5" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-5" value="PC - Program Counter (Prossima istruzione)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-19" y="299" width="126.5" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-7" value="IR - Instruction Register &lt;br&gt;(Istruzione attuale)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="138" y="299" width="126.5" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-9" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.447;entryY=0.018;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="pmaDduMfLUgnfYESlEfu-3" target="pmaDduMfLUgnfYESlEfu-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-10" value="MAR/MDR&lt;br&gt;(Celle/Indirizzo di memoria da leggere e scrivere)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="299" width="126.5" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-16" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="pmaDduMfLUgnfYESlEfu-12" target="pmaDduMfLUgnfYESlEfu-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-17" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="pmaDduMfLUgnfYESlEfu-12" target="pmaDduMfLUgnfYESlEfu-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-12" value="Ciclo CPU" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="138" y="393" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-13" value="Fetch &lt;br&gt;(preleva da memoria principale)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-16" y="508" width="126.5" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-14" value="Decode &lt;br&gt;(capisco l&#39;istruzione da IR)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="505" width="142" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-15" value="Execute&lt;br&gt;(Esegue l&#39;ìstruzione)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="307" y="505" width="126.5" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="pmaDduMfLUgnfYESlEfu-18" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.557;entryY=0.031;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="pmaDduMfLUgnfYESlEfu-12" target="pmaDduMfLUgnfYESlEfu-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Y8vPOzdLAz3MY8daBD5N" name="HD">
+    <mxGraphModel dx="723" dy="567" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TVKSgPIo0pptB34uepGk-8" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="CT_mzmrtPjfpT5za5lU3-2" target="TVKSgPIo0pptB34uepGk-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CT_mzmrtPjfpT5za5lU3-2" value="Hard Disk&lt;br&gt;&lt;br&gt;(Memorizzazione permanente delle informazioni - I/O)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="312" y="183" width="168" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="TVKSgPIo0pptB34uepGk-1" value="&lt;div&gt;Funzioni:&lt;br&gt;&lt;br&gt;- Pilotare la rotazione dei dischi&lt;/div&gt;&lt;div&gt;- Gestire lo spostamento delle testine di lettura/scrittura&lt;/div&gt;&lt;div&gt;- Inviare/ricevere le informazioni alla memoria e al processore principale&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="284" y="337" width="224" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="TVKSgPIo0pptB34uepGk-3" value="&lt;div&gt;Composto:&lt;br&gt;&lt;br&gt;- Tracce = Parti di memoria&lt;br&gt;- Settori = Piste circolari dove trovare i singoli pezzi di informazione&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="12" y="332" width="224" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="TVKSgPIo0pptB34uepGk-4" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.485;entryY=0.011;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="CT_mzmrtPjfpT5za5lU3-2" target="TVKSgPIo0pptB34uepGk-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TVKSgPIo0pptB34uepGk-6" value="&lt;div&gt;Parametri:&lt;br&gt;&lt;br&gt;- Velocità di accesso (seek = testine)&lt;br&gt;- Capacità di memorizzazione&lt;br&gt;- Latenza (tempo di rotazione)&lt;br&gt;- Trasferimento (tempo di spostamento blocchi)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="542" y="340" width="224" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="TVKSgPIo0pptB34uepGk-9" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.392;entryY=-0.003;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="CT_mzmrtPjfpT5za5lU3-2" target="TVKSgPIo0pptB34uepGk-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TVKSgPIo0pptB34uepGk-18" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="TVKSgPIo0pptB34uepGk-10" target="TVKSgPIo0pptB34uepGk-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TVKSgPIo0pptB34uepGk-19" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="TVKSgPIo0pptB34uepGk-10" target="TVKSgPIo0pptB34uepGk-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TVKSgPIo0pptB34uepGk-10" value="Schedulazione" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="442" y="534" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TVKSgPIo0pptB34uepGk-11" value="FCFS (First Come First Served)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="211" y="635" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TVKSgPIo0pptB34uepGk-12" value="SSTF (Shortest Seek Time First)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="374" y="635" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TVKSgPIo0pptB34uepGk-13" value="SCAN (Spostamento testine ad ascensore = gerarchico)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="544" y="633" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TVKSgPIo0pptB34uepGk-14" value="C- SCAN (SCAN Circolare)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="722" y="635" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TVKSgPIo0pptB34uepGk-16" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.548;entryY=-0.005;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="TVKSgPIo0pptB34uepGk-10" target="TVKSgPIo0pptB34uepGk-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TVKSgPIo0pptB34uepGk-17" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.449;entryY=0.041;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="TVKSgPIo0pptB34uepGk-10" target="TVKSgPIo0pptB34uepGk-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="hqoXah_95gZxZOTbj18m" name="Processi">
+    <mxGraphModel dx="599" dy="870" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7gMofFEZIqOuXWS91n-T-4" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="7gMofFEZIqOuXWS91n-T-2" target="7gMofFEZIqOuXWS91n-T-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7gMofFEZIqOuXWS91n-T-2" value="Processi = Programmi in esecuzione con gestione di risorse" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="193" y="-268" width="143" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="7gMofFEZIqOuXWS91n-T-6" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="7gMofFEZIqOuXWS91n-T-3" target="7gMofFEZIqOuXWS91n-T-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7gMofFEZIqOuXWS91n-T-3" value="Stati di processi:&lt;br&gt;&lt;br&gt;- Disponibile&lt;br&gt;- Pronto&lt;br&gt;- Attesa&lt;br&gt;- Esecuzione (Può essere interrotto e poi assegnato ad altre attività)&lt;br&gt;- Terminazione" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="169" y="-160" width="197" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="7gMofFEZIqOuXWS91n-T-5" value="Descrittore =&amp;nbsp;&lt;div&gt;Gestore della memoria&lt;br&gt;&lt;br&gt;• nome del lavoro, data e ora di accettazione, priorità, tempo CPU&lt;br&gt;• risorse statiche&lt;br&gt;• risorse dinamiche&lt;br&gt;• indicatore stato di esecuzione&lt;br&gt;&lt;br&gt;Process Control Block (PCB)&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="32" y="21" width="194" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="7gMofFEZIqOuXWS91n-T-7" value="Schedulatore =&amp;nbsp;&lt;div&gt;Quali processi da portare in memoria&lt;br&gt;&lt;br&gt;• aggiornare le informazioni&lt;br/&gt;• selezionare quali lavori devono acquisire risorse per avanzare&lt;br/&gt;• generare processi assegnando le opportune risorse&amp;nbsp;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="261" y="39" width="194" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="7gMofFEZIqOuXWS91n-T-8" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.552;entryY=0.019;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="7gMofFEZIqOuXWS91n-T-3" target="7gMofFEZIqOuXWS91n-T-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7gMofFEZIqOuXWS91n-T-12" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="7gMofFEZIqOuXWS91n-T-10" target="7gMofFEZIqOuXWS91n-T-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7gMofFEZIqOuXWS91n-T-10" value="Schedulazione" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="219" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7gMofFEZIqOuXWS91n-T-11" value="Non-preemptive (Senza precedenza)&lt;br&gt;&lt;br&gt;o&amp;nbsp;FIFO (First In First Out)&lt;br&gt;o Shortest job first (tempo più breve di esecuzione)&lt;br&gt;o Higher response ratio next (tempo più breve di risposta)&lt;br&gt;&lt;br&gt;Priorità = (tempo attesa + tempo esecuzione) / tempo esecuzione&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="311" width="229" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="7gMofFEZIqOuXWS91n-T-13" value="Preemptive (Con precedenza di ruoli e gerarchia)&lt;br&gt;&lt;br&gt;&lt;div&gt;o Round Robin (Allocazione equa)&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="289" y="330" width="212" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="7gMofFEZIqOuXWS91n-T-14" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.521;entryY=0.007;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="7gMofFEZIqOuXWS91n-T-10" target="7gMofFEZIqOuXWS91n-T-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

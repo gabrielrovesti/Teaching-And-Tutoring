@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" modified="2024-03-12T17:48:15.890Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="AXsgUqZ0mshGz_e0QSL8" version="24.0.2" type="device">
+  <diagram name="Pagina-1" id="R36o94icOPDpDodxkeV3">
+    <mxGraphModel dx="1895" dy="973" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="xRA0n2hvIo_e7EEXmmcR-8" target="xRA0n2hvIo_e7EEXmmcR-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-8" value="Offerta&lt;br&gt;(Quantità di beni o servizi immessi sul mercato)&lt;br&gt;&lt;br&gt;Direttamente proporzionale alla domanda" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="589" y="140" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-9" value="- Fattori oggettivi (prezzo del bene e di altri beni, quantità di domanda, reddito dei consumatori)&amp;nbsp;&lt;br&gt;&lt;br&gt;- Fattori produttivi (lavoro, capitale = quanto si investe, natura, innovazione tecnologica)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="300" width="218" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="xRA0n2hvIo_e7EEXmmcR-12" target="xRA0n2hvIo_e7EEXmmcR-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-12" value="Prezzo&amp;nbsp;&lt;br&gt;(Valore espresso in moneta di un bene o di un servizio)&lt;br&gt;&lt;br&gt;Prezzo di equilibrio&amp;nbsp;&lt;br&gt;(prezzo che si equipara tra quantità offerta e domandata" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="894" y="140" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-13" value="- Quando la domanda è superiore all&#39;offerta il prezzo di mercato del bene tende a crescere fino al livello di equilibrio&lt;br&gt;&lt;br&gt;- Quando l&#39;offerta è superiore alla domanda, il prezzo di mercato del bene tende a decrescere fino al livello di equilibrio" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="896.5" y="310" width="175" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="xRA0n2hvIo_e7EEXmmcR-15" target="xRA0n2hvIo_e7EEXmmcR-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="xRA0n2hvIo_e7EEXmmcR-15" target="xRA0n2hvIo_e7EEXmmcR-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="xRA0n2hvIo_e7EEXmmcR-15" target="xRA0n2hvIo_e7EEXmmcR-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="xRA0n2hvIo_e7EEXmmcR-15" target="xRA0n2hvIo_e7EEXmmcR-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-15" value="Varie forme di mercato =&lt;br&gt;Cambiano in base al numero di soggetti ma anche in base alle modalità" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="550" width="164.5" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="xRA0n2hvIo_e7EEXmmcR-18" target="xRA0n2hvIo_e7EEXmmcR-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-18" value="Concorrenza perfetta" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="297.5" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="xRA0n2hvIo_e7EEXmmcR-19" target="xRA0n2hvIo_e7EEXmmcR-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-19" value="Concorrenza imperfetta" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="xRA0n2hvIo_e7EEXmmcR-20" target="xRA0n2hvIo_e7EEXmmcR-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-20" value="Oligopolio" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="790" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="xRA0n2hvIo_e7EEXmmcR-21" target="xRA0n2hvIo_e7EEXmmcR-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-21" value="Monopolio" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-28" value="- Impossibilità degli imprenditori di fissare il prezzo di vendita dei beni&amp;nbsp;&lt;br&gt;&lt;br&gt;&amp;nbsp;- Fissato dall&#39;incontro della domanda e dell&#39;offerta = nessuna delle parti influenza il prezzo&lt;br&gt;&lt;br&gt;- Omogeneità = Comprare ovunque va bene&lt;br&gt;- Polverizzazione del mercato in un sacco di imprese in modo facile&lt;br&gt;- Mancanza di forme di intervento" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="810" width="195" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-29" value="- Molti venditori e molti compratori&lt;br&gt;&lt;br&gt;- Prezzo variabile in base al mercato ma in qualsiasi momento può emergere un monopolio&lt;br&gt;&lt;br&gt;- Mancanza di trasparenza e forte frazionamento del mercato&lt;br&gt;- Mancanza di indifferenza degli acquirenti = si ha differenza nello scegliere" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="535" y="830" width="190" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-30" value="- Monopolio diffuso (pochi produttori - molti compratori)&lt;br&gt;- Es. mercato delle auto&lt;br&gt;&lt;br&gt;- Offerta molto ampia e prezzi con poca differenza&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;br&gt;- Difficoltà di accesso di nuove imprese" style="rounded=1;whiteSpace=wrap;html=1;glass=0;shadow=0;textShadow=0;" vertex="1" parent="1">
+          <mxGeometry x="760" y="840" width="180" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="xRA0n2hvIo_e7EEXmmcR-31" value="- Un solo produttore e molti consumatori&lt;br&gt;Es. mercato dei motori di ricerca, social network e app di messaggistica (nuovi monopoli)&lt;br&gt;&lt;br&gt;- Contrasto legale (antitrust = non deve prendere il controllo nessuno)&lt;br&gt;&lt;br&gt;- Unico venditore&lt;br&gt;- Qualità non necessariamente elevata (può decidere quello che vuoi)&lt;br&gt;- Determinazione da parte di uno solo del prezzo" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="985" y="870" width="230" height="220" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

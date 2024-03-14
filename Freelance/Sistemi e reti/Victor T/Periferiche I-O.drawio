@@ -1,0 +1,173 @@
+<mxfile host="app.diagrams.net" modified="2024-03-01T16:09:58.414Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="oId20fbNg0oe34wfxvud" version="23.1.6" type="device" pages="3">
+  <diagram name="Concetti generali" id="rmuCEIS7XnK9635ZWdKu">
+    <mxGraphModel dx="1154" dy="509" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GntsP3CWqldUOuy4f-3W-137" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="GntsP3CWqldUOuy4f-3W-134" target="GntsP3CWqldUOuy4f-3W-135">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-138" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="GntsP3CWqldUOuy4f-3W-134" target="GntsP3CWqldUOuy4f-3W-136">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-134" value="Periferiche&lt;br&gt;=&amp;nbsp;&lt;br&gt;Controllo I/O&lt;br&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="331" y="65" width="127" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-142" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="GntsP3CWqldUOuy4f-3W-135" target="GntsP3CWqldUOuy4f-3W-139">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-143" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="GntsP3CWqldUOuy4f-3W-135" target="GntsP3CWqldUOuy4f-3W-141">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-135" value="Transito" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="109" y="182" width="99" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-144" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="GntsP3CWqldUOuy4f-3W-136" target="GntsP3CWqldUOuy4f-3W-140">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-149" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="GntsP3CWqldUOuy4f-3W-136" target="GntsP3CWqldUOuy4f-3W-147">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-150" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="GntsP3CWqldUOuy4f-3W-136" target="GntsP3CWqldUOuy4f-3W-146">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-136" value="Destinatario" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="509" y="175" width="98" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-139" value="Ingresso (In)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="22" y="255" width="98" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-148" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="GntsP3CWqldUOuy4f-3W-140" target="GntsP3CWqldUOuy4f-3W-145">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-140" value="Altre macchine" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="667" y="250" width="98" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-141" value="Uscita (Out)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="205" y="255" width="98" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-145" value="Modem - Convertitori AC/DC" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="327" width="112" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-154" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="GntsP3CWqldUOuy4f-3W-146" target="GntsP3CWqldUOuy4f-3W-153">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-146" value="Essere umano" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345" y="247" width="98" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-152" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="GntsP3CWqldUOuy4f-3W-147" target="GntsP3CWqldUOuy4f-3W-151">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-147" value="Dispositivi di memorizzazione" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="509" y="252" width="98" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-151" value="Hard disk&lt;br&gt;Dischi ottici&lt;br&gt;Nastri magnetici" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="502" y="339" width="112" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-153" value="Monitor/LCD/Mouse/&lt;br&gt;Scanner/Cuffie" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="322" y="327" width="144" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-158" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="GntsP3CWqldUOuy4f-3W-155" target="GntsP3CWqldUOuy4f-3W-156">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-159" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="GntsP3CWqldUOuy4f-3W-155" target="GntsP3CWqldUOuy4f-3W-157">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-155" value="Interfacciamento tramite porte = diversi tipi di connettori" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="326" y="453" width="148" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-161" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="GntsP3CWqldUOuy4f-3W-156" target="GntsP3CWqldUOuy4f-3W-160">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-163" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="GntsP3CWqldUOuy4f-3W-156" target="GntsP3CWqldUOuy4f-3W-162">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-156" value="Seriale =&lt;br&gt;I dati transitano un bit dopo l&#39;altro con un ordine" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="186" y="549" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-157" value="Parallelo =&lt;br&gt;Transitano più bit in parallelo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="494" y="549" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-160" value="Asincrona = Start/Stop e seguono quel flusso" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="98.5" y="662" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GntsP3CWqldUOuy4f-3W-162" value="Sincrona = Bit in flusso continuo" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="268" y="662" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="F_RUUk5qn_bnQNavvNpg" name="Struttura I/O">
+    <mxGraphModel dx="957" dy="422" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Gr8r0mbHlEYzOvl82g-o-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="Gr8r0mbHlEYzOvl82g-o-1" target="Gr8r0mbHlEYzOvl82g-o-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Gr8r0mbHlEYzOvl82g-o-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="Gr8r0mbHlEYzOvl82g-o-1" target="Gr8r0mbHlEYzOvl82g-o-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Gr8r0mbHlEYzOvl82g-o-1" value="Lettura della CPU&lt;br&gt;Scrittura in un dispositivo" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="309" y="107" width="151" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="Gr8r0mbHlEYzOvl82g-o-2" value="Buffer = Dati di input" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="171" y="237" width="86" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="Gr8r0mbHlEYzOvl82g-o-3" value="Latch = Dati di output" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="506" y="237" width="86" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="Gr8r0mbHlEYzOvl82g-o-6" value="Dispositivi programmabili&lt;br&gt;- Registro dati (comunicazione dati da e verso il mondo esterno)&lt;br&gt;- Registro di controllo (i dispositivi connessi)&lt;br&gt;- Registro di stato (dov&#39;è il dato)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="262" y="291" width="245" height="138" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="HXJzF-8FRrN7yAoz06Nh" name="Tecniche gestione periferiche">
+    <mxGraphModel dx="1154" dy="509" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SK0Uu_ta7erVjYA8cFag-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="SK0Uu_ta7erVjYA8cFag-1" target="SK0Uu_ta7erVjYA8cFag-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SK0Uu_ta7erVjYA8cFag-1" value="Polling" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="131" y="204" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SK0Uu_ta7erVjYA8cFag-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="SK0Uu_ta7erVjYA8cFag-2" target="SK0Uu_ta7erVjYA8cFag-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SK0Uu_ta7erVjYA8cFag-2" value="DMA = Direct Memory Access" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="587" y="206" width="184" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="SK0Uu_ta7erVjYA8cFag-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="SK0Uu_ta7erVjYA8cFag-3" target="SK0Uu_ta7erVjYA8cFag-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SK0Uu_ta7erVjYA8cFag-3" value="Interrupt" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="372.5" y="209" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SK0Uu_ta7erVjYA8cFag-4" value="- Interroga sequenzialmente le periferiche&lt;br&gt;- Chiede la disponibilità dei dati ripetutamente" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="115.5" y="315" width="151" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="SK0Uu_ta7erVjYA8cFag-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SK0Uu_ta7erVjYA8cFag-6" target="SK0Uu_ta7erVjYA8cFag-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SK0Uu_ta7erVjYA8cFag-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="SK0Uu_ta7erVjYA8cFag-6" target="SK0Uu_ta7erVjYA8cFag-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SK0Uu_ta7erVjYA8cFag-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="SK0Uu_ta7erVjYA8cFag-6" target="SK0Uu_ta7erVjYA8cFag-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SK0Uu_ta7erVjYA8cFag-6" value="Tre modalità" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="357" y="64" width="151" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="SK0Uu_ta7erVjYA8cFag-10" value="- Interrompere la CPU per routine ad alta priorità" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="357" y="315" width="151" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="SK0Uu_ta7erVjYA8cFag-11" value="- Accesso diretto alla memoria senza passare dalla CPU&lt;br&gt;- La CPU rimane bloccata fino alla fine trasferimento dati" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="603.5" y="319" width="151" height="94" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
