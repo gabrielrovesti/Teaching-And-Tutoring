@@ -225,3 +225,14 @@ footer {
     color: lightblue;
     font-size: 20px;
 }
+
+.title-stylish{
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+}
+
+.generic-paragraph{
+    text-align: center;
+    font-size: 0.8em;
+}
