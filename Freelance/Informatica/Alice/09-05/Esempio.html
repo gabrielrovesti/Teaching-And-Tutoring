@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function controllaEmail() {
+            // Ottieni il valore dell'email inserito dall'utente
+            var email = document.getElementById("email").value;
+            
+            // Espressione regolare per verificare il formato dell'email
+            var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            // Controlla se l'email è valida
+            if (regex.test(email)) {
+                document.getElementById("messaggio").textContent = "Email valida!";
+            } else {
+                document.getElementById("messaggio").textContent = "Email non valida. Riprova.";
+            }
+        }
+    </script>
+    <title>Document</title>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form con Eventi JavaScript</title>
+</head>
+<body>
+    <h2>Verifica Email</h2>
+    <form id="emailForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="button" onclick="controllaEmail()">Invia</button>
+    </form>
+    <p id="messaggio"></p>
+</body>
+</html>

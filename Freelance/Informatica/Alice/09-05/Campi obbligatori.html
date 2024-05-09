@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        function verificaCampi() {
+            var nome = document.getElementById("nome").value;
+            var cognome = document.getElementById("cognome").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            
+            if (nome === "" || cognome === "" || email === "" || password.length < 8) {
+                alert("Compila tutti i campi obbligatori e assicurati che la password abbia almeno 8 caratteri.");
+                return false; // Blocca l'invio del form
+            }
+            return true; // Invia il form
+        }
+
+    </script>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifica Campi Obbligatori</title>
+</head>
+<body>
+    <h2>Form di Registrazione</h2>
+    <form id="registrazioneForm" onsubmit="return verificaCampi()">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+        <label for="cognome">Cognome:</label>
+        <input type="text" id="cognome" name="cognome" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <input type="submit" value="Invia">
+    </form>
+</body>
+</html>
