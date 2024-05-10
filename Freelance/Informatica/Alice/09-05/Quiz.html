@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Pagina</title>
+    </head>
+    <script type="text/javascript">
+          function controlla(){
+            var input = document.getElementById("inputcolore");
+
+            var colori_it = ["marrone", "rosso", "blu", "viola", "arancione", "verde"];
+            var colori_en = ["brown", "red", "blue", "purple", "orange", "green"];
+
+            var color = "white";
+            
+            var i = 0;
+            for(i; i < colori_it.length(); ++i){
+                if(input == colori.it[i]){
+                    color = colori_en[i];
+                }
+            }
+
+            if(document.getElementsByName() == "opzione1"){
+                avviso = "Risposta giusta";
+            }
+            else{
+                avviso = "Risposta errata";
+            }
+
+            document.getElementById("feedback").innerHTML = color;
+
+        }
+    </script>
+    <body>
+        <h2 style="color: orange; text-transform: uppercase">Quiz con JavaScript</h2>
+        <form>
+            <fieldset>
+                <legend style="color: red;">
+                    Inserisci un colore:
+                </legend>
+                <p>Puoi scegliere tra: marrone, rosso, blu, viola, arancione, verde... oppure un colore diverso!</p>
+                <input type="text" id="inputcolore" placeholder="Inserisci...."/>
+            </fieldset>
+            <fieldset>
+                <legend style="color: red;">
+                    Rispondi correttamente al quiz:
+                </legend>
+                <p>In JavaScript, cosa si intende per "array"?</p>
+                <input type="radio" name="opzione1" value="opzione1"/>Opzione 1<p></p>
+                <input type="radio" name="opzione2" value="opzione2"/>Opzione 2<p></p>
+                <input type="radio" name="opzione3" value="opzione3"/>Opzione 3<p></p>
+            </fieldset>
+            <input type="submit" value="Invia" onsubmit="controlla()"/>
+            <p id="feedback"></p>
+        </form>
+        
+    </body>
+</html>

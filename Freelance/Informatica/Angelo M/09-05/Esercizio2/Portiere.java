@@ -4,7 +4,7 @@ public class Portiere extends Calciatore
     private int rigoriSubiti;
     private int rigoriParati;
 
-    public  Portiere()
+    public Portiere()
     {
         super();
     }
@@ -24,11 +24,6 @@ public class Portiere extends Calciatore
 
     public Portiere(Portiere p)
     {
-        //this.setNome(p.getNome());
-        //this.setPartiteGiocate(p.getPartiteGiocate());
-        //this.setPartiteGiocate(p.getGolSegnati());
-        //this.setValoreinEuro(p.getValoreinEuro());
-        //possono
         super(p);
         this.golSubiti = p.getGolSubiti();
         this.rigoriParati = p.getRigoriParati();

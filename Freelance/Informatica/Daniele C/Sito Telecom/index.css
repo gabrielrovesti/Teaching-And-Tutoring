@@ -21,7 +21,7 @@ nav {
 }
 
 .navigation-links li {
-    margin: 0 10px;
+    margin: 0 10px 10px 10px;
 }
 
 .navigation-links a {
@@ -32,6 +32,7 @@ nav {
 .lang-select select {
     border: none;
     padding: 5px 10px;
+    background-color: #ffffff;
 }
 
 .main-container {
@@ -127,6 +128,8 @@ nav {
 footer {
     background-color: #f2f2f2;
     padding: 20px;
+    z-index: 1;
+    margin-top: 40px;
 }
   
 .footer-container {
@@ -139,11 +142,12 @@ footer {
 .footer-column {
     flex: 1;
     padding: 0 20px;
-    text-align: center;
 }
   
-.footer-column img {
-    max-width: 100px;
+.footer-column .icons {
+    max-width: 200px;
+    border-radius: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
   
 .footer-column p {
@@ -250,7 +254,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    text-align: left;
+    text-align: center;
     background-color: rgb(249, 245, 245);
 }
   
@@ -285,28 +289,33 @@ footer {
 
 .sponsor-title{
     color: #2196f3;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 .customer-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .customers {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+    text-align: left;
+    border: 1px bottom solid #2196f3;
 }
 
 .customer {
     width: 300px;
-    padding: 20px;
+    padding: 1em;
     margin-bottom: 20px;
-    border: 1px bottom solid #2196f3;
-
+    border-bottom: 2px solid #2196f3;
+    border-top: 2px solid #2196f3;
+    border-left: 2px solid #2196f3;
+    border-right: 2px solid #2196f3;
+    border-radius: 1em;
 }
 
 .customer img {
@@ -322,4 +331,23 @@ footer {
 .customer p {
     font-size: 14px;
     line-height: 1.5;
+}
+
+.sponsor-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: space-between;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 2em;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    margin-bottom: -40px;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.sponsor-container > div{
+    padding: 1em;
 }
