@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Riferimento: https://www.notiziariomotoristico.com/articoli/13589/il-mondo-dei-concessionari-e-la-nascita-dei-grandi-dealer-->
+<?xml-stylesheet type="text/css" href="concessionaria-stile.css" ?>
+<concessionarie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="concessionaria.xsd">
+    <concessionaria>
+        <nome>Porsche Automotive (Porsche Holding) - Eurocar Italia</nome>
+        <società>Bonaldi Motori (BG), Bonaldi Tech (BG), Dorigoni (TN), Eurocar Italia (UD), Saottini Auto (BS), Vicentini (VR)</società>
+        <fatturato>1.155.818.314 €</fatturato>
+        <dipendenti>1273</dipendenti>
+        <autovendute>25024</autovendute>
+        <sedi>44</sedi>
+        <brand>Audi, Lamborghini, Porsche, Seat, Skoda, Volkswagen, Volkswagen LCV</brand>
+    </concessionaria>
+        <concessionaria>
+        <nome>Vanini - Gruppo Autotorino</nome>
+        <società>Autotorino (SO)</società>
+        <fatturato>1.124.832.951 €</fatturato>
+        <dipendenti>1396</dipendenti>
+        <autovendute>20308</autovendute>
+        <sedi>62</sedi>
+        <brand>Alfa Romeo, BMW, Fiat, Fiat P, Hyundai, Jeep, Kia, Lancia, Lexus, Mercedes, Mini, Mitsubishi, Smart, Subaru, Toyota</brand>
+    </concessionaria>
+    <concessionaria>
+    <nome>Gruppo Intergea</nome>
+    <società>Alternativa (TO), Auto 3 (IM), Autoarona (NO), Autoingros Torino (TO), Autoteam 9 (VR), Autoteam (VR), Car Village (FI), Centro Europeo Ricambi (TO), Cierreffe (TO), Contatto (CN), Eclettica (SV), Ferrari Motors (MN), Forza (TO), Locauto Due (TO), Logica (BI), Nuova Auto Alpina (AO), Overdrive (MI), Queen Car (TO), Seven Car (VR), Teknogest (TO), Theorema (TO), Torino Auto (TO), Tua (CN)</società>
+    <fatturato>630.766.551 €</fatturato>
+    <dipendenti>583</dipendenti>
+    <autovendute>31606</autovendute>
+    <sedi>120</sedi>
+    <brand>Alfa Romeo, Audi, Citroen, Dacia, DS, Fiat, Fiat P, Honda, Hyundai, Jaguar, Jeep, Kia, Lancia, Land Rover, Maserati, Mazda, Mitsubishi, Opel, Peugeot, Renault, Skoda, Ssangyong, Suzuki, Volkswagen, Volkswagen LCV, Volvo</brand>
+    </concessionaria>
+    <concessionaria>
+        <nome>Penske</nome>
+        <società>Autovanti (MB), Bologna Premium (BO), StarEmilia (BO), Vanti Group (BO), Vanti Quattro (BO), Vanti Sport (BO)</società>
+        <fatturato>608.328.800 €</fatturato>
+        <dipendenti>501</dipendenti>
+        <autovendute>8407</autovendute>
+        <sedi>20</sedi>
+        <brand>Audi, BMW, Jaguar, Lamborghini, Land Rover, Maserati, Mercedes, Mini, Porsche, Smart, Volvo</brand>
+    </concessionaria>
+    <concessionaria>
+        <nome>Bossoni</nome>
+        <società>Adricar (BS), Bossoni Automobili (CR), Gruppo Bossoni-Autoblu (BS)</società>
+        <fatturato>516.656.615 €</fatturato>
+        <dipendenti>678</dipendenti>
+        <autovendute>12763</autovendute>
+        <sedi>16</sedi>
+        <brand>Alfa Romeo, Audi, Fiat, Fiat P, Jeep, Kia, Lancia, Mercedes, Peugeot, Porsche, Skoda, Volkswagen, Volkswagen LCV, Volvo</brand>
+    </concessionaria>
+    <concessionaria>
+        <nome>Ceccato</nome>
+        <società>Ceccato Automobili (VI), Ceccato Automobili Due (VI), Industrial Cars Automobili (VI), Motor Time (PD), Negro Automobili (TV)</società>
+        <fatturato>449.890.505 €</fatturato>
+        <dipendenti>455</dipendenti>
+        <autovendute>14041</autovendute>
+        <sedi>20</sedi>
+        <brand>Alfa Romeo, Fiat, Fiat P, Honda, Jeep, Kia, Lancia, Mitsubishi, Nissan, Porsche, Skoda, Volkswagen, Volkswagen LCV</brand>
+    </concessionaria>
+    <concessionaria>
+        <nome>Spazio</nome>
+        <società>Spazio (TO), Spazio Tre (TO), Spazio Quattro (TO), Spazio Cinque (TO), Spazio Genova (GE)</società>
+        <fatturato>420.668.530 €</fatturato>
+        <dipendenti>172</dipendenti>
+        <autovendute>9772</autovendute>
+        <sedi>26</sedi>
+        <brand>Alfa Romeo, Citroen, Fiat, Fiat P, Hyundai, Jeep, Lancia, Lexus, Opel, Peugeot, Toyota</brand>
+    </concessionaria>
+    <concessionaria>
+        <nome>Brandini</nome>
+        <società>Autoeur (FI), Brandini (FI), Brandini 2 (FI)</società>
+        <fatturato>404.199.115 €</fatturato>
+        <dipendenti>334</dipendenti>
+        <autovendute>9836</autovendute>
+        <sedi>13</sedi>
+        <brand>Alfa Romeo, BMW, Citroen, DS, Fiat, Fiat P, Hyundai, Jeep, Lancia, Mini, Nissan, Opel, Peugeot</brand>
+    </concessionaria>
+    <concessionaria>
+        <nome>De Bona</nome>
+        <società>De Bona (BL), De Bona Padova (PD), De Bona Venezia (VE)</società>
+        <fatturato>389.823.221 €</fatturato>
+        <dipendenti>445</dipendenti>
+        <autovendute>10550</autovendute>
+        <sedi>14</sedi>
+        <brand>Alfa Romeo, DS, Fiat, Fiat P, Hyundai, Jeep, Kia, Lancia, Maserati, Opel, Peugeot, Skoda, Volkswagen, Volkswagen LCV</brand>
+    </concessionaria>
+    <concessionaria>
+        <nome>Barchetti</nome>
+        <società>Activa (TN), Barchetti 1 (BZ), Barchetti 2 (BZ), Fioletti (BS)</società>
+        <fatturato>372.389.414 €</fatturato>
+        <dipendenti>281</dipendenti>
+        <autovendute>10447</autovendute>
+        <sedi>24</sedi>
+        <brand>Alfa Romeo, BMW, Citroen, DS, Fiat, Ford, Hyundai, Jeep, Lancia, Mini, Opel, Peugeot, Seat, Skoda, Toyota, Volvo</brand>
+    </concessionaria>
+</concessionarie>

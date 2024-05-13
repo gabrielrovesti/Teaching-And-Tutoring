@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="concessionarie">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="concessionaria" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nome" type="xs:string">
+                            <xs:element name="società" type="xs:string">
+                            <xs:element name="fatturato" type="xs:integer">
+                            <xs:element name="dipendenti" type="xs:integer">
+                            <xs:element name="autovendute" type="xs:integer">
+                            <xs:element name="sedi" type="xs:integer">
+                            <xs:element name="brand" type="xs:string">    
+                        </xs:sequence>
+                    </xs:complexType>    
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

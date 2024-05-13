@@ -1,0 +1,36 @@
+concessionarie {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: block;
+}
+
+concessionaria {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: block;
+}
+
+nome {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #444;
+    display: block;
+}
+
+società, fatturato, dipendenti, autovendute, sedi {
+    margin-bottom: 5px;
+    display: block;
+}
+
+fatturato, dipendenti, autovendute, sedi {
+    color: #2c8e3c;
+    font-weight: bold;
+}
