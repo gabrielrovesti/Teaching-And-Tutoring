@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Semplice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        #quiz {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        #risultato {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz Semplice</h1>
+    <div id="quiz">
+        <p id="domanda"></p>
+        <input type="text" id="risposta" placeholder="Inserisci la tua risposta">
+        <button onclick="controllaRisposta()">Verifica</button>
+        <p id="risultato"></p>
+    </div>
+
+    <script>
+        const domande = [
+            "Qual è la capitale dell'Italia?",
+            "Quanti giorni ci sono in una settimana?",
+            "Quale è il colore del cielo sereno?"
+        ];
+        const risposteCorrette = ["roma", "7", "blu"];
+        let indiceDomanda = 0;
+
+        function impostaDomanda() {
+            document.getElementById("domanda").textContent = domande[indiceDomanda];
+        }
+
+        function controllaRisposta() {
+            const rispostaUtente = document.getElementById("risposta").value.trim().toLowerCase();
+            const rispostaCorretta = risposteCorrette[indiceDomanda].toLowerCase();
+
+            if (rispostaUtente === rispostaCorretta) {
+                document.getElementById("risultato").textContent = "Risposta corretta!";
+                avanzaDomanda();
+            } else {
+                document.getElementById("risultato").textContent = "Risposta errata. Riprova.";
+            }
+        }
+
+        function avanzaDomanda() {
+            indiceDomanda++;
+            if (indiceDomanda < domande.length) {
+                impostaDomanda();
+                document.getElementById("risposta").value = "";
+                document.getElementById("risultato").textContent = "";
+            } else {
+                document.getElementById("domanda").textContent = "Hai completato il quiz!";
+                document.getElementById("risposta").style.display = "none";
+                document.getElementById("risultato").textContent = "Grazie per aver partecipato!";
+            }
+        }
+
+        impostaDomanda();
+    </script>
+</body>
+</html>

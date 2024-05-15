@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Numeri Primi</title>
+</head>
+<script type="text/javascript">
+    function controllaNumero() {
+        var input = document.getElementById("inputNumero").value;
+        var numero = parseInt(input);
+        var risultato = "";
+
+        if (isNaN(numero) || numero < 2) {
+            risultato = "Inserisci un numero intero maggiore di 1.";
+        } else {
+            var isPrimo = true;
+            for (var i = 2; i <= Math.sqrt(numero); i++) {
+                if (numero % i === 0) {
+                    isPrimo = false;
+                    break;
+                }
+            }
+            risultato = isPrimo ? numero + " è un numero primo" : numero + " non è un numero primo";
+        }
+
+        document.getElementById("feedback").innerHTML = risultato;
+    }
+</script>
+<body>
+    <h2 style="color: navy; text-transform: uppercase">Verifica Numeri Primi</h2>
+    <form>
+        <fieldset>
+            <legend style="color: green;">Inserisci un numero:</legend>
+            <input type="text" id="inputNumero" placeholder="Inserisci un numero intero..." />
+        </fieldset>
+        <fieldset>
+            <legend style="color: green;">Verifica se è un numero primo:</legend>
+            <p>Un numero primo è un numero intero maggiore di 1 che è divisibile solo per 1 e se stesso.</p>
+            <input type="button" value="Verifica" onclick="controllaNumero()" />
+        </fieldset>
+        <p id="feedback"></p>
+    </form>
+</body>
+</html>

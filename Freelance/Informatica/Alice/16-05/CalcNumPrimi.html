@@ -1,0 +1,105 @@
+<html>
+<head>
+    <title>Calcolatore di Numeri Primi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            color: #666;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        #risultato {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<script type="text/javascript">
+    function calcolaPrimi() {
+        var min = parseInt(document.getElementById("minValue").value);
+        var max = parseInt(document.getElementById("maxValue").value);
+        var risultato = document.getElementById("risultato");
+        risultato.innerHTML = "";
+
+        if (isNaN(min) || isNaN(max) || min < 2 || max < min) {
+            risultato.innerHTML = "Inserisci valori validi per il range (numeri interi maggiori di 1, con valore minimo inferiore al valore massimo).";
+            return;
+        }
+
+        var numeriPrimi = [];
+        for (var i = min; i <= max; i++) {
+            if (isPrimo(i)) {
+                numeriPrimi.push(i);
+            }
+        }
+
+        if (numeriPrimi.length === 0) {
+            risultato.innerHTML = "Non ci sono numeri primi nel range specificato.";
+        } else {
+            risultato.innerHTML = "I numeri primi nel range da " + min + " a " + max + " sono: " + numeriPrimi.join(", ");
+        }
+    }
+
+    function isPrimo(numero) {
+        if (numero < 2) {
+            return false;
+        }
+        for (var i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+</script>
+<body>
+    <h1>Calcolatore di Numeri Primi</h1>
+    <form>
+        <fieldset>
+            <legend>Inserisci il range</legend>
+            <label for="minValue">Valore minimo:</label>
+            <input type="number" id="minValue" min="2" value="2" required>
+            <label for="maxValue">Valore massimo:</label>
+            <input type="number" id="maxValue" min="3" value="100" required>
+        </fieldset>
+        <button type="button" onclick="calcolaPrimi()">Calcola Numeri Primi</button>
+    </form>
+    <div id="risultato"></div>
+</body>
+</html>
