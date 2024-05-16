@@ -38,7 +38,7 @@
             "Quanti giorni ci sono in una settimana?",
             "Quale è il colore del cielo sereno?"
         ];
-        const risposteCorrette = ["roma", "7", "blu"];
+        const risposteCorrette = ["Roma", "7", "Blu"];
         let indiceDomanda = 0;
 
         function impostaDomanda() {
@@ -46,8 +46,8 @@
         }
 
         function controllaRisposta() {
-            const rispostaUtente = document.getElementById("risposta").value.trim().toLowerCase();
-            const rispostaCorretta = risposteCorrette[indiceDomanda].toLowerCase();
+            const rispostaUtente = document.getElementById("risposta").value;
+            const rispostaCorretta = risposteCorrette[indiceDomanda];
 
             if (rispostaUtente === rispostaCorretta) {
                 document.getElementById("risultato").textContent = "Risposta corretta!";

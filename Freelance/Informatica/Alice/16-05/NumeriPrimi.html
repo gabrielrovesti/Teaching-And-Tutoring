@@ -4,24 +4,35 @@
 </head>
 <script type="text/javascript">
     function controllaNumero() {
-        var input = document.getElementById("inputNumero").value;
-        var numero = parseInt(input);
+        var input = document.getElementById("inputNumero").value; // prendiamo il valore
+        var numero = parseInt(input); // conversione da stringa a intero
         var risultato = "";
 
-        if (isNaN(numero) || numero < 2) {
+        if (isNaN(numero) || numero < 2) { // controlla che non sia un numero
             risultato = "Inserisci un numero intero maggiore di 1.";
         } else {
-            var isPrimo = true;
+            var isPrimo = true; // booleano (controllo)
+            // algoritmo controllo numeri primi
             for (var i = 2; i <= Math.sqrt(numero); i++) {
                 if (numero % i === 0) {
                     isPrimo = false;
                     break;
                 }
             }
+            /* Senso logico
+            if (isPrimo == true){
+                risultato = isPrimo;
+                numero += " è un numero primo";
+            }
+            else{
+                numero += " non è un numero primo";
+            }
+            */
             risultato = isPrimo ? numero + " è un numero primo" : numero + " non è un numero primo";
         }
 
         document.getElementById("feedback").innerHTML = risultato;
+        // paragrafo per mostrare il risultato
     }
 </script>
 <body>
