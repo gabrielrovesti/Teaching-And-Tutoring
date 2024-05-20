@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:FatturaElettronica versione="FPR12" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:p="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2 http://www.fatturapa.gov.it/export/fatturazione/sdi/fatturapa/v1.2/Schema_del_file_xml_FatturaPA_versione_1.2.xsd">
+  <FatturaElettronicaHeader>
+
+    <DatiTrasmissione>
+      <IdTrasmittente>
+        <IdPaese>IT</IdPaese>
+        <IdCodice>12345678901</IdCodice>
+      </IdTrasmittente>
+      <ProgressivoInvio>0001</ProgressivoInvio>
+      <FormatoTrasmissione>FPR12</FormatoTrasmissione>
+      <CodiceDestinatario>0000000</CodiceDestinatario>
+    </DatiTrasmissione>
+
+    <CedentePrestatore>
+      <DatiAnagrafici>
+        <IdFiscaleIVA>
+          <IdPaese>IT</IdPaese>
+          <IdCodice>12345678901</IdCodice>
+        </IdFiscaleIVA>
+        <Anagrafica>
+          <Denominazione>Azienda di Servizi Informatici</Denominazione>
+        </Anagrafica>
+        <RegimeFiscale>RF01</RegimeFiscale>
+      </DatiAnagrafici>
+      <Sede>
+        <Indirizzo>Via Esempio, 123</Indirizzo>
+        <CAP>12345</CAP>
+        <Comune>Città Esempio</Comune>
+        <Provincia>PR</Provincia>
+        <Nazione>IT</Nazione>
+      </Sede>
+    </CedentePrestatore>
+
+    <CessionarioCommittente>
+      <DatiAnagrafici>
+        <CodiceFiscale>98765432109</CodiceFiscale>
+        <Anagrafica>
+          <Denominazione>Cliente Esempio S.r.l.</Denominazione>
+        </Anagrafica>
+      </DatiAnagrafici>
+      <Sede>
+        <Indirizzo>Via Esempio, 456</Indirizzo>
+        <CAP>67890</CAP>
+        <Comune>Altro Comune</Comune>
+        <Provincia>PC</Provincia>
+        <Nazione>IT</Nazione>
+      </Sede>
+    </CessionarioCommittente>
+
+  </FatturaElettronicaHeader>
+
+  <FatturaElettronicaBody>
+
+    <DatiGenerali>
+      <DatiGeneraliDocumento>
+        <TipoDocumento>TD01</TipoDocumento>
+        <Divisa>EUR</Divisa>
+        <Data>2024-05-19</Data>
+        <Numero>0001</Numero>
+      </DatiGeneraliDocumento>
+    </DatiGenerali>
+
+    <DatiBeniServizi>
+      <DettaglioLinee>
+        <NumeroLinea>1</NumeroLinea>
+        <Descrizione>Sviluppo software su misura</Descrizione>
+        <Quantita>1.00</Quantita>
+        <PrezzoUnitario>5000.00</PrezzoUnitario>
+        <PrezzoTotale>5000.00</PrezzoTotale>
+        <AliquotaIVA>22.00</AliquotaIVA>
+      </DettaglioLinee>
+      <DettaglioLinee>
+        <NumeroLinea>2</NumeroLinea>
+        <Descrizione>Consulenza e assistenza tecnica</Descrizione>
+        <Quantita>1.00</Quantita>
+        <PrezzoUnitario>2500.00</PrezzoUnitario>
+        <PrezzoTotale>2500.00</PrezzoTotale>
+        <AliquotaIVA>22.00</AliquotaIVA>
+      </DettaglioLinee>
+      <DatiRiepilogo>
+        <AliquotaIVA>22.00</AliquotaIVA>
+        <ImponibileImporto>7500.00</ImponibileImporto>
+        <Imposta>1650.00</Imposta>
+        <EsigibilitaIVA>I</EsigibilitaIVA>
+      </DatiRiepilogo>
+    </DatiBeniServizi>
+
+    <DatiPagamento>
+      <CondizioniPagamento>TP02</CondizioniPagamento>
+      <DettaglioPagamento>
+        <ModalitaPagamento>MP05</ModalitaPagamento>
+        <ImportoPagamento>9150.00</ImportoPagamento>
+      </DettaglioPagamento>
+    </DatiPagamento>
+    
+  </FatturaElettronicaBody>
+</p:FatturaElettronica>
