@@ -1,33 +1,17 @@
-#include <iostream>
-#include <vector>
-#include <list>
-#include <sstream>
-#include <fstream>
+// Assumere che abs sia una classe astratta. Definire un template di funzione bool Fun(Tq*, T2&), dove T1 e T2 sono
+// parametri di tipo, con il seguente comportamento. Si considera un istanza implicita Fun(ptr, ref) dove si suppone che i parametri
+// di tipo T1 e T2 siano istanziati a tipi polimorfi. Allora Fun(ptr, ref) ritorna true se e solo se valgono le seguenti due condizioni:
 
-template <class T>
-std::list<const std::iostream*> compare(const std::vector<std::ostream*>& v, const std::vector<const T*>& w) {
-    if (v.size() != w.size()) {
-        throw std::string("");
-    }
+// 1. I parametri di tipo T1 e T2 sono istanziati allo stesso tipo
+// 2. Siano D1* il tipo dinamico di ptr e D2& il tipo dinamico di ref, allora:
+//    (i) D1 e D2 sono lo stesso tipo
+//   (ii) Questo tipo è un sottotipo proprio della classe Abs
 
-    std::list<const std::iostream*> result;
+// Soluzione
 
-    for (size_t i = 0; i < v.size(); ++i) {
-        auto* vi_fstream = dynamic_cast<std::fstream*>(v[i]);
-        auto* wi_fstream = dynamic_cast<const std::fstream*>(w[i]);
-
-        auto* wi_sstream = dynamic_cast<const std::stringstream*>(w[i]);
-
-        if (vi_fstream && wi_fstream) {
-            result.push_back(static_cast<const std::iostream*>(v[i]));
-        } else if (wi_sstream && wi_sstream->good() && typeid(*v[i]) != typeid(*w[i])) {
-            result.push_back(static_cast<const std::iostream*>(w[i]));
-        }
-    }
-
-    return result;
-}
-
-int main(){
-    return 0;
+template <class T1, class T2>
+bool Fun(T1* ptr, T2& ref) const {
+     return ( typeid(T1) == typeid(T2) ) && 
+            ( typeid(*ptr) == typeid(ref) ) &&
+            ( dynamic_cast<Abs*>(ptr) );
 }
