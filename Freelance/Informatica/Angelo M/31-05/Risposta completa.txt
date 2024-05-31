@@ -1,0 +1,9 @@
+Cosa vuol dire che la sottoclasse si differenzia dalla sua superclasse per estensione e/o per ridefinizione?
+
+Quando una sottoclasse si differenzia dalla sua superclasse per estensione e/o ridefinizione, significa che:
+
+1. Estensione: La sottoclasse aggiunge nuovi attributi e/o metodi specifici che non sono presenti nella superclasse. Questo permette alla sottoclasse di avere funzionalità aggiuntive oltre a quelle ereditate dalla superclasse. Ad esempio, se avessimo una superclasse "Veicolo" e una sottoclasse "Auto", la sottoclasse "Auto" potrebbe avere attributi aggiuntivi come "numero_porte" o "tipo_carburante" che sono specifici delle auto ma non di tutti i veicoli.
+
+2. Ridefinizione (overriding): La sottoclasse può ridefinire i metodi ereditati dalla superclasse, fornendo una propria implementazione. Questo consente alla sottoclasse di modificare o specializzare il comportamento dei metodi della superclasse secondo le proprie esigenze. Ad esempio, se la superclasse "Veicolo" ha un metodo "accelera()", la sottoclasse "Auto" potrebbe ridefinire questo metodo per implementare l'accelerazione in modo specifico per le auto, magari considerando il cambio delle marce.
+
+In sintesi, l'estensione permette di aggiungere nuove caratteristiche alla sottoclasse, mentre la ridefinizione permette di personalizzare il comportamento ereditato dalla superclasse. Queste due meccaniche forniscono flessibilità e specializzazione nelle gerarchie di classi, consentendo di modellare oggetti più specifici mantenendo al contempo una relazione di ereditarietà con la superclasse più generale.
