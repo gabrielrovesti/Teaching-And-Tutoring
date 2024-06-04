@@ -1,0 +1,3 @@
+Aka = prendo tutti gli elementi più piccoli (<) della size (sapendo che size è unsigned, quindi può essere solo positiva)
+
+Significa che nel primo vettore stampa 8 e nel secondo stampa 10 (quella è unsigned, resto stampa la sua size)
