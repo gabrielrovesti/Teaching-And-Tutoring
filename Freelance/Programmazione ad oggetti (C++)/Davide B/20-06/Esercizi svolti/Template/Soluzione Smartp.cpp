@@ -24,13 +24,19 @@ public:
         return *p;
     }
     T* operator->() const {
-        return p;
+        return &p; //p
     }
     bool operator==(const SmartP& s) const {
-        return *p == *s.p;
+        if(*p == *s.p) return true;
+        return false;
+
+        // short: return *p == *s.p;
     }
     bool operator!=(const SmartP& s) const {
-        return *p != *s.p;
+        if(*p != *s.p) return true;
+        return false;
+
+        //short: return *p != *s.p;
     }
 };
 
