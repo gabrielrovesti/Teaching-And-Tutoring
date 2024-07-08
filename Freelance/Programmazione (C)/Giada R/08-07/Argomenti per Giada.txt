@@ -1,0 +1,1 @@
+Comunque gli argomenti da riguardare insieme, oltre a fare poi esercizi di vario tipo, sono: ricorsione (vediamo se manda anche questo file, gli ho scritto una mail qualche giorno fa ma non mi ha ancora risposto), pre/post condizioni, vettori multidimensionali, correttezza
