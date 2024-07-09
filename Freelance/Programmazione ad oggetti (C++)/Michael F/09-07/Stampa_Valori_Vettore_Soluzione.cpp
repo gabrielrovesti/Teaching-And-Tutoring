@@ -46,6 +46,12 @@ public:
     virtual bool operator<=(const B& r) const {return dynamic_cast<const F*>(&r) != 0 ? true : false;}
 };
 
+class G: public F{
+
+    public:
+    virtual bool operator<=(const B& r) const {return dynamic_cast<const G*>(&r) != 0 ? true : false;}
+};
+
 void fun(const vector<B*>& v){
     D* p;
     for(int k=0;k!=v.size();++k){
@@ -69,23 +75,11 @@ int main() {
   D d;
   E e;
   F f;
+  G g;
   vector<B*> v;
-  v.push_back(&d);
   v.push_back(&f);
-  v.push_back(static_cast<D*>(&e)); 
-  v.push_back(&d);
-  v.push_back(&c);
-  v.push_back(&d);
-  v.push_back(&d);
-  v.push_back(&b);
-  v.push_back(&b);
-  v.push_back(&c);
-  v.push_back(&b);
-  v.push_back(&f);
-  v.push_back(static_cast<E*>(&f));
-  v.push_back(&e);
-  v.push_back(&c);
-
+  v.push_back(static_cast<D*>(&g)); 
+  
   fun(v);
 }
 
