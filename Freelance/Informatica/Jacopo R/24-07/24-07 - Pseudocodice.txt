@@ -1,0 +1,31 @@
+// PSEUDOCODICE
+// ESEMPIO ALGORITMO: RADICE QUADRATA
+
+// (1) DEFINIZIONE VARIABILI
+// INPUT e OUTPUT
+
+numero <- 0
+radice <- 0
+n <- 10
+
+// radice = sqrt(numero) - modo non iterativo = calcolo diretto radice
+
+// iterazione = for/while
+// contare fino a X
+
+// finché non siamo arrivati al numero, ci conviene continuare a dividere per 2
+
+// 4 = radice quadrata di 16
+
+// 4 * 4 = 16
+
+if (numero < 0):
+    print("Inserisci un numero positivo")
+if (numero == 1):
+    print("Radice quadrata è 1")
+
+while (numero * numero <= radice):
+    numero = (numero + numero / radice) / 2
+
+// 16 -> 8 -> 4
+
