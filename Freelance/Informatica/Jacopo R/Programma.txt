@@ -1,2 +1,3 @@
 programmazione strutturata, quoziente iterativo, tabelle di traccia, calcolo iterativo della radice quadrata, vettori, passaggio parametro per valore e riferimento
-e ricerca dicotomica anche se non sono sicuro che la faccia
+e ricerca dicotomica (non sicuro)
+Algoritmi di ordinamento
