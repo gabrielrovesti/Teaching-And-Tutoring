@@ -1,0 +1,13 @@
+(esercizio da completare se i crediti del proprio esame sono almeno 6) - Punti 9
+
+Dato un array di interi ed un intero n>=0, implementare una funzione ruota_array() che ruoti verso sinistra l'array di n posizioni, ovvero sposti ciascun elemento dell'array di n posizioni verso sinistra. Gli elementi che finirebbero fuori dall'array vengono spostati al termine dell'array stesso: per esempio se si sposta verso sinistra di una posizione il primo elemento di un array, questo viene spostato nella posizione più a destra nell'array. Di seguito alcuni esempio di array in input e di come vengono trasformati da ruota_array():
+
+se n=1 [1,2,3,4] -> [2,3,4,1]
+se n=2 [1,2,3,4] -> [3,4,1,2]
+se n=5 [1,2,3,4] -> [2,3,4,1]
+
+L'esercizio consiste nel
+
+1) Scrivere PRE, POST della funzione ruota_array() e di ogni altra funzione che definirete. 
+2) Implementare ruota_array(). Se ruota_array() è suddivisibile in più sottofunzioni, definite una funzione per ognuna di esse. 
+3) Verranno dati dei punti in più se si implementa la soluzione senza creare array aggiuntivi, modificando direttamente quello passato come parametro a ruota_array().

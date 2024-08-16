@@ -1,0 +1,3 @@
+Scrivete la funzione search che effettui la ricerca di un nodo con valore uguale al parametro "val" all'interno di una struttura ad albero di tipo BST. La funzione deve restituire 1 se l'elemento viene trovato, 0 altrimenti.
+
+Nota: si tenga conto del codice e delle funzioni fornite. La soluzione fornita può essere - a vostra scelta - ricorsiva od iterativa.

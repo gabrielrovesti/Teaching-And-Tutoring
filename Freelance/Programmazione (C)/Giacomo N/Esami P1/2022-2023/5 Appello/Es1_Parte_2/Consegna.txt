@@ -1,0 +1,4 @@
+Definire una funzione ricorsiva che, dato un array X di interi positivi ed un intero target, determini se esiste un sequenza di elementi di X (ottenuta eventualmente considerando più volte lo stesso elemento) la cui somma dia target. 
+La funzione restituisce 1 se esiste almeno una di tali sequenze, 0 altrimenti. 
+Ad esempio se X={4,5,3,6,1} e target=7 la funzione resituisce 1 poiché 4+3=7 oppure perché 3+3+1=7. 
+Scrivere PRE e POST di tutte le funzioni che implementate.

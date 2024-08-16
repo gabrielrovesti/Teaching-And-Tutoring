@@ -1,0 +1,41 @@
+Es. 1
+
+esercizio da completare se i crediti del proprio esame sono almeno 9) - Punti: 9
+
+Per ciascuna delle seguenti funzioni:
+- Scrivere PRE e POST condizioni
+- Scrivere la misura di complessita' del problema (il parametro che decresce con le chiamate ricorsive)
+- Non e' necessario scrivere ipotesi induttiva etc...ma e' richiesto commentare adeguatamente il codice, spiegando caso base e chiamate ricorsive (in particolare perche' la misura di complessita' decresce in una chiamata ricorsive).
+
+Parte 1
+Implementare una funzione RICORSIVA con firma
+    void swap_eq(int* arr, int dim, int i, int j, int n) 
+che, dati:
+   • un array arr di interi di dimensione dim
+   • interi non-negativi i, j, n tali che n>0 e 0 ≤ i+n ≤ j ed j+n ≤ dim
+modifica l'array arr scambiando la porzione arr[i] .. arr[i+n-1]  con arr[j] .. arr[j+n-1]. 
+Notare che le clausole 0 ≤ i+n ≤ j ed j+n ≤ dim assicurano che le porzioni esistano e siano disgiunte
+
+Parte 2
+UTILIZZARE la funzione swap_eq per implementare una funzione RICORSIVA con firma
+    void swap(int* arr, int dim, int m, int n, int p) 
+che, dati:
+   • un array arr di interi di dimensione dim
+   • interi non-negativi m, n, p tali che 0 ≤ m < n < p ≤ dim
+modifica l'array arr scambiando la porzione arr[m] .. arr[n-1]  con arr[n] .. arr[p-1]. 
+Notare che:
+1) essendo m<n<p<dim, le porzioni in questione esistono e sono necessariamente disgiunte
+2) le porzioni possono avere dimensioni differenti (il cuore dell'esercizio e' capire come decomporre il caso "complesso" di porzioni di dimensioni differente nel caso piu' semplice di porzioni di dimensione uguale (suggerimento: la funzione swap e' una combinazione di condizionali, swap_eq, e chiamate ricorsive soltanto). 
+
+N.B. Soluzioni iterative che richiamano la funzione stessa al termine senza calcolare niente ricorsivamente non saranno accettate. 
+Punti:
+• 2 punti per corretta implementazione swap_eq
+• 3 punti per corretta implementazione swap
+• 2 punti PRE/POST e commenti
+• 2 punti misura complessita' swap
+
+
+Es.2
+
+Scrivete una funzione clone_invlist che effettui la copia di una lista in modo tale che gli elementi della nuova lista siano in ordine inverso.
+

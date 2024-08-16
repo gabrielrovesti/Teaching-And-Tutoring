@@ -1,0 +1,2 @@
+C'erano 2 esercizi, uno era il solito "cosa stampa la printf"
+Il secondo chiedeva di dichiarare determinate variabili basate sulle indicazioni (es. Definire un puntatore ad un array di puntatori ad intero)

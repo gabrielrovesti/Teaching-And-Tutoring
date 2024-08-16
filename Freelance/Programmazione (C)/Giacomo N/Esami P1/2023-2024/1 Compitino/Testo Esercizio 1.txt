@@ -1,0 +1,15 @@
+esercizio da completare se i crediti del proprio esame sono almeno 9) - Punti 7
+
+Scrivere una funzione minimi_termini() che, dati due interi positivi num e den, riduce ai minimi termini la frazione num/den. 
+Una volta invocata minimi_termini() nel main, deve essere possibile stampare i due valori num e den che formano la frazione ridotta ai minimi termini. 
+Ad es. 
+a) se num=6 e den=12, dopo aver invocato minimi_termini() nel main, il programma stampa "6/12=1/2"
+b) se num=4 e den=3, il programma stampa "4/3=4/3"
+
+Vi ricordiamo che una frazione è ridotta ai minimi termini se il numeratore ed il denominatore sono stati divisi per tutti i divisori in comune tra i due. 
+
+L'esercizio consiste nel:
+
+1) scrivere PRE e POST della funzione minimi_termini()
+2) implementare la funzione minimi_termini()
+3) invocare la funzione minimi_termini() nel main. 
