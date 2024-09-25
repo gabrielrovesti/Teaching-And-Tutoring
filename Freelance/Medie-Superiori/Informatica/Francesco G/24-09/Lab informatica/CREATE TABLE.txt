@@ -1,0 +1,33 @@
+Creazione dell'entità Studente
+Il linguaggio SQL non è un linguaggio CASE SENSITIVE
+    - tuttavia è prevista una convenzione di scrittura che non dà obblighi nel 
+        rispettarla.
+    - Le parole chiave di linguaggio so scritte in maiuscolo mentre nomi di 
+      entità e attributi vengono visualizzati con la lettera iniziale maiuscola 
+
+CREATE TABLE <nome_entità>(
+    <nome_attributo> <tipo> <opzioni>,
+        .
+        .
+        .
+        .
+    PRIMARY KEY(<nome_attributo_univoco>)
+);
+
+DEFINIAMO LA STRUTTURA DELL'entità Studente
+(DDL <-- Data Definition Language)
+
+CREATE TABLE Studente(
+    CDF     VARCHAR(16),
+    Nome    VARCHAR(50),
+    Cognome VARCHAR(50),
+    DataN   DATE,     <---- AAAA-MM-DD  formato del tipo data
+    PRIMARY KEY(CDF)
+);
+
+CREATE TABLE Studente(
+    CDF     VARCHAR(16) PRIMARY KEY,
+    Nome    VARCHAR(50),
+    Cognome VARCHAR(50),
+    DataN   DATE     <---- AAAA-MM-DD  formato del tipo data
+);
