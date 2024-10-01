@@ -1,0 +1,15 @@
+Sistema di elaborazione - CPU/Cache/BUS
+
+Avvio del computer = varie memorie/Windows/Linux
+
+Microprocessore = Architettura/set istruzioni
+
+Assembly
+
+Basi di rete (segnali/architetture/client-server)
+
+Tecnologia reti
+
+Cablaggio e reti locali
+
+Schede Arduino e Raspberry PI
