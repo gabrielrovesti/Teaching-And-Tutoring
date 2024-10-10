@@ -1,0 +1,42 @@
+
+### Domande orale di conferma voto aggiornate al 2022-2023###
+Raccolte dal gruppo telegram FIUP del corso di ASD, ogni riga contiene le domande fatte ad una singola persona
+
+- Qualcuno sa di quanti punti può alzare/abbassare il voto la prova orale?
+- Massimo 
+
+Giusto per informazione Baldan mi ha risposto così:
+l'orale diventa parte della prova che viene giudicata nel complesso. Non c'è un'indicazione precisa, ma sulla base dell'esperienza si può attendere una variabilità di +/- 3 punti.
+
+Baldan:
+
+- Complessità di un problema, cos'è un heap e complessità ricerca del massimo
+- Metodo del limite e la sua dimostrazione
+- BST e dimostrazione che il limite degli ordinamenti è nlogn
+- Definizione di RB-tree e costo dell’inserimento
+- Complessità di quicksort e spiegazione breve dell'algoritmo
+- Counting sort (funzionamento, complessità, svantaggi, perchè non si può usare sempre per ottenere ordinamento lineare, condizione affinche rimanga theta(n)
+- Tabella hash: complessità inserimento e rimozione, chaining e open addressing
+- Doppio hashing (come scegliere le due funzioni di hash)
+- Quicksort: descrizione complessità caso medio, caso peggiore e motivare perché la maggior parte delle ripartizioni sono riconducibili al caso medio
+- Max-heap e funzionamento heapsort
+- Complessità lineare nel counting sort e radix sort
+- Perché preferire BST a tabelle hash (voleva sapere che con BST si possono effettuare molte più operazioni e che possono contenere una quantità molto grande di oggetti rispetto alle tabelle hash che hanno capacità limitata).
+- Cosa significa avere limite inferiore per un algoritmo? Cos'è albero di decisione e limite inferiore per l'ordinamento. Descrivere funzionamento e complessità sia di maxHeapify che buildMaxHeap.
+
+
+Scquizzato:
+
+- Complessità di funzioni dettate dal prof, Cos’è uno heap e complessità insert in un heap
+- Radix sort, complessità sottostringa, complessità sottosequenza, numero sottosequenze di una stringa, complessità LCS, O grande
+- Definizione di omega, esistenza di un eventuale altro ordine per calcolare gli elementi nella terza condizione della dinamica
+- Definizione di albero binario, complessità della funzione di inserimento, definizione di sottostringa e sottosequenza e numero di sottostringhe e sottosequenze in una stringa
+- Descrizione generico algortimo top down memorizzato, funzionamento e complessità Maxheap, funzionamento e  complessità di un inserimento di un elemento in un Maxheap
+- Codici di Huffman, definizione albero binario di ricerca e complessità della ricerca in un albero binario di ricerca
+- Complessità di un problema, quale tra gli esercizi di programmazione dinamica svolti a lezione non si risolveva solo risolvendo sottoproblemi (risposta: il LIS )
+- Definizione e vantaggi memoizzazione, complessità e funzionamento dell'inserimento in un min heap
+- Radix sort, quick sort, complessità di 2 funzioni, complessità del LCS
+- Codice prefisso, Radix Sort, Heap Sort, Lower Bound di complessità di un problema, con esempio sugli algoritmi di sorting (ha voluto sapere che il lowerbound n*log(n) si applica solo agli algoritmi che usano il confronto tra elementi; non sapevo ne esistessero altri), Numero di sottosequenze e sottostringhe di una stringa, in modo esatto e asintotico
+- Confronto tra varie funzioni, algoritmo di dinamica del compito memoizzato, vantaggio algoritmi memoizzati rispetto agli iterativi
+- Limite inferiore, limite superiore, heap e la scansione del riempimento della tabella di LCS
+- Differenza tra approccio top-down e bottom-up per programmazione dinamica. Vantaggi e svantaggi di entrambi.

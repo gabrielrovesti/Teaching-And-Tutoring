@@ -1,0 +1,15 @@
+È richiesto spiegare l'idea di base e motivare perché è corretto, come riportato anche nelle note.
+All'esame non è che voglia una prova di correttezza fatta per bene formalmente, 
+ma che gli faccia capire la tua idea. (nel mio caso è bastato anche solo un invariante poche righe)
+
+In linea di massima:
+iterativamente, si individui:
+- precondizioni
+- invariante
+- passo induttivo
+- postcondizioni
+
+Ricorsivamente, si individui:
+- precondizioni
+- ipotesi induttiva
+- postcondizioni

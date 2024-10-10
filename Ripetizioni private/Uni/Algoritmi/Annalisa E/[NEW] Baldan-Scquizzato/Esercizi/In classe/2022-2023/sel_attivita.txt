@@ -1,0 +1,4 @@
+
+Si consideri un insieme di 6 attivita' a_i, caratterizzate dai seguenti vettori s e f di tempi di inizio e fine: s = (2,1,2,3,4,7) e f = (4,4,6,11,12,13). Determinare l'insieme delle attivita' compatibili selezionate dall'algoritmo greedy GREEDY_SEL.
+
+{a_1, a_5}
