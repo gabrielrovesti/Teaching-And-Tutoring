@@ -1,8 +1,0 @@
-header();   <-- refresh della pagina automatico
-       |
-       |
-       |
-  dovrò passere l'url della pagina che intendo caricare al termine del refresh
-
-    location    <-- specifica dopo quanti secondi
-    url         <-- specifica che cosa visualizzare

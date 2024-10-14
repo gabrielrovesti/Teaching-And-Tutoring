@@ -1,0 +1,11 @@
+1-
+    Inserire un valore numerico (acquisire mediante form) 
+    e visualizzarne il fattoriale.
+
+
+    5     output 120
+    5*4*3*2
+    1 è il valore neutro del prodotto
+    il fattoriale di 0 per convenione è 1.
+
+    
