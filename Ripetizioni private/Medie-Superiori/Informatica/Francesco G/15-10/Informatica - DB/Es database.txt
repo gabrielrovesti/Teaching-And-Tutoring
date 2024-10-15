@@ -1,0 +1,43 @@
+Esercizio su Data-base relazionali.
+
+Proprietario
+   ( Idpro, Nome, Cognome, DataN, Indirizzo, Telefono )
+
+Auto
+   ( Targa, Marca, Modello, Colore, Cilindrata, Potenza, *Idpro )
+
+
+Fase di creazione delle entità e scelta della tipologia degli attributi
+
+CREATE TABLE Proprietario( 
+	Idpro	 	INT AUTO_INCREMENT PRIMARY KEY, <--ATTRIBUTI UNIVOCO 
+	Nome	     	VARCHAR(50) NOT NULL, 
+	Cognome		VARCHAR(50) NOT NULL, 
+	DataN		DATE NOT NULL, 
+	Indirizzo	VARCHAR(50) NOT NULL, 
+	Telefono 	VARCHAR(50) <-- per non perdere il + o i valori 00 iniziali
+);
+
+
+CREATE TABLE Auto( 
+	Targa		VARCHAR(7) PRIMARY KEY NOT NULL, 
+	Marca		VARCHAR(50) NOT NULL, 	
+	Modello		VARCHAR(50) NOT NULL, 
+	Colore		VARCHAR(50) NOT NULL, 
+	Cilindrata	INT NOT NULL, 
+	Potenza		INT NOT NULL, 
+	Idpro		INT,
+	FOREIGN KEY (Idpro) REFERENCES Proprietario (Idpro)  <-- comando che mi permette di rendere Idpro chiave esterna
+);
+
+
+RELAZIONI TRA Entità	
+
+Ogni volta si renda necessario instaurare ina relazione tra entità si devono coinvolgere gli attributi di chiave.
+Per instaurare una relazione di tipo 1 a molti il collegamento deve avvenire dall'attributo di chiave primaria in PROPRIETARIO verso l'attributo reso chiave esterna in AUTO.
+APLLICO quindi L'INTEGRITà REFERENZIALE DEI DATI.
+Quindi la PRIMARY KEY e la FOREIGN KEY devono necessariamente essere create dello stesso tipo (in questo caso es: INT),
+per quanto riguarda il nome dell'attributo le due chiavi possono anche non avere lo stesso nome.
+
+
+

@@ -1,0 +1,18 @@
+Tipologia di estrazione DATI
+|
+|
+|_ SELECT (interrogazione o QUERY di selezione)
+
+di base il funzionamento è quello di selezionare le informazioni da 
+visuallizzare dopo aver interrogato il databese.
+
+SELECT  attributi da visualizzare
+FROM    da dove visualizzo gli attributi;
+
+COMANDO DISTINCT 
+            |
+            |--> mi permette di eliminare dall'estrazione evenutali valori doppi o multipli
+
+
+SELECT  DISTINCT attributi da visualizzare
+FROM    da dove visualizzo gli attributi;
