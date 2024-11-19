@@ -1,0 +1,67 @@
+JOIN di Equivalenza
+
+L'istruzione JOIN mi permette di estrarre dati da più Entità
+
+Il JOIN di Equivalenza prevede sull'istruzione FROM l'elenco di tutte
+le Entità da cui intendo estrarre dati e l'uguaglianza delle chiavi 
+nell'istruzione WHERE (ATTENZIONE --> può dare come risultato accettato
+anche l'insieme vuoto).
+
+Esercizio:
+
+Proprietario
+   ( Idpro, Nome, Cognome, DataN, Indirizzo, Telefono )
+
+Auto
+   ( Targa, Marca, Modello, Colore, Cilindrata, Potenza, *Idpro )
+
+
+1- Visualizzare tutti i dati delle auto possedute da Tommaso.
+
+	SELECT	Auto.*
+	FROM	Proprietario, Auto
+	WHERE	Proprietario.Idpro=Auto.Idpro
+	AND	ProPrietario.Nome="Tommaso";
+
+
+N.B.
+    --> Quando di estraggono dati da più entità è necessario
+specificare per l'attributo da visualizzare l'entità da cui proviene.
+
+    --> Utilizzando le istruzioni di JOIN si rende necessario
+rispettare l'ordine di creazione delle entità per prelevare i dati.
+
+	si creano in primis le entità che contengono solo chiavi 	primarie;
+	
+	successivamente creo le entità che contengono chiavi primarie
+	e chiavi esterne
+
+	per ultime provvedi a creare le entità di sola relazione
+
+
+2- Visualizzare quante auto possiede Riccardo.
+
+	SELECT	COUNT(Targa) AS Nauto
+   a)   FROM	Proprietario, Auto
+	WHERE	Proprietario.Idpro=Auto.Idpro
+	AND	Nome="Riccardo";
+
+	SELECT	COUNT(Auto.Targa) AS Nauto
+   b)   FROM	Proprietario, Auto
+	WHERE	Proprietario.Idpro=Auto.Idpro
+	AND	Nome="Riccardo";
+
+3- Visualizzare il numero di auto possedute da persone nate negli
+anni 2000.
+	
+	SELECT	COUNT(Auto.*)
+	FROM	Proprietario, Auto
+	WHERE	Proprietario.Idpro=Auto.Idpro
+	AND	YEAR(Proprietario.DataN)=2000;
+
+
+
+
+
+
+

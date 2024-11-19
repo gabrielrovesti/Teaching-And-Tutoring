@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<p:FatturaElettronica versione="FPR12" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:p="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2 http://www.fatturapa.gov.it/export/fatturazione/sdi/fatturapa/v1.2/Schema_del_file_xml_FatturaPA_versione_1.2.xsd">
+<FatturaElettronicaHeader>
+<DatiTrasmissione>
+<IdTrasmittente>
+<IdPaese>IT</IdPaese>
+<IdCodice>00000000000</IdCodice>
+</IdTrasmittente>
+<ProgressivoInvio>00000</ProgressivoInvio>
+<FormatoTrasmissione>FPR12</FormatoTrasmissione>
+<CodiceDestinatario>0000000</CodiceDestinatario>
+</DatiTrasmissione>
+<CedentePrestatore>
+<DatiAnagrafici>
+<IdFiscaleIVA>
+<IdPaese>IT</IdPaese>
+<IdCodice>00000000000</IdCodice>
+</IdFiscaleIVA>
+<Anagrafica>
+<Denominazione>SOCIETA snc</Denominazione>
+</Anagrafica>
+<RegimeFiscale>RF01</RegimeFiscale>
+</DatiAnagrafici>
+<Sede>
+<Indirizzo>VIA ...</Indirizzo>
+<CAP>35100</CAP>
+<Comune>Alba</Comune>
+<Provincia>PD</Provincia>
+<Nazione>IT</Nazione>
+</Sede>
+</CedentePrestatore>
+<CessionarioCommittente>
+<DatiAnagrafici>
+<CodiceFiscale>00000000000</CodiceFiscale>
+<Anagrafica>
+<Denominazione>CONDOMINIO ...</Denominazione>
+</Anagrafica>
+</DatiAnagrafici>
+<Sede>
+<Indirizzo>VIA ...</Indirizzo>
+<CAP>35100</CAP>
+<Comune>PADOVA</Comune>
+<Provincia>PD</Provincia>
+<Nazione>IT</Nazione>
+</Sede>
+</CessionarioCommittente>
+</FatturaElettronicaHeader>
+<FatturaElettronicaBody>
+<DatiGenerali>
+<DatiGeneraliDocumento>
+<TipoDocumento>TD01</TipoDocumento>
+<Divisa>EUR</Divisa>
+<Data>2023-01-01</Data>
+<Numero>00</Numero>
+</DatiGeneraliDocumento>
+</DatiGenerali>
+<DatiBeniServizi>
+<DettaglioLinee>
+<NumeroLinea>1</NumeroLinea>
+<Descrizione>compenso amministrazione</Descrizione>
+<Quantita>1.00</Quantita>
+<PrezzoUnitario>1500.00</PrezzoUnitario>
+<PrezzoTotale>1500.00</PrezzoTotale>
+<AliquotaIVA>22.00</AliquotaIVA>
+</DettaglioLinee>
+<DettaglioLinee>
+<NumeroLinea>2</NumeroLinea>
+<Descrizione>competenze di studio per corrispondenza, fotocopie,pratiche.</Descrizione>
+<Quantita>1.00</Quantita>
+<PrezzoUnitario>1150.00</PrezzoUnitario>
+<PrezzoTotale>1150.00</PrezzoTotale>
+<AliquotaIVA>22.00</AliquotaIVA>
+</DettaglioLinee>
+<DatiRiepilogo>
+<AliquotaIVA>22.00</AliquotaIVA>
+<ImponibileImporto>2650.00</ImponibileImporto>
+<Imposta>583.00</Imposta>
+<EsigibilitaIVA>I</EsigibilitaIVA>
+</DatiRiepilogo>
+</DatiBeniServizi>
+<DatiPagamento>
+<CondizioniPagamento>TP02</CondizioniPagamento>
+<DettaglioPagamento>
+<ModalitaPagamento>MP05</ModalitaPagamento>
+<ImportoPagamento>3233.00</ImportoPagamento>
+</DettaglioPagamento>
+</DatiPagamento>
+</FatturaElettronicaBody>
+</p:FatturaElettronica>
