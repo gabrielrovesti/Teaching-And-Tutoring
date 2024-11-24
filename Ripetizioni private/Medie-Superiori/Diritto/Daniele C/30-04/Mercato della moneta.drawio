@@ -1,0 +1,96 @@
+<mxfile host="app.diagrams.net" modified="2024-04-16T16:08:46.094Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" version="24.2.5" etag="SQcVC891ONcFfZUvJSpO" type="device">
+  <diagram id="RP71heT5GVkDMx9IZBLT" name="Pagina-1">
+    <mxGraphModel dx="878" dy="448" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TXRXIJyhyxK7D_WPwOaW-1" target="TXRXIJyhyxK7D_WPwOaW-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TXRXIJyhyxK7D_WPwOaW-1" target="TXRXIJyhyxK7D_WPwOaW-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TXRXIJyhyxK7D_WPwOaW-1" target="TXRXIJyhyxK7D_WPwOaW-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TXRXIJyhyxK7D_WPwOaW-1" target="TXRXIJyhyxK7D_WPwOaW-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-1" value="Moneta = mezzo di pagamento" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="TXRXIJyhyxK7D_WPwOaW-2" target="TXRXIJyhyxK7D_WPwOaW-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="TXRXIJyhyxK7D_WPwOaW-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="259.9999999999999" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-2" value="Monete metalliche e banconote = Circuito legale di creazione" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TXRXIJyhyxK7D_WPwOaW-4" target="TXRXIJyhyxK7D_WPwOaW-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-4" value="Moneta bancaria = Fa riferimento a un conto corrente&amp;nbsp;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-10" value="Valore nominale = valore &quot;scritto&quot; della moneta" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-14" value="Valore intrinseco = Valore reale della moneta" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TXRXIJyhyxK7D_WPwOaW-15" target="TXRXIJyhyxK7D_WPwOaW-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-15" value="Vantaggi: senza contanti e tracciabili dei microchip" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-17" value="Moneta commerciale = valore legale dato dal mercato e riconoscibile sempre&amp;nbsp;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="230" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-19" value="Esempi: Assegni (pagherò)/Tessere/Bancomat/Carta di credito" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="440" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-21" value="Criptovalue/Bitcoin = no autorità centrale che le emette = sistema distribuito" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="820" y="230" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="TXRXIJyhyxK7D_WPwOaW-23" target="TXRXIJyhyxK7D_WPwOaW-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="TXRXIJyhyxK7D_WPwOaW-23" target="TXRXIJyhyxK7D_WPwOaW-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-23" value="Funzioni monetarie" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="414" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-24" value="Misura di valore (quantitativa) di beni e servizi" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-26" value="Mezzo di pagamento e risorsa di valore" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TXRXIJyhyxK7D_WPwOaW-28" target="TXRXIJyhyxK7D_WPwOaW-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-28" value="Inflazione" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TXRXIJyhyxK7D_WPwOaW-29" target="TXRXIJyhyxK7D_WPwOaW-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-29" value="Deflazione" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-30" value="Aumento dei prezzi = &lt;br&gt;- diminuzione del potere d&#39;acquisto&lt;br&gt;- aumento dei costi&lt;br&gt;- eccesso di domanda&lt;br&gt;- controllo tramite autorità centrali (banche) per gestirla" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="255" y="870" width="150" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="TXRXIJyhyxK7D_WPwOaW-32" value="- Diminuzione generalizzata dei prezzi (o anche invariati)&lt;br&gt;- Indebolimento del sistema &lt;br&gt;economico&lt;br&gt;- Recessione e rallentamento&lt;br&gt;- Aumento del potere d&#39;acquisto" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="537.5" y="870" width="165" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
