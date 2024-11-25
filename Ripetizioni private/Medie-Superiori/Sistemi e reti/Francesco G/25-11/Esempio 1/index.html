@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Elenco Studenti data La classe</title>
+        <!-- Link al file css -->
+        <link rel="stylesheet" href="gfx.css" />
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <h1>Inserisci la classe</h1>
+        <br/>
+        <!-- Form (modulo) per inviare dati 
+        
+        "Action" = pagina a cui inviare i dati
+        "Method" = metodo di invio dei dati (GET o POST)
+        -->
+        <form action="lista.php" method="GET">
+            <input type="text" name="classe" required />
+            <!-- Bottone di invio con testo "Stampa"-->
+            <input type="submit" value="Stampa"/>
+        </form>
+    </body>
+</html>

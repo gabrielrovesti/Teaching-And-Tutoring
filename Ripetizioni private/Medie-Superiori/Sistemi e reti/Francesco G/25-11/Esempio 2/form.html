@@ -1,0 +1,20 @@
+<!DocType html>
+<html>
+    <head>
+        <title>Esercitaione con query e database</title> <!-- titolo della pagina -->
+        <link rel="stylesheet" href="graph.css"/> <!-- collegamento al file css -->
+    </head>
+    <body>
+       <h1>Estrazione dati</h1>
+       <br/>
+       <form action="estr.php" method="GET"> <!-- form per l'inserimento dei dati -->
+        <!-- Action = File da richiamare / Method = GET/POST-->
+            <input type="text" name="x" placeholder="inserisci nome" required/>
+            <input type="text" name="y" placeholder="inserisci cognome" required/>
+            <!-- Input testuali, usiamo name per prenderci i dati con PHP -->
+            <!-- Required = obbligatorio -->
+            <input type="submit" value="VISUALIZZA"/>    
+            <!-- Bottone per inviare i dati -->              
+       </form>
+    </body>
+</html>
