@@ -1,0 +1,7 @@
+Simplesso: 
+
+Per vincoli positivi
+http://reshmat.ru/simplex_method_lpp.html
+
+Anche per vincoli negativi:
+https://www.emathhelp.net/calculators/linear-programming/simplex-method-calculator/

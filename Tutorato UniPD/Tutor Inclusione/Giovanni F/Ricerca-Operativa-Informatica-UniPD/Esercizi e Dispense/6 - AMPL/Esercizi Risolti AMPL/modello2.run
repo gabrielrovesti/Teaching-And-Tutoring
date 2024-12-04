@@ -1,0 +1,6 @@
+reset;
+model modello2.mod;
+data modello2.dat;
+option solver cplex;
+solve;
+display ricavo, x;

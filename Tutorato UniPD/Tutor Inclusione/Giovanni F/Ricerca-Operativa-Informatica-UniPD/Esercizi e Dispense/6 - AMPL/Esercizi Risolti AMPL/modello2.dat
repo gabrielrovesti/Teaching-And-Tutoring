@@ -1,0 +1,12 @@
+#convertendo tutti pesi in Kg (grammi/tonnellate)
+
+set I := aranciata concentrato; #prodotti
+set J := acqua arance; #risorse
+
+param B := acqua 10000 arance 1000; #disponibilità risorse
+param R := aranciata 0.80 concentrato 2; #ricavi
+
+param A :	acqua	arance :=
+aranciata	2		0.5
+concentrato	0.5		5
+;

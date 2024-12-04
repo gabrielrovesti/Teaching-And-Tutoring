@@ -1,0 +1,14 @@
+set I := auto, moto, bicicletta, monopattino;
+set J := ruote, tubi, bulloni;
+
+param C := auto 5 moto 10 bicicletta 15 monopattino 20;
+param P := auto 10 moto 15 bicicletta 20 monopattino 25;
+param F := auto 7 moto 8 bicicletta 9 monopattino 10;
+param B := ruote 4 tubi 6 bulloni 8;
+param W := 100;
+param A : 		ruote		tubi		bulloni :=
+auto			1		2		3
+moto			4		5		6
+bicicletta		7		8		9
+monopattino 	10		11		12
+;

@@ -1,0 +1,12 @@
+Attori:
+Utente 
+
+Casi d'uso:
+UC1 - Navigazione file system
+UC2 - Ricerca prefisso tramite regex
+UC2.1 - Vis. lista prefissi espressione
+UC2.1.1 - Vis. nome
+UC2.1.2 - Vis. data ultimo accesso
+UC2.1.3 - Vis. data creazione
+UC3 - Selezione prefisso
+UC3.1 - Vis. contenuto prefisso
