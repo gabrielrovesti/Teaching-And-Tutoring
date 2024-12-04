@@ -1,7 +1,7 @@
 # Teaching and Tutoring
 
 ## Panoramica
-Repository contenente materiali didattici e risorse per l'insegnamento di Sistemi e Reti, strutturato per supportare sia la didattica istituzionale che il tutoraggio individuale presso diversi istituti.
+Repository contenente materiali didattici e risorse per l'insegnamento di tutti i corsi, ripetizioni ed insegnamenti vari, strutturato per supportare sia la didattica istituzionale che il tutoraggio individuale presso diversi istituti e diversi ragazzi.
 
 ## Struttura del Repository
 
