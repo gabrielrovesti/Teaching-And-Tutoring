@@ -1,0 +1,26 @@
+1.
+- Classe CartaDaGioco:
+     - Definisci una classe che rappresenti una singola carta. Ogni carta deve avere i seguenti attributi:
+       - Seme (ad esempio, "cuori", "picche").
+       - Nome (ad esempio, "asso", "due", "re").
+       - Valore numerico associato al nome della carta.
+     - Implementa metodi per confrontare i semi e i valori delle carte
+ 
+   - Classe Mazzo:
+     - Crea una classe per rappresentare un mazzo di 52 carte. Il mazzo deve essere un array di oggetti CartaDaGioco.
+     - Implementa un metodo per preparare il mazzo popolandolo con tutte le combinazioni di semi e valori.
+     - Fornisci metodi per mescolare il mazzo, pescare la prima carta o una carta casuale, e rappresentare il mazzo come stringa.
+ 
+2. 
+   - Classe GiocoCarte:
+     - Simula un gioco tra due giocatori che pescano carte da due mazzi separati.
+     - Le carte pescate vengono confrontate per:
+       - Seme: stabilire quale carta ha il seme di valore maggiore.
+       - Valore: stabilire quale carta ha il valore numerico maggiore in caso di semi uguali.
+       - Pareggi: contare i casi in cui le carte sono identiche per seme e valore.
+     - Implementa una logica per calcolare e visualizzare i punteggi di entrambi i giocatori e determinare il vincitore.
+ 
+3. Requisiti aggiuntivi
+   - La classe Mazzo deve gestire correttamente l'aggiornamento dell'array dopo la pesca di una carta.
+   - Implementa un sistema per mescolare le carte in modo casuale.
+   - Fornisci un resoconto completo del gioco, mostrando quante carte sono state pescate e il risultato finale.
