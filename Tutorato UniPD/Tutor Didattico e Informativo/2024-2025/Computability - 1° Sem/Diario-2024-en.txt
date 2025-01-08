@@ -93,12 +93,15 @@
     Second recursion theorem [§11.1, §11.2]
 
 22. 18/12/2024
-    Exercises
+    A typical exam: exercises
 
 Jan 2025
+
+23. 07/01/2025
+    Exercises
 
 24. 13/01/2025
     Exercises
 
 25. 14/01/2025
-    Exercises?
+    Exercises
