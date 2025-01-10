@@ -1,6 +1,0 @@
-reset;
-model modello3.mod;
-data modello4.dat;
-option solver cplex;
-solve;
-display costo, x;
