@@ -1,3 +1,5 @@
+*** 3D ***
+
 Corsini: 7
 Chirico: 6
 Tiengo: 5 1/2
@@ -8,6 +10,9 @@ Loriggiola: 5
 Cassanego: 7
 Nordio: 5
 Fanton: 4
+Coseru: 4 1/2
+
+*** 4D ***
 
 Coccato: 9
 Baldan: 7
@@ -25,3 +30,6 @@ Tasca: 5
 Rigattieri: 8
 Grassetto: 8
 Pizzinato: 9 1/2
+Gallinaro: 5
+
+Missing: Canevarolo, Serban
