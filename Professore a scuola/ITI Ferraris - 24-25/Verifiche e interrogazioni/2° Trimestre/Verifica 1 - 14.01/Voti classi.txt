@@ -31,5 +31,6 @@ Rigattieri: 8
 Grassetto: 8
 Pizzinato: 9 1/2
 Gallinaro: 5
+Serban: 7 1/2
 
-Missing: Canevarolo, Serban
+Missing: Canevarolo
