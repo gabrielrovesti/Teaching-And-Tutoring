@@ -50,22 +50,16 @@ end
 
 %% File: DLP2.m
 function dlp = DLP2(x, d)
-    % Function per calcolare i punti di Leja usando la fattorizzazione LU
-    % Input:
-    %   x: vettore dei punti nell'intervallo [-1,1]
-    %   d: grado del polinomio (output sarà d+1 punti)
-    % Output:
-    %   dlp: vettore dei d+1 punti di Leja approssimati
-    
     % Costruzione matrice di Vandermonde con base Chebyshev
     V = build_chebyshev_vandermonde(x, d);
     
     % Fattorizzazione LU con pivoting
-    [~, ~, P] = lu(V);
+    [~, ~, P] = lu(V, 'vector');
     
     % Estrazione dei punti di Leja
     dlp = x(P(1:d+1));
 end
+
 
 %% File: leb_con.m
 function L = leb_con(z, x)
