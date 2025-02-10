@@ -1,0 +1,57 @@
+** MOD **
+
+### Insiemi ###
+
+set I; # fornitori
+set J; # materie prime
+set K; # prodotti
+
+### Parametri e variabili ###
+
+param P{K};
+param C{I, J};
+param Q{J, K};
+param F{I};
+param M{I};
+param B;
+
+var x{K} integer >=0; # testo diceva x_k \in Z_+
+var z{I} binary;
+var y{I, J} >=0; # reale
+
+### Vincoli e f.o. ###
+
+maximize obj: sum{k in K} P[k] * x[k];
+
+s.t. v1{i in I, j in J}: C[i, j] * y[i, j] + sum{i in I} F[i] * z[i] <= B; # v1 = vincolo 1
+
+s.t. v2{j in J}: sum{i in I} y[i, j] >= sum{k in K} Q[j, k] * x[k};
+
+s.t. v3{i in I}: sum{j in J}: y[i, j] <= M[i] * z[i];
+ 
+
+** DAT **
+
+set I := forn1 forn2 forn3;
+set J := mat1 mat2;
+set K := prod1 prod2 prod3;
+
+param P := prod1 10 prod2 20 prod3 30;
+param F := forn1 100 forn2 200 forn3 300;
+param B := 5000;
+param M := forn1 20 forn2 30 forn3 30;
+
+param C: mat1	mat2
+forn1	10	20
+forn2	20	30
+forn3	30	40
+;
+
+** RUN **
+
+reset;
+option solver cplex;
+model model.mod;
+data data.dat;
+run;
+display obj, x, c, v1, v2, v3;
