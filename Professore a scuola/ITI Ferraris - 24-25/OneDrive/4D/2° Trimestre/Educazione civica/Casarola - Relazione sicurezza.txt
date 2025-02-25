@@ -1,5 +1,6 @@
 Ricerca & Analisi Completa dei Temi di Cybersecurity e Intelligenza Artificiale 
 
+
 1)Attacchi Informatici e Social Engineering  
 
 Introduzione al tema  
@@ -172,7 +173,7 @@ Domande di discussione
 	2. Quali garanzie tecniche possono prevenire l'abuso di backdoor criptografiche?  
 	3. Come proteggere i sistemi crittografici da attacchi fisici e quantistici?  
 
-7)Minacce Informatiche Avanzate (APT, Ransomware)  
+7) Minacce Informatiche Avanzate (APT, Ransomware)  
 
 Introduzione al tema  
 	Le Advanced Persistent Threat (APT) e gli attacchi ransomware rappresentano la frontiera più pericolosa della cyberwarfare moderna. La convergenza tra gruppi criminali e attori 	statali crea scenari ibridi di difficile attribuzione e contrasto.  
