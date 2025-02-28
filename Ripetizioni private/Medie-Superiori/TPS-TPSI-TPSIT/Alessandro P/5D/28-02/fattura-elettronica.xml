@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:FatturaElettronica versione="FPR12" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:p="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2 http://www.fatturapa.gov.it/export/fatturazione/sdi/fatturapa/v1.2/Schema_del_file_xml_FatturaPA_versione_1.2.xsd" SistemaEmittente="Software">
+
+	<FatturaElettronicaHeader>
+		<DatiTrasmissione>
+			<IdTrasmittente>
+				<IdPaese>IT</IdPaese>
+				<IdCodice>RSSMRA80A01H501U</IdCodice>
+			</IdTrasmittente>
+			<ProgressivoInvio>00001</ProgressivoInvio>
+			<FormatoTrasmissione>FPR12</FormatoTrasmissione>
+			<CodiceDestinatario>0000000</CodiceDestinatario>
+			<ContattiTrasmittente>
+				<Telefono>06123456</Telefono>
+				<Email>info@artauction.it</Email>
+			</ContattiTrasmittente>
+		</DatiTrasmissione>
+		
+		<CedentePrestatore>
+			<DatiAnagrafici>
+				<IdFiscaleIVA>
+					<IdPaese>IT</IdPaese>
+					<IdCodice>01234567890</IdCodice>
+				</IdFiscaleIVA>
+				<CodiceFiscale>RSSMRA80A01H501U</CodiceFiscale>
+				<Anagrafica>
+					<Denominazione>Arte Antica - Casa d'Aste</Denominazione>
+				</Anagrafica>
+				<RegimeFiscale>RF15</RegimeFiscale>
+			</DatiAnagrafici>
+			<Sede>
+				<Indirizzo>Via delle Aste</Indirizzo>
+				<NumeroCivico>123</NumeroCivico>
+				<CAP>00100</CAP>
+				<Comune>Roma</Comune>
+				<Provincia>RM</Provincia>
+				<Nazione>IT</Nazione>
+			</Sede>
+			<Contatti>
+				<Telefono>06123456</Telefono>
+				<Email>amministrazione@artauction.it</Email>
+			</Contatti>
+		</CedentePrestatore>
+		
+		<CessionarioCommittente>
+			<DatiAnagrafici>
+				<IdFiscaleIVA>
+					<IdPaese>IT</IdPaese>
+					<IdCodice>09876543210</IdCodice>
+				</IdFiscaleIVA>
+				<Anagrafica>
+					<Nome>Mario</Nome>
+					<Cognome>Rossi</Cognome>
+				</Anagrafica>
+			</DatiAnagrafici>
+			<Sede>
+				<Indirizzo>Via dei Collezionisti</Indirizzo>
+				<NumeroCivico>42</NumeroCivico>
+				<CAP>20100</CAP>
+				<Comune>Milano</Comune>
+				<Provincia>MI</Provincia>
+				<Nazione>IT</Nazione>
+			</Sede>
+		</CessionarioCommittente>
+	</FatturaElettronicaHeader>
+
+	<FatturaElettronicaBody>
+		<DatiGenerali>
+			<DatiGeneraliDocumento>
+				<TipoDocumento>TD01</TipoDocumento>
+				<Divisa>EUR</Divisa>
+				<Data>2025-02-15</Data>
+				<Numero>FATTURA/2025/001</Numero>
+				<ImportoTotaleDocumento>12200.00</ImportoTotaleDocumento>
+				<Causale>Cessione di oggetti d'arte tramite asta pubblica</Causale>
+			</DatiGeneraliDocumento>
+		</DatiGenerali>
+		
+		<DatiBeniServizi>
+			<DettaglioLinee>
+				<NumeroLinea>1</NumeroLinea>
+				<CodiceArticolo>
+					<CodiceTipo>INTERNO</CodiceTipo>
+					<CodiceValore>DIP-OL-001</CodiceValore>
+				</CodiceArticolo>
+				<Descrizione>Dipinto olio su tela "Natura morta" - XVIII secolo</Descrizione>
+				<Quantita>1.00</Quantita>
+				<UnitaMisura>PZ</UnitaMisura>
+				<PrezzoUnitario>8000.00</PrezzoUnitario>
+				<PrezzoTotale>8000.00</PrezzoTotale>
+				<AliquotaIVA>22.00</AliquotaIVA>
+				<AltriDatiGestionali>
+					<TipoDato>PROVARTE</TipoDato>
+					<RiferimentoTesto>Lotto n. 15 - Catalogo Primavera 2025</RiferimentoTesto>
+				</AltriDatiGestionali>
+			</DettaglioLinee>
+			<DettaglioLinee>
+				<NumeroLinea>2</NumeroLinea>
+				<CodiceArticolo>
+					<CodiceTipo>INTERNO</CodiceTipo>
+					<CodiceValore>SCU-BR-002</CodiceValore>
+				</CodiceArticolo>
+				<Descrizione>Scultura in bronzo "Figura femminile" - XIX secolo</Descrizione>
+				<Quantita>1.00</Quantita>
+				<UnitaMisura>PZ</UnitaMisura>
+				<PrezzoUnitario>2000.00</PrezzoUnitario>
+				<PrezzoTotale>2000.00</PrezzoTotale>
+				<AliquotaIVA>22.00</AliquotaIVA>
+				<AltriDatiGestionali>
+					<TipoDato>PROVARTE</TipoDato>
+					<RiferimentoTesto>Lotto n. 23 - Catalogo Primavera 2025</RiferimentoTesto>
+				</AltriDatiGestionali>
+			</DettaglioLinee>
+			<DatiRiepilogo>
+				<AliquotaIVA>22.00</AliquotaIVA>
+				<ImponibileImporto>10000.00</ImponibileImporto>
+				<Imposta>2200.00</Imposta>
+				<EsigibilitaIVA>I</EsigibilitaIVA>
+				<RiferimentoNormativo>Art. 40-bis DL 41/95 - Agenzie di vendita all'asta</RiferimentoNormativo>
+			</DatiRiepilogo>
+		</DatiBeniServizi>
+		
+		<DatiPagamento>
+			<CondizioniPagamento>TP02</CondizioniPagamento>
+			<DettaglioPagamento>
+				<ModalitaPagamento>MP05</ModalitaPagamento>
+				<DataScadenzaPagamento>2025-03-15</DataScadenzaPagamento>
+				<ImportoPagamento>12200.00</ImportoPagamento>
+				<IstitutoFinanziario>Banca Nazionale dell'Arte</IstitutoFinanziario>
+				<IBAN>IT60X0542811101000000123456</IBAN>
+			</DettaglioPagamento>
+		</DatiPagamento>
+	</FatturaElettronicaBody>
+
+</p:FatturaElettronica>
