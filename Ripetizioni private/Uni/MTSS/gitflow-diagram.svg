@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Righe di sfondo per separare i livelli -->
+  <rect x="0" y="0" width="900" height="100" fill="#f0f0f0" />
+  <rect x="0" y="100" width="900" height="100" fill="#e8e8e8" />
+  <rect x="0" y="200" width="900" height="100" fill="#f0f0f0" />
+  <rect x="0" y="300" width="900" height="300" fill="#e8e8e8" />
+  
+  <!-- Titoli delle sezioni -->
+  <text x="30" y="50" font-family="Arial" font-size="16" font-weight="bold">master</text>
+  <text x="30" y="150" font-family="Arial" font-size="16" font-weight="bold">release</text>
+  <text x="30" y="250" font-family="Arial" font-size="16" font-weight="bold">develop</text>
+  <text x="30" y="350" font-family="Arial" font-size="16" font-weight="bold">features</text>
+  
+  <!-- Linea master -->
+  <line x1="150" y1="50" x2="750" y2="50" stroke="#333" stroke-width="2" />
+  <circle cx="150" cy="50" r="10" fill="#3465a4" stroke="#204a87" stroke-width="2" />
+  <circle cx="600" cy="50" r="10" fill="#3465a4" stroke="#204a87" stroke-width="2" />
+  
+  <!-- Linea release -->
+  <line x1="400" y1="150" x2="550" y2="150" stroke="#333" stroke-width="2" />
+  <circle cx="400" cy="150" r="10" fill="#73d216" stroke="#4e9a06" stroke-width="2" />
+  <circle cx="475" cy="150" r="10" fill="#73d216" stroke="#4e9a06" stroke-width="2" />
+  <circle cx="550" cy="150" r="10" fill="#73d216" stroke="#4e9a06" stroke-width="2" />
+  <text x="470" y="135" font-family="Arial" font-size="12">v1.0</text>
+  
+  <line x1="730" y1="150" x2="830" y2="150" stroke="#333" stroke-width="2" />
+  <circle cx="730" cy="150" r="10" fill="#73d216" stroke="#4e9a06" stroke-width="2" />
+  <circle cx="830" cy="150" r="10" fill="#73d216" stroke="#4e9a06" stroke-width="2" />
+  <text x="770" y="135" font-family="Arial" font-size="12">v2.0</text>
+  
+  <!-- Linea develop -->
+  <line x1="150" y1="250" x2="850" y2="250" stroke="#333" stroke-width="2" />
+  <circle cx="150" cy="250" r="10" fill="#edd400" stroke="#c4a000" stroke-width="2" />
+  <circle cx="250" cy="250" r="10" fill="#edd400" stroke="#c4a000" stroke-width="2" />
+  <circle cx="330" cy="250" r="10" fill="#edd400" stroke="#c4a000" stroke-width="2" />
+  <circle cx="400" cy="250" r="10" fill="#edd400" stroke="#c4a000" stroke-width="2" />
+  <circle cx="550" cy="250" r="10" fill="#edd400" stroke="#c4a000" stroke-width="2" />
+  <circle cx="650" cy="250" r="10" fill="#edd400" stroke="#c4a000" stroke-width="2" />
+  <circle cx="730" cy="250" r="10" fill="#edd400" stroke="#c4a000" stroke-width="2" />
+  <circle cx="850" cy="250" r="10" fill="#edd400" stroke="#c4a000" stroke-width="2" />
+  
+  <!-- Feature branches -->
+  <!-- Feature 1 -->
+  <path d="M 150,250 Q 170,320 200,380" stroke="#333" stroke-width="2" fill="none" />
+  <circle cx="200" cy="380" r="20" fill="#75507b" stroke="#5c3566" stroke-width="2" />
+  <text x="195" y="385" font-family="Arial" font-size="16" fill="white">1</text>
+  <path d="M 200,380 Q 230,320 250,250" stroke="#333" stroke-width="2" fill="none" />
+  
+  <!-- Feature 2 -->
+  <path d="M 250,250 Q 270,340 300,420" stroke="#333" stroke-width="2" fill="none" />
+  <circle cx="300" cy="420" r="20" fill="#75507b" stroke="#5c3566" stroke-width="2" />
+  <text x="295" y="425" font-family="Arial" font-size="16" fill="white">2</text>
+  <path d="M 300,420 Q 320,340 330,250" stroke="#333" stroke-width="2" fill="none" />
+  
+  <!-- Feature 3 -->
+  <path d="M 250,250 Q 270,380 350,480" stroke="#333" stroke-width="2" fill="none" />
+  <circle cx="350" cy="480" r="20" fill="#75507b" stroke="#5c3566" stroke-width="2" />
+  <text x="345" y="485" font-family="Arial" font-size="16" fill="white">3</text>
+  <path d="M 350,480 Q 380,380 400,250" stroke="#333" stroke-width="2" fill="none" />
+  
+  <!-- Connessione release v1.0 -->
+  <path d="M 400,250 Q 400,200 400,150" stroke="#333" stroke-width="2" fill="none" />
+  <path d="M 550,150 Q 550,200 550,250" stroke="#333" stroke-width="2" fill="none" />
+  <path d="M 550,150 Q 575,100 600,50" stroke="#333" stroke-width="2" fill="none" />
+  
+  <!-- Feature 4 -->
+  <path d="M 550,250 Q 570,320 600,380" stroke="#333" stroke-width="2" fill="none" />
+  <circle cx="600" cy="380" r="20" fill="#75507b" stroke="#5c3566" stroke-width="2" />
+  <text x="595" y="385" font-family="Arial" font-size="16" fill="white">4</text>
+  <path d="M 600,380 Q 630,320 650,250" stroke="#333" stroke-width="2" fill="none" />
+  
+  <!-- Feature 5 -->
+  <path d="M 650,250 Q 670,340 700,420" stroke="#333" stroke-width="2" fill="none" />
+  <circle cx="700" cy="420" r="20" fill="#75507b" stroke="#5c3566" stroke-width="2" />
+  <text x="695" y="425" font-family="Arial" font-size="16" fill="white">5</text>
+  <path d="M 700,420 Q 720,340 730,250" stroke="#333" stroke-width="2" fill="none" />
+  
+  <!-- Feature 6 -->
+  <path d="M 730,250 Q 750,340 780,420" stroke="#333" stroke-width="2" fill="none" />
+  <circle cx="780" cy="420" r="20" fill="#75507b" stroke="#5c3566" stroke-width="2" />
+  <text x="775" y="425" font-family="Arial" font-size="16" fill="white">6</text>
+  <path d="M 780,420 Q 810,340 830,250" stroke="#333" stroke-width="2" fill="none" />
+  
+  <!-- Feature 7 -->
+  <path d="M 730,250 Q 750,380 830,480" stroke="#333" stroke-width="2" fill="none" />
+  <circle cx="830" cy="480" r="20" fill="#75507b" stroke="#5c3566" stroke-width="2" />
+  <text x="825" y="485" font-family="Arial" font-size="16" fill="white">7</text>
+  <path d="M 830,480 Q 850,380 850,250" stroke="#333" stroke-width="2" fill="none" />
+  
+  <!-- Connessione release v2.0 -->
+  <path d="M 730,250 Q 730,200 730,150" stroke="#333" stroke-width="2" fill="none" />
+  
+  <!-- Legenda -->
+  <rect x="700" y="520" width="180" height="70" fill="white" stroke="#333" stroke-width="1" />
+  <text x="710" y="540" font-family="Arial" font-size="14" font-weight="bold">Legenda:</text>
+  <circle cx="720" cy="560" r="10" fill="#3465a4" stroke="#204a87" stroke-width="2" />
+  <text x="740" y="565" font-family="Arial" font-size="12">master</text>
+  <circle cx="720" cy="580" r="10" fill="#73d216" stroke="#4e9a06" stroke-width="2" />
+  <text x="740" y="585" font-family="Arial" font-size="12">release</text>
+  <circle cx="800" cy="560" r="10" fill="#edd400" stroke="#c4a000" stroke-width="2" />
+  <text x="820" y="565" font-family="Arial" font-size="12">develop</text>
+  <circle cx="800" cy="580" r="10" fill="#75507b" stroke="#5c3566" stroke-width="2" />
+  <text x="820" y="585" font-family="Arial" font-size="12">feature</text>
+</svg>
