@@ -1,0 +1,43 @@
+<!DocType html>
+<html lang="it">
+    <head>
+        <title>Pagina di Accesso</title>
+        <link rel="stylesheet" href="f.stile" />
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <h2>Form di accesso</h2>
+        <br/>
+        <table>
+            <tr>    
+                <td colspan="2">Inserisci i parametri di accesso</td>
+            </tr>
+        <form action="auth.php" method="POST">
+            <tr>
+                <td>Username:</td><td>&nbsp;</td>    
+            </tr>
+            <tr>
+                <td colspan="2">
+            <input type="email" name="usr" required />
+                </td>   
+            </tr>
+            <tr>
+                <td>Password:</td><td>&nbsp;</td>    
+            </tr>
+            <tr>
+                <td colspan="2">
+            <input type="password" name="aut" required />   
+                </td>   
+            </tr>
+            <tr>
+                <td>
+            <input type="submit" value="ACCEDI" />
+                </td>
+                <td>
+            <input type="reset" value="clear data" />
+                </td>
+            </tr>
+        </form>
+        </table>
+    </body>
+</html>
