@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- Codifica  di tipo xml-->
+<?xml-stylesheet type="text/css" href="Libri.css"?>
+<catalogo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Libri.xsd">
+  
+  <libro id="libro1">
+    <titolo>Clean Code: A Handbook of Agile Software Craftsmanship</titolo>
+    <edizione>Prima Edizione</edizione>
+    <autori>
+      <autore>
+        <nome>Robert</nome>
+        <cognome>Martin</cognome>
+      </autore>
+    </autori>
+    <isbn>9780132350884</isbn>
+    <casaEditrice>Prentice Hall</casaEditrice>
+    <anno>2008</anno>
+    <scontistica>
+      <sconto>15</sconto>
+      <dataInizio>2025-03-01</dataInizio>
+      <dataFine>2025-05-31</dataFine>
+    </scontistica>
+    <disponibilita>42</disponibilita>
+    <categoria>Informatica</categoria>
+    <numeroPagine>464</numeroPagine>
+    <lingua>Inglese</lingua>
+  </libro>
+  
+  <libro id="libro2">
+    <titolo>Design Patterns: Elements of Reusable Object-Oriented Software</titolo>
+    <edizione>Prima Edizione</edizione>
+    <autori>
+      <autore>
+        <nome>Erich</nome>
+        <cognome>Gamma</cognome>
+      </autore>
+      <autore>
+        <nome>Richard</nome>
+        <cognome>Helm</cognome>
+      </autore>
+      <autore>
+        <nome>Ralph</nome>
+        <cognome>Johnson</cognome>
+      </autore>
+      <autore>
+        <nome>John</nome>
+        <cognome>Vlissides</cognome>
+      </autore>
+    </autori>
+    <isbn>9780201633610</isbn>
+    <isbn>0201633612</isbn>
+    <casaEditrice>Addison-Wesley Professional</casaEditrice>
+    <anno>1994</anno>
+    <disponibilita>25</disponibilita>
+    <categoria>Informatica</categoria>
+    <numeroPagine>416</numeroPagine>
+    <lingua>Inglese</lingua>
+  </libro>
+  
+  <libro id="libro3">
+    <titolo>Il problema dei tre corpi</titolo>
+    <edizione>Edizione italiana</edizione>
+    <autori>
+      <autore>
+        <nome>Cixin</nome>
+        <cognome>Liu</cognome>
+      </autore>
+    </autori>
+    <isbn>9788804732693</isbn>
+    <casaEditrice>Mondadori</casaEditrice>
+    <anno>2017</anno>
+    <scontistica>
+      <sconto>20</sconto>
+      <dataInizio>2025-04-01</dataInizio>
+      <dataFine>2025-04-15</dataFine>
+    </scontistica>
+    <disponibilita>18</disponibilita>
+    <categoria>Fantascienza</categoria>
+    <numeroPagine>384</numeroPagine>
+    <lingua>Italiano</lingua>
+  </libro>
+  
+</catalogo>

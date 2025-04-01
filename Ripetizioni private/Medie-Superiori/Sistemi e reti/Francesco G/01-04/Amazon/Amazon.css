@@ -1,0 +1,316 @@
+ordini {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  display: block;
+  background-color: #f3f3f3;
+  padding: 15px;
+}
+
+ordine {
+  display: block;
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}
+
+numeroOrdine {
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  color: #232f3e;
+  margin-bottom: 10px;
+}
+
+numeroOrdine::before {
+  content: "Numero ordine: ";
+  color: #555;
+}
+
+dataOrdine {
+  display: block;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+dataOrdine::before {
+  content: "Data: ";
+  font-weight: bold;
+}
+
+cliente {
+  display: block;
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+cliente::before {
+  content: "Dati cliente";
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #232f3e;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 3px;
+}
+
+nome, cognome {
+  display: inline;
+}
+
+nome::after {
+  content: " ";
+}
+
+email {
+  display: block;
+  margin: 5px 0;
+  color: #0066c0;
+}
+
+telefono {
+  display: block;
+  margin: 5px 0;
+}
+
+telefono::before {
+  content: "Tel: ";
+  color: #555;
+}
+
+indirizzo {
+  display: block;
+  margin: 10px 0;
+}
+
+indirizzo::before {
+  content: "Indirizzo di spedizione:";
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+via, civico {
+  display: inline;
+}
+
+via::after {
+  content: ", ";
+}
+
+cap, citta, provincia {
+  display: inline;
+}
+
+cap::after, citta::after {
+  content: " ";
+}
+
+provincia::after {
+  content: ", ";
+}
+
+prodotti {
+  display: block;
+  margin: 15px 0;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+prodotti::before {
+  content: "Prodotti ordinati:";
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #232f3e;
+}
+
+prodotto {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+codiceProdotto {
+  display: block;
+  font-size: 12px;
+  color: #555;
+}
+
+nome[xmlns] {
+  display: block;
+  font-weight: bold;
+  color: #0066c0;
+  margin: 5px 0;
+}
+
+descrizione {
+  display: block;
+  font-style: italic;
+  color: #666;
+  margin: 5px 0;
+}
+
+quantita, prezzo {
+  display: inline-block;
+}
+
+quantita::before {
+  content: "Quantità: ";
+  font-weight: bold;
+}
+
+quantita::after {
+  content: " × ";
+}
+
+prezzo::before {
+  content: "€ ";
+}
+
+categoria {
+  display: inline-block;
+  background-color: #f0f2f2;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+spedizione {
+  display: block;
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+spedizione::before {
+  content: "Informazioni spedizione";
+  display: block;
+  font-weight: bold;
+  color: #232f3e;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 3px;
+}
+
+metodo {
+  display: block;
+  margin: 5px 0;
+}
+
+metodo[xmlns]::before {
+  content: "Metodo: ";
+  font-weight: bold;
+}
+
+costo {
+  display: block;
+  margin: 5px 0;
+}
+
+costo::before {
+  content: "Costo: € ";
+  font-weight: bold;
+}
+
+dataConsegnaPrevista {
+  display: block;
+  margin: 5px 0;
+}
+
+dataConsegnaPrevista::before {
+  content: "Consegna prevista: ";
+  font-weight: bold;
+}
+
+corriere {
+  display: block;
+  margin: 5px 0;
+}
+
+corriere::before {
+  content: "Corriere: ";
+  font-weight: bold;
+}
+
+codiceTracciamento {
+  display: block;
+  font-family: monospace;
+  margin: 5px 0;
+}
+
+codiceTracciamento::before {
+  content: "Codice tracciamento: ";
+  font-weight: bold;
+}
+
+pagamento {
+  display: block;
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+pagamento::before {
+  content: "Dettagli pagamento";
+  display: block;
+  font-weight: bold;
+  color: #232f3e;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 3px;
+}
+
+metodo[xmlns=""] {
+  display: block;
+  margin: 5px 0;
+}
+
+metodo[xmlns=""]::before {
+  content: "Metodo: ";
+  font-weight: bold;
+}
+
+totale {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  color: #B12704;
+  margin: 5px 0;
+}
+
+totale::before {
+  content: "Totale: € ";
+}
+
+stato {
+  display: block;
+  margin: 5px 0;
+}
+
+stato::before {
+  content: "Stato pagamento: ";
+  font-weight: bold;
+}
+
+statoOrdine {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #007600;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+statoOrdine::before {
+  content: "Stato ordine: ";
+  color: #232f3e;
+}

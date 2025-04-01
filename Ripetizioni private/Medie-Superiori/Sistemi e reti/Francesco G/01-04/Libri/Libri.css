@@ -1,0 +1,177 @@
+catalogo {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  display: block;
+}
+
+libro {
+  display: block;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+titolo {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0056b3;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 5px;
+}
+
+edizione {
+  display: block;
+  font-style: italic;
+  margin-bottom: 5px;
+  color: #6c757d;
+}
+
+autori {
+  display: block;
+  margin: 10px 0;
+}
+
+autori::before {
+  content: "Autori:";
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+autore {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+autore::after {
+  content: ", ";
+}
+
+autore:last-child::after {
+  content: "";
+}
+
+nome::after {
+  content: " ";
+}
+
+isbn {
+  display: block;
+  font-family: 'Courier New', monospace;
+  margin: 5px 0;
+}
+
+isbn::before {
+  content: "ISBN: ";
+  font-weight: bold;
+}
+
+casaEditrice {
+  display: block;
+  margin: 5px 0;
+}
+
+casaEditrice::before {
+  content: "Casa Editrice: ";
+  font-weight: bold;
+}
+
+anno {
+  display: inline-block;
+  margin: 5px 0;
+}
+
+anno::before {
+  content: "Anno: ";
+  font-weight: bold;
+}
+
+scontistica {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  background-color: #fff3cd;
+  border-radius: 5px;
+  border-left: 4px solid #ffc107;
+}
+
+scontistica::before {
+  content: "Offerta Speciale!";
+  font-weight: bold;
+  display: block;
+  color: #856404;
+  margin-bottom: 5px;
+}
+
+sconto::after {
+  content: "%";
+}
+
+sconto {
+  display: inline-block;
+  font-weight: bold;
+  color: #d63384;
+  font-size: 18px;
+}
+
+dataInizio::before {
+  content: " dal ";
+}
+
+dataFine::before {
+  content: " al ";
+}
+
+disponibilita {
+  display: block;
+  margin: 5px 0;
+}
+
+disponibilita::before {
+  content: "Disponibilità: ";
+  font-weight: bold;
+}
+
+disponibilita::after {
+  content: " copie";
+}
+
+categoria {
+  display: inline-block;
+  margin: 5px 10px 5px 0;
+  padding: 2px 8px;
+  background-color: #e2f0fd;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+categoria::before {
+  content: "Categoria: ";
+  font-weight: bold;
+}
+
+numeroPagine {
+  display: inline-block;
+  margin: 5px 0;
+}
+
+numeroPagine::before {
+  content: "Pagine: ";
+  font-weight: bold;
+}
+
+lingua {
+  display: inline-block;
+  margin: 5px 0 5px 10px;
+}
+
+lingua::before {
+  content: "Lingua: ";
+  font-weight: bold;
+}

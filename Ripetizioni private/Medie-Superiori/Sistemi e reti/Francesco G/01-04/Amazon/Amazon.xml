@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="Amazon.css"?>
+<ordini xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Amazon.xsd">
+  
+  <ordine id="ord001">
+    <numeroOrdine>405-7823912-3456789</numeroOrdine>
+    <dataOrdine>2025-03-28</dataOrdine>
+    <cliente>
+      <nome>Mario</nome>
+      <cognome>Rossi</cognome>
+      <email>mario.rossi@email.it</email>
+      <telefono>3456789012</telefono>
+      <indirizzo>
+        <via>Via Roma</via>
+        <civico>42</civico>
+        <cap>10121</cap>
+        <citta>Torino</citta>
+        <provincia>TO</provincia>
+        <paese>Italia</paese>
+      </indirizzo>
+    </cliente>
+    <prodotti>
+      <prodotto>
+        <codiceProdotto>B08F1BQJFV</codiceProdotto>
+        <nome>Cuffie Bluetooth</nome>
+        <descrizione>Cuffie wireless con cancellazione attiva del rumore</descrizione>
+        <quantita>1</quantita>
+        <prezzo>89.99</prezzo>
+        <categoria>Elettronica</categoria>
+      </prodotto>
+      <prodotto>
+        <codiceProdotto>B07XJ8C8F5</codiceProdotto>
+        <nome>Mouse Gaming</nome>
+        <descrizione>Mouse gaming RGB con 8 pulsanti programmabili</descrizione>
+        <quantita>1</quantita>
+        <prezzo>35.50</prezzo>
+        <categoria>Informatica</categoria>
+      </prodotto>
+    </prodotti>
+    <spedizione>
+      <metodo>Prime</metodo>
+      <costo>0.00</costo>
+      <dataConsegnaPrevista>2025-03-30</dataConsegnaPrevista>
+      <corriere>BRT</corriere>
+      <codiceTracciamento>IT8574932654</codiceTracciamento>
+    </spedizione>
+    <pagamento>
+      <metodo>Carta di Credito</metodo>
+      <totale>125.49</totale>
+      <stato>Completato</stato>
+    </pagamento>
+    <statoOrdine>In preparazione</statoOrdine>
+  </ordine>
+  
+  <ordine id="ord002">
+    <numeroOrdine>405-8975642-5678123</numeroOrdine>
+    <dataOrdine>2025-04-01</dataOrdine>
+    <cliente>
+      <nome>Laura</nome>
+      <cognome>Bianchi</cognome>
+      <email>laura.bianchi@email.it</email>
+      <indirizzo>
+        <via>Via Garibaldi</via>
+        <civico>15</civico>
+        <cap>20121</cap>
+        <citta>Milano</citta>
+        <provincia>MI</provincia>
+        <paese>Italia</paese>
+      </indirizzo>
+    </cliente>
+    <prodotti>
+      <prodotto>
+        <codiceProdotto>B0863M1FL2</codiceProdotto>
+        <nome>Harry Potter e la Pietra Filosofale</nome>
+        <descrizione>Edizione illustrata</descrizione>
+        <quantita>1</quantita>
+        <prezzo>24.90</prezzo>
+        <categoria>Libri</categoria>
+      </prodotto>
+      <prodotto>
+        <codiceProdotto>B079MDKZV6</codiceProdotto>
+        <nome>Diario 2025</nome>
+        <descrizione>Agenda settimanale con copertina rigida</descrizione>
+        <quantita>2</quantita>
+        <prezzo>12.50</prezzo>
+        <categoria>Cancelleria</categoria>
+      </prodotto>
+      <prodotto>
+        <codiceProdotto>B08L5TNJHJ</codiceProdotto>
+        <nome>Penna stilografica</nome>
+        <descrizione>Penna a inchiostro blu con pennino medio</descrizione>
+        <quantita>1</quantita>
+        <prezzo>18.75</prezzo>
+        <categoria>Cancelleria</categoria>
+      </prodotto>
+    </prodotti>
+    <spedizione>
+      <metodo>Standard</metodo>
+      <costo>3.99</costo>
+      <dataConsegnaPrevista>2025-04-05</dataConsegnaPrevista>
+      <corriere>SDA</corriere>
+      <codiceTracciamento>SDA7458963214</codiceTracciamento>
+    </spedizione>
+    <pagamento>
+      <metodo>PayPal</metodo>
+      <totale>72.64</totale>
+      <stato>Completato</stato>
+    </pagamento>
+    <statoOrdine>Spedito</statoOrdine>
+  </ordine>
+  
+</ordini>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Elemento radice "ordini" -->
+  <xs:element name="ordini">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ordine" type="tipoOrdine" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Tipo complesso "tipoOrdine" -->
+  <xs:complexType name="tipoOrdine">
+    <xs:sequence>
+      <xs:element name="numeroOrdine" type="xs:string"/>
+      <xs:element name="dataOrdine" type="xs:date"/>
+      <xs:element name="cliente" type="tipoCliente"/>
+      <xs:element name="prodotti">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="prodotto" type="tipoProdotto" minOccurs="1" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="spedizione" type="tipoSpedizione"/>
+      <xs:element name="pagamento" type="tipoPagamento"/>
+      <xs:element name="statoOrdine" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+  </xs:complexType>
+
+  <!-- Tipo complesso "tipoCliente" -->
+  <xs:complexType name="tipoCliente">
+    <xs:sequence>
+      <xs:element name="nome" type="xs:string"/>
+      <xs:element name="cognome" type="xs:string"/>
+      <xs:element name="email" type="xs:string"/>
+      <xs:element name="telefono" type="xs:string" minOccurs="0"/>
+      <xs:element name="indirizzo" type="tipoIndirizzo"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo complesso "tipoIndirizzo" -->
+  <xs:complexType name="tipoIndirizzo">
+    <xs:sequence>
+      <xs:element name="via" type="xs:string"/>
+      <xs:element name="civico" type="xs:string"/>
+      <xs:element name="cap" type="xs:string"/>
+      <xs:element name="citta" type="xs:string"/>
+      <xs:element name="provincia" type="xs:string"/>
+      <xs:element name="paese" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo complesso "tipoProdotto" -->
+  <xs:complexType name="tipoProdotto">
+    <xs:sequence>
+      <xs:element name="codiceProdotto" type="xs:string"/>
+      <xs:element name="nome" type="xs:string"/>
+      <xs:element name="descrizione" type="xs:string" minOccurs="0"/>
+      <xs:element name="quantita" type="xs:positiveInteger"/>
+      <xs:element name="prezzo" type="xs:decimal"/>
+      <xs:element name="categoria" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo complesso "tipoSpedizione" -->
+  <xs:complexType name="tipoSpedizione">
+    <xs:sequence>
+      <xs:element name="metodo" type="xs:string"/>
+      <xs:element name="costo" type="xs:decimal"/>
+      <xs:element name="dataConsegnaPrevista" type="xs:date"/>
+      <xs:element name="corriere" type="xs:string" minOccurs="0"/>
+      <xs:element name="codiceTracciamento" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo complesso "tipoPagamento" -->
+  <xs:complexType name="tipoPagamento">
+    <xs:sequence>
+      <xs:element name="metodo" type="xs:string"/>
+      <xs:element name="totale" type="xs:decimal"/>
+      <xs:element name="stato" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

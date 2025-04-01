@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- 1. Definizione del file dicendo "è XML"-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <!-- 2 = Sei un file XSD -->
+<!-- Schema = Grammatica con delle regole-->
+
+  <!-- Definizione dell'elemento radice "catalogo" -->
+  <xs:element name="catalogo">
+    <xs:complexType>
+      <xs:sequence> <!-- Sequence = Insieme non ordinato di libri-->
+        <xs:element name="libro" type="tipoLibro" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Definizione del tipo complesso "tipoLibro" = Ogni libro contiene almeno titolo / edizione / autori-->
+  <xs:complexType name="tipoLibro">
+    <xs:sequence>
+      <xs:element name="titolo" type="xs:string"/>
+      <xs:element name="edizione" type="xs:string"/>
+      <xs:element name="autori">
+        <xs:complexType> <!-- Ogni autore ha un insieme di autori-->
+          <xs:sequence>
+            <xs:element name="autore" type="tipoAutore" minOccurs="1" maxOccurs="unbounded"/>
+            <!-- Autori da 1 ad infinito (unbounded = senza limiti)-->
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <!-- Inserimento di tutti gli altri campi -->
+      <xs:element name="isbn" type="tipoISBN" minOccurs="1" maxOccurs="unbounded"/>
+      <!-- ISBN almeno 1 carattere, max 13-->
+      
+      <xs:element name="casaEditrice" type="xs:string"/>
+      <xs:element name="anno" type="tipoAnno"/>
+      <xs:element name="scontistica" type="tipoScontistica" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="disponibilita" type="xs:positiveInteger"/>
+      <xs:element name="categoria" type="xs:string"/>
+      <xs:element name="numeroPagine" type="xs:positiveInteger"/>
+      <xs:element name="lingua" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+  </xs:complexType>
+
+  <!-- Definizione del tipo complesso "tipoAutore" = Ogni autore ha un nome e un cognome-->
+  <xs:complexType name="tipoAutore">
+    <xs:sequence>
+      <xs:element name="nome" type="xs:string"/>
+      <xs:element name="cognome" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definizione del tipo semplice "tipoISBN" con restrizione di lunghezza -->
+  <!-- ISBN impone i 13 caratteri come limite = tipo stringa e 13 caratteri max-->
+  <xs:simpleType name="tipoISBN">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="13"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Definizione del tipo semplice "tipoAnno" come intero positivo (testo) -->
+  <xs:simpleType name="tipoAnno">
+    <xs:restriction base="xs:positiveInteger"/>
+  </xs:simpleType>
+
+  <!-- Definizione del tipo complesso "tipoScontistica" = abbiamo 3 elementi (sconto, datainizio, datafine) -->
+  <xs:complexType name="tipoScontistica">
+    <xs:sequence> <!-- Sequenza non ordinata di elementi dentro-->
+      <xs:element name="sconto" type="xs:positiveInteger"/>
+      <xs:element name="dataInizio" type="xs:date"/>
+      <xs:element name="dataFine" type="xs:date"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
