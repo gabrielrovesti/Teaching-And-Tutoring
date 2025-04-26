@@ -1,0 +1,28 @@
+Strutture Dati in Java
+- ArrayList
+- Coda circolare
+- Liste concatenate
+- Insiemi
+- Mappe
+- Tabelle di hash
+
+Classi di esempi:
+PilaArrayList
+ArrayListInteger
+Pila: LIFO interface Pila<T> extends Contenitore
+CodaArraylistEstremoFissoLiberato
+interface Coda<T> extends Contenitore
+CodaArrayList<T> implements Coda
+CodaCircolareArrayInteger implements Coda
+Coda Doppia deque (ArrayDeque)
+	- Implementazione di boolean isPalindrome
+Coda Prioritaria (PriorityQueue<T>)
+Lista concatenata (LinkedList<T>)
+HashSet<E> con metodo hashCode (per Object ed E)
+Altri esempi: Set<E> e TreeSet<E>
+Esempio: Coppia (String descrizione, int priorità) e ComparatoreCoppia(che implementa Comparator) con uso di PriorityQueue
+HashMap e Map con esempio void nRicorrenze(String f)
+
+Per ognuna: 
+- Esempi di metodi
+- Complessità computazionale dei singoli metodi
