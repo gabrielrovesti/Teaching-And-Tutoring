@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 15px;
+}
+
+section {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+img#approfondimento {
+  position: fixed ;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  height: 45px;
+}
+
+img#usb {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  height: 45px;
+}
+
+img#up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  height: 45px;
+}
+
+img#up:hover {
+  opacity: 0.5;
+}
+
+img#collegamenti, img#tipi-usb {
+  width: 60%;
+}
+
+table {
+  display: inline-block;
+  border-collapse: collapse;
+  margin: 10px 20px 10px 0;
+}
+
+table tr:first-child {
+  position: sticky;
+  top: 0;
+}
+
+table th {
+  background-color: #ffcc00;
+  text-align: left;
+}
+
+table th, table td {
+  padding: 5px 15px 5px 5px;
+  border: 2px solid #ffcc00;
+  height: 35px;
+}

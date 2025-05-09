@@ -1,16 +1,21 @@
-public class Mazzo {
-    private final int NCARTE = 52;
-    private int x = NCARTE-1;
-    private final String[] seme = {"cuori", "quadri", "fiori", "picche"};
-    private final int[] valore = {11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
-    private final String[] nome = {"asso","due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove", "dieci","jack", "regina", "re"};
-    private CartaDaGioco[] mazzo;
-    
-    public Mazzo() {
-        mazzo = new CartaDaGioco[NCARTE];
-        preparaMazzo();
-    }
-    
+import java.util.Random;
+
+public class Mazzo
+{
+	private final int NCARTE=52; // final = non viene più modificato
+	private int x=NCARTE-1;
+	//tre array, uno per i semi, uno per i valori e uno per il nome
+	private final String[] seme= {"cuori", "quadri", "fiori", "picche"};
+	private final int[] valore= {11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
+	private final String[] nome= {"asso","due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove", "dieci","jack", "regina", "re"};
+	private CartaDaGioco[] mazzo;
+		
+	public Mazzo() //array di oggetti di tipo CartaDaGioco
+	{ 
+		mazzo = new CartaDaGioco[NCARTE];
+		preparaMazzo();
+	}
+	//per ogni seme devo fare 13 giri (cioè i valori delle carte)
     public void preparaMazzo() {
         int index = 0;
         for(int i = 0; i < seme.length; i++) {
@@ -20,15 +25,17 @@ public class Mazzo {
             }
         }
     }
-    
-    public String toString() {
-        String s = " \n";
-        for(int j = 0; j < NCARTE; j++) {
-            s = s + "["+(j+1)+"]" + mazzo[j] + "\n \n";
-        }
-        return s;
-    }
-    
+	
+	public String toString()
+	{
+		String s=" \n";
+		for(int j=0; j<NCARTE; j++)
+		{
+			s=s + "["+(j+1)+"]"+ mazzo[j] + "\n \n";
+		}
+		return s;
+	}
+	//random!!!!
     public void mescola() {
         Random rand = new Random();
         for(int i = 0; i < NCARTE; i++) {
@@ -38,7 +45,7 @@ public class Mazzo {
             mazzo[j] = temp;
         }
     }
-    
+	//pesca la prima
     public CartaDaGioco pescaPrima() {
         if(x >= 0) {
             CartaDaGioco carta = mazzo[0];
@@ -51,7 +58,7 @@ public class Mazzo {
         }
         return null;
     }
-    
+	//pesca casuale--> random
     public CartaDaGioco pescaCasuale() {
         if(x >= 0) {
             Random rand = new Random();
@@ -66,4 +73,6 @@ public class Mazzo {
         }
         return null;
     }
+    }
+	
 }

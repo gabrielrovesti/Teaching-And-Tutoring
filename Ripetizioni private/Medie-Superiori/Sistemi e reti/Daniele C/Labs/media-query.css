@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #dddddd;
+  color: black;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-family:'Courier New', Courier, monospace;
+  color: #dddddd;
+  text-shadow: gold 1px 0 10px;
+}
+
+header {
+  padding: 15px 10px;
+  background-color: crimson;
+  text-align: center;
+  color: #dddddd;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+header li {
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+header .menu li a {
+  font-weight: bold;
+  color: #dddddd;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header .submenu li a {
+  color: #dddddd;
+  text-decoration: none;
+}
+
+header li a.active {
+  text-decoration: underline;
+}
+
+section#welcome h3 {
+  padding: 8px;
+  text-align: center;
+  color: #444444;
+}
+
+section#intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url('images/pattern.png');
+}
+
+section#intro div {
+  max-width: 60%;
+  background-color: #dddddd;
+}
+
+section#intro img {
+  max-width: 300px;
+}
+
+@media (max-width: 765px) {
+  header .menu ul {
+    flex-direction: column;
+  }
+  header .menu li {
+    margin-bottom: 3px;
+  }
+  header .submenu {
+    display: none;
+  }
+  section#welcome {
+    display: none;
+  }
+  section#intro {
+    padding-top: 0;
+    background-image: none;
+  }
+  section#intro div {
+    order: 1;
+    max-width: 100%;
+    padding: 10px;
+  }
+  section#intro img {
+    order: 0;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+main h2 {
+  padding: 15px;
+  background-color: #F4D03F;
+  text-align: center;
+  color: #444444;
+}
+
+section.piatti {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  color: #dddddd;
+}
+
+.piatto {
+  margin: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.piatto h4 {
+  text-align: center;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.piatto img {
+  width: 300px;
+}
+
+.piatto img:hover {
+  opacity: 0.5;
+}
+
+footer {
+  padding: 15px;
+  background-color: #444444;
+  text-align: center;
+  color: #dddddd;
+}

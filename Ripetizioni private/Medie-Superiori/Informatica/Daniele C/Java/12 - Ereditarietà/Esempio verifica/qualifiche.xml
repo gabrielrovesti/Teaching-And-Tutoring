@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<qualificaGP>
+     <bolide scuderia="FERRARI">
+        <pilota punti="35">Leclerc</pilota>
+    </bolide>
+   <bolide scuderia="MERCEDES">
+        <pilota punti="10">Hamilton</pilota>
+    </bolide>
+    <bolide scuderia="HAAS">
+        <pilota punti="0">Schumacher</pilota>
+    </bolide>
+    <bolide scuderia="ALPINE">
+        <pilota punti="5">Alonso</pilota>
+    </bolide>
+    <bolide scuderia="ASTON MARTIN">
+        <pilota punti="6">Stroll</pilota>
+    </bolide>
+    <bolide scuderia="RED BULL">
+        <pilota punti="1">Verstappen</pilota>
+    </bolide>
+    <bolide scuderia="ALFA ROMEO">
+        <pilota punti="0">Giovinazzi</pilota>
+    </bolide>
+    <bolide scuderia="ALFA ROMEO">
+        <pilota punti="0">Bottas</pilota>
+    </bolide>
+</qualificaGP>

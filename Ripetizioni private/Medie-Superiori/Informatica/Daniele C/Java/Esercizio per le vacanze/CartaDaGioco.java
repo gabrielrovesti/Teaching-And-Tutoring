@@ -10,7 +10,6 @@ public class CartaDaGioco{
 			seme=s;
 			nome=n;
 			valore=v;
-			
 		}
 		
 		//get 

@@ -67,7 +67,7 @@ public class Salvadanaio {
 			return gruzzoletto; // Se c'è solo 1 o 0 soldi, restituiamo quello che c'è
 		}
 
-		Random random = new Random();
+		Rando m random = new Random();
 		return random.nextInt(gruzzoletto - 1) + 1; // Numero tra 1 e (gruzzoletto - 1)
 	}
 

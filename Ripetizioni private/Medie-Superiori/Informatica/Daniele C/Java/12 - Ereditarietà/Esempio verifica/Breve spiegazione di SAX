@@ -1,0 +1,33 @@
+parser SAX
+
+visita sequenzialmene un file xml; genera degli eventi che invocano metodi di callback
+
+<....>  TAG APERTURA  	Genera l'evento che invoca il metodo di caalback startElement(...) caricando sul parametro qName la stringa contenuta tra le parentesi angolari
+						e su attributi (di classe Attributes) la coppia nomeattributo=valoreattributo
+		  
+</....> TAG CHIUSURA   Genera l'evento che invoca il metodo di callback endElement(...) caricando sul parametro qName la stringa contenuta tra le parentesi angolari
+
+>...<   CONTENUTO       Genera l'evento che invoca il metodo di CB characters(...) che costruisce la stringa s a partire dal primo carattere subito dopo la > fino al carattere subito prima < 		 
+
+
+
+ESEMPIO
+<persona sesso="M" eta="25">
+    <nome>Alessandro</nome>
+    <altezza>185</altezza>
+</persona>	
+
+riga 15 invoca startElement -> qName = "persona"   attributi.getValue("sesso") = "M"    e     attributi.getValue("eta") = "25"
+tra la 15 e la 16 invoca characters -> viene costruita la stringa compresa tra > e < (un acaporiga + 4 spazi)
+
+riga 16 invoca startElement -> qNmae ="nome"
+riga 16 invoca characters viene costruita la stringa "Alessandro"
+riga 16 invoca endElement -> qName = "nome"
+tra la 16 e la 17 invoca characters -> viene costruita la stringa compresa tra > e < (un acaporiga + 4 spazi)
+
+riga 17 invoca startElement -> qNmae ="altezza"
+riga 17 invoca characters viene costruita la stringa "185"
+riga 17 invoca endElement -> qName = "altezza"
+tra la 17 e la 18 invoca characters -> viene costruita la stringa compresa tra > e < (un acaporiga)
+
+riga 18 invoca endElement -> qName ="persona"
