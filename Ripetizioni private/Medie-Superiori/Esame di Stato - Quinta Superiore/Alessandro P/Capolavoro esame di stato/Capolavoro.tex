@@ -1,0 +1,87 @@
+
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{inconsolata}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Esame di Stato 2025}
+\lhead{Alessandro - Capolavoro}
+\rfoot{Pagina \thepage}
+
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{0.5em}{}
+\setstretch{1.2}
+
+\definecolor{lightgray}{gray}{0.95}
+\lstset{
+  backgroundcolor=\color{lightgray},
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  frame=single,
+  language=C,
+  showstringspaces=false,
+  tabsize=2
+}
+
+\title{\textbf{EDU-K.O. --- Il Simulatore di Sopravvivenza Scolastica}}
+\author{Alessandro}
+\date{Esame di Stato 2025}
+
+\begin{document}
+\maketitle
+
+\section*{Introduzione}
+
+\noindent
+Questo progetto è un'opera provocatoria e simbolica, scritta in linguaggio \texttt{C}, che rappresenta in forma testuale il disagio quotidiano vissuto dagli studenti italiani all'interno del sistema scolastico. Il programma simula un'ipotetica scelta che uno studente deve compiere, ma che, in ogni caso, lo porterà a una conseguenza negativa. L'obiettivo è evidenziare, attraverso l'ironia amara della logica binaria, quanto il sistema scolastico possa risultare opprimente, privo di empatia e spesso contraddittorio. Il linguaggio \texttt{C}, scelto per la sua freddezza e rigidità, incarna perfettamente il modello impersonale e rigido del sistema educativo.
+
+\vspace{1em}
+\noindent
+Ogni scelta dell’utente conduce comunque a una forma di frustrazione o penalizzazione. È un codice semplice, ma dietro ogni riga si cela un grido, una riflessione: \emph{"ha senso tutto questo?"}
+
+\section*{Codice sorgente}
+
+\begin{lstlisting}
+#include <stdio.h>
+
+void attendiInvio() {
+    printf("\nPremi INVIO per continuare...");
+    getchar(); // attende un invio
+}
+
+int main(){
+    int scelta;
+    printf("Vai comunque a scuola?\n");
+    printf("1. Sì, non voglio essere bocciato\n2. No, ho bisogno di riposo\n");
+    scanf("%d", &scelta);
+    if (scelta == 1) {
+        printf("Prendi 4 alla verifica e vieni accusato di non aver studiato abbastanza.\n");
+    } else {
+        printf("Assenza non giustificata. Vieni considerato svogliato e irresponsabile.\n");
+    }
+
+    attendiInvio();
+}
+\end{lstlisting}
+
+\section*{Commento finale}
+
+\noindent
+Questo programma non è soltanto codice: è un’opera di denuncia. In esso si legge il sentimento di impotenza che ogni studente ha provato almeno una volta, trovandosi davanti a un sistema che premia la mera esecuzione e punisce l’umanità. L’uso del terminale, l’assenza di grafiche, e il ritmo scandito dal ``Premi INVIO per continuare...'' sono scelte precise, per lasciare spazio alle parole, al peso delle frasi, e alla riflessione che ne scaturisce.
+
+\vspace{1em}
+\noindent
+Con questo progetto non ho voluto solo “programmare”. Ho voluto parlare, e soprattutto far sentire qualcosa. 
+
+\vfill
+\noindent\textbf{Autore:} Alessandro \\
+\textbf{Classe:} 5° Superiore – Istituto Tecnico Informatico \\
+\textbf{Anno:} 2025
+\end{document}
