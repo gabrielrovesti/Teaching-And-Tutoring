@@ -57,7 +57,7 @@ void situazione_verifica(Studente *s);
 void situazione_colloquio(Studente *s);
 void situazione_casa(Studente *s);
 void risultato_finale(Studente *s);
-void ascii_art_intro();
+void intro();
 void pausa();
 int scelta_utente(int min, int max);
 
@@ -66,7 +66,7 @@ int main() {
     
     printf("\033[2J\033[1;1H"); // Pulisce lo schermo
     
-    ascii_art_intro();
+    intro();
     
     Studente studente;
     inizializza_studente(&studente);
@@ -385,14 +385,7 @@ void risultato_finale(Studente *s) {
     printf("----------------------------------------\n");
 }
 
-void ascii_art_intro() {
-    printf("\n");
-    printf("   ███████╗██████╗ ██╗   ██╗      ██╗  ██╗     ██████╗ \n");
-    printf("   ██╔════╝██╔══██╗██║   ██║      ██║ ██╔╝    ██╔═══██╗\n");
-    printf("   █████╗  ██║  ██║██║   ██║█████╗█████╔╝     ██║   ██║\n");
-    printf("   ██╔══╝  ██║  ██║██║   ██║╚════╝██╔═██╗     ██║   ██║\n");
-    printf("   ███████╗██████╔╝╚██████╔╝      ██║  ██╗ ██╗╚██████╔╝\n");
-    printf("   ╚══════╝╚═════╝  ╚═════╝       ╚═╝  ╚═╝ ╚═╝ ╚═════╝ \n");
+void intro() {
     printf("\n");
     printf("           Il Simulatore di Sopravvivenza Scolastica\n");
     printf("          \"Benvenuto nel sistema che vuole distruggerti\"\n");
