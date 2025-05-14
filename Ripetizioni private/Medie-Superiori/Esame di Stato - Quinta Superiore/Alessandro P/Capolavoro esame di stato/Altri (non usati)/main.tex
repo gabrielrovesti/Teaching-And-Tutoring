@@ -1,0 +1,911 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{textcomp}
+
+% Configurazione della pagina
+\geometry{margin=2.5cm}
+
+% Configurazione dell'header e footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyhead[L]{EDU-K.O. - Simulatore di Sopravvivenza Scolastica}
+\fancyhead[R]{Esame di Stato 2025}
+\fancyfoot[C]{\thepage}
+
+% Configurazione dei titoli
+\titleformat{\section}
+{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+% Configurazione del codice
+\definecolor{codegray}{rgb}{0.95,0.95,0.95}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    literate=
+        {à}{{\`a}}1 
+        {è}{{\`e}}1 
+        {ì}{{\`i}}1 
+        {ò}{{\`o}}1 
+        {ù}{{\`u}}1
+        {É}{{\'E}}1
+        {È}{{\`E}}1
+        {ç}{{\c{c}}}1
+        {█}{{$\blacksquare$}}1 
+        {♥}{{$\heartsuit$}}1
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    {\Huge\textbf{EDU-K.O.\\}\par}
+    \vspace{1cm}
+    {\LARGE Il Simulatore di Sopravvivenza Scolastica\par}
+    \vspace{2cm}
+    {\large Capolavoro per l'Esame di Stato 2025\par}
+    \vspace{3cm}
+    {\large\itshape Nome Studente: Alessandro Privitera\par}
+    {\large\itshape Classe: 5\textsuperscript{a} Informatica\par}
+    \vspace{1cm}
+    {\large\itshape Istituto Tecnico Industriale "Galileo Ferraris"\par}
+    \vspace{1cm}
+    {\large Anno Scolastico 2024-2025\par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Introduzione}
+
+Questo progetto rappresenta una riflessione critica e provocatoria sul sistema scolastico italiano, tradotta in un videogioco testuale sviluppato in linguaggio C. \textit{EDU-K.O. - Il Simulatore di Sopravvivenza Scolastica} è un'opera che, attraverso la programmazione e l'ironia, mette in luce le contraddizioni e le difficoltà che gli studenti affrontano quotidianamente.
+
+Il programma simula una giornata tipica di uno studente italiano, costretto a navigare tra verifiche a sorpresa, aspettative irrealistiche, e un sistema che spesso sembra progettato per mettere alla prova non solo le conoscenze, ma anche la resistenza psicologica.
+
+\subsection{Motivazione e Obiettivi}
+
+La motivazione alla base di questo progetto nasce dalla mia esperienza personale e da quella condivisa con altri studenti. L'obiettivo non è semplicemente criticare, ma piuttosto:
+
+\begin{itemize}
+    \item Stimolare una riflessione critica sul sistema educativo attuale
+    \item Evidenziare, attraverso la gamification e l'ironia, problematiche reali che meritano attenzione
+    \item Dimostrare come l'informatica possa essere uno strumento di espressione e critica sociale
+    \item Proporre implicitamente un sistema educativo più umano ed empatico
+\end{itemize}
+
+\subsection{Competenze Dimostrate}
+
+Questo progetto mi ha permesso di mettere in pratica e sviluppare diverse competenze acquisite durante il percorso di studi:
+
+\begin{itemize}
+    \item \textbf{Sviluppo Software}: Progettazione e implementazione di un'applicazione interattiva in C
+    \item \textbf{Algoritmi e Strutture Dati}: Utilizzo di struct per la gestione dei dati del giocatore
+    \item \textbf{Interfacce Utente}: Creazione di un'interfaccia testuale intuitiva
+    \item \textbf{Problem Solving}: Gestione delle diverse situazioni di gioco e dei relativi esiti
+    \item \textbf{Pensiero Critico}: Analisi del sistema educativo e traduzione delle sue problematiche in meccaniche di gioco
+    \item \textbf{Documentazione}: Capacità di presentare e documentare adeguatamente un progetto software
+\end{itemize}
+
+\section{Analisi e Progettazione}
+
+\subsection{Analisi del Problema}
+
+Il problema affrontato da questo progetto è duplice:
+\begin{enumerate}
+    \item Come rappresentare efficacemente, attraverso un programma, le contraddizioni del sistema scolastico
+    \item Come creare un'esperienza interattiva che sia al contempo provocatoria ma anche coinvolgente
+\end{enumerate}
+
+\subsection{Metodologia di Sviluppo}
+
+Per lo sviluppo di questo progetto ho adottato un approccio iterativo:
+\begin{enumerate}
+    \item Raccolta di esperienze e situazioni tipiche della vita scolastica
+    \item Classificazione di queste situazioni in categorie (mattino, lezioni, verifiche, ecc.)
+    \item Progettazione della struttura dati per rappresentare lo stato del giocatore
+    \item Implementazione delle singole situazioni di gioco
+    \item Testing e bilanciamento delle meccaniche di gioco
+    \item Rifinitura dell'interfaccia utente e dei messaggi
+\end{enumerate}
+
+\subsection{Strumenti Utilizzati}
+
+\begin{itemize}
+    \item \textbf{Linguaggio di Programmazione}: C
+    \item \textbf{Ambiente di Sviluppo}: Visual Studio Code
+    \item \textbf{Compilatore}: GCC (GNU Compiler Collection)
+    \item \textbf{Controllo Versione}: Git
+    \item \textbf{Documentazione}: \LaTeX
+\end{itemize}
+
+\section{Implementazione}
+
+\subsection{Struttura del Programma}
+
+Il programma è strutturato in diverse sezioni:
+
+\begin{itemize}
+    \item Definizione delle strutture dati e costanti
+    \item Funzioni di gestione dell'interfaccia utente
+    \item Funzioni che simulano le diverse situazioni scolastiche
+    \item Funzione principale che coordina il flusso di gioco
+\end{itemize}
+
+\subsection{Strutture Dati}
+
+La principale struttura dati utilizzata è la struct \texttt{Studente}, che mantiene lo stato del giocatore:
+
+\begin{lstlisting}[language=C, caption=Struttura dati Studente]
+typedef struct {
+    char nome[NOME_LENGTH];
+    int stress;
+    float media;
+    int ore_sonno;
+    int assenze;
+    int note_disciplinari;
+    int voglia_vivere;
+} Studente;
+\end{lstlisting}
+
+Questa struttura permette di tracciare diversi parametri che rappresentano lo stato psicofisico e il rendimento scolastico del giocatore.
+
+\subsection{Flusso di Gioco}
+
+Il gioco si sviluppa attraverso una serie di situazioni che rappresentano momenti tipici della giornata scolastica:
+
+\begin{enumerate}
+    \item Risveglio e preparazione mattutina
+    \item Lezioni in classe
+    \item Verifiche a sorpresa
+    \item Colloquio con i docenti
+    \item Ritorno a casa e gestione dei compiti
+    \item Valutazione finale della giornata
+\end{enumerate}
+
+Per ogni situazione, il giocatore deve scegliere tra diverse opzioni, ciascuna con conseguenze diverse sui parametri del personaggio.
+
+\subsection{Meccaniche di Gioco}
+
+Le principali meccaniche di gioco includono:
+
+\begin{itemize}
+    \item \textbf{Sistema di scelte}: Ogni situazione presenta al giocatore 3 opzioni
+    \item \textbf{Parametri dinamici}: I parametri del giocatore (stress, media, ore di sonno, ecc.) vengono modificati in base alle scelte
+    \item \textbf{Conseguenze a catena}: Le scelte fatte in una situazione influenzano le situazioni successive
+    \item \textbf{Feedback immediato}: Dopo ogni scelta, il giocatore riceve un feedback sui risultati delle sue azioni
+    \item \textbf{Visualizzazione stato}: Dopo ogni situazione, viene mostrato lo stato aggiornato dei parametri
+\end{itemize}
+
+\subsection{Interfaccia Utente}
+
+L'interfaccia è minimalista e basata su testo, una scelta deliberata per enfatizzare il contenuto e il messaggio:
+
+\begin{itemize}
+    \item Rappresentazione grafica dello stress e della voglia di vivere tramite barre di progresso testuali
+    \item Menu di scelta numerici
+    \item Messaggi ironici e provocatori che accompagnano ogni situazione
+\end{itemize}
+
+\section{Codice Sorgente}
+
+\subsection{Header e Definizioni}
+
+\begin{lstlisting}[language=C, caption=Header e definizioni]
+/*
+* EDU-K.O. - Il Simulatore di Sopravvivenza Scolastica
+* Un viaggio interattivo nell'assurda realtà del sistema educativo italiano
+* 
+* "Nel codice, come nella vita: lo studente perde sempre"
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+// Configurazione del gioco
+#define MAX_STRESS 100
+#define MAX_VOTO 10
+#define NOME_LENGTH 50
+\end{lstlisting}
+
+\subsection{Strutture Dati e Array}
+
+\begin{lstlisting}[language=C, caption=Strutture dati e array]
+// Struttura per lo studente virtuale
+typedef struct {
+    char nome[NOME_LENGTH];
+    int stress;
+    float media;
+    int ore_sonno;
+    int assenze;
+    int note_disciplinari;
+    int voglia_vivere;
+} Studente;
+
+// Frasi ironiche del sistema
+char* frasi_prof[] = {
+    "\"Non dovevi studiare solo l'ultima settimana\"",
+    "\"Io alla tua età studiavo 12 ore al giorno\"",
+    "\"Non ho tempo per spiegazioni individuali\"",
+    "\"La creatività non serve, servono le nozioni\"",
+    "\"Non è colpa mia se non capisci\"",
+    "\"Questo lo avete già fatto in precedenza\"",
+    "\"Nel mondo del lavoro non ti passano nulla\"",
+    "\"Dovete imparare a essere autonomi\""
+};
+
+char* situazioni_assurde[] = {
+    "Ti hanno assegnato 8 materie con verifica questa settimana",
+    "Il WiFi non funziona ma pretendono che usi il registro elettronico",
+    "Ti chiedono di essere creativo ma poi ti bocciano se esci dal programma",
+    "Devi fare 30 ore di alternanza scuola-lavoro non retribuite",
+    "Ti fanno studiare poesie del 1200 ma non come fare le tasse",
+    "La prof cambia le regole del compito durante il compito",
+    "Ti chiedono di avere 'spirito critico' ma solo se concordi con loro"
+};
+\end{lstlisting}
+
+\subsection{Funzione Main}
+
+\begin{lstlisting}[language=C, caption=Funzione main]
+int main() {
+    srand(time(NULL));
+    
+    printf("\033[2J\033[1;1H"); // Pulisce lo schermo
+    
+    intro();
+    
+    Studente studente;
+    inizializza_studente(&studente);
+    
+    printf("\n\n=== EDU-K.O. - Il Simulatore di Sopravvivenza Scolastica ===\n");
+    printf("     \"Benvenuto nell'incubo quotidiano\"               \n\n");
+    
+    // Varie situazioni di una giornata scolastica
+    situazione_mattino(&studente);
+    situazione_lezione(&studente);
+    situazione_verifica(&studente);
+    situazione_colloquio(&studente);
+    situazione_casa(&studente);
+    
+    // Risultato finale
+    risultato_finale(&studente);
+    
+    return 0;
+}
+\end{lstlisting}
+
+\subsection{Funzioni di Gioco}
+
+Per motivi di spazio, riporto solo alcune delle funzioni principali. Il codice completo è disponibile nell'appendice.
+
+\begin{lstlisting}[language=C, caption=Funzione di inizializzazione]
+void inizializza_studente(Studente *s) {
+    printf("\nInserisci il tuo nome: ");
+    fgets(s->nome, NOME_LENGTH, stdin);
+    s->nome[strcspn(s->nome, "\n")] = 0; // Rimuove newline
+    
+    s->stress = 50;
+    s->media = 6.0;
+    s->ore_sonno = 5; // Realistico per uno studente italiano
+    s->assenze = 0;
+    s->note_disciplinari = 0;
+    s->voglia_vivere = 50;
+    
+    printf("\nBene %s, benvenuto nella macchina tritacarne.\n", s->nome);
+    pausa();
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=C, caption=Funzione di visualizzazione stato]
+void mostra_status(Studente *s) {
+    printf("\n--- Status di %s ---\n", s->nome);
+    printf("Stress: %d/100 ", s->stress);
+    for(int i = 0; i < s->stress/10; i++) printf("\n");
+    printf("\n");
+    
+    printf("Media scolastica: %.1f\n", s->media);
+    printf("Ore di sonno: %d\n", s->ore_sonno);
+    printf("Assenze: %d\n", s->assenze);
+    printf("Note disciplinari: %d\n", s->note_disciplinari);
+    printf("Voglia di vivere: %d%% ", s->voglia_vivere);
+    for(int i = 0; i < s->voglia_vivere/20; i++) printf("♥");
+    printf("\n-------------------\n");
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=C, caption=Esempio di situazione di gioco]
+void situazione_verifica(Studente *s) {
+    printf("\n\n=== ORE 10:15 - VERIFICA A SORPRESA DI LATINO ===\n");
+    printf("'Ragazzi, compito in classe! Spero abbiate ripassato.'\n");
+    printf("Nessuno aveva annunciato nulla. Il panico si diffonde.\n");
+    
+    printf("\nCome affronti la situazione?\n");
+    printf("1. Tenti di copiare dal tuo compagno\n");
+    printf("2. Scrivi qualsiasi cosa sperando nella pietà\n");
+    printf("3. Consegni in bianco con dignità\n");
+    
+    int scelta = scelta_utente(1, 3);
+    
+    switch(scelta) {
+        case 1:
+            printf("\nLa prof ti becca dopo 2 minuti.\n");
+            printf("'%s! VERGOGNATI! Voti annullati per entrambi!'\n", s->nome);
+            printf("Il tuo compagno ti odia. Hai perso un amico.\n");
+            s->media = (s->media * 4 + 2) / 5;
+            s->stress += 35;
+            s->voglia_vivere -= 20;
+            s->note_disciplinari++;
+            break;
+            
+        case 2:
+            printf("\nScrivi frasi con errori grammaticali italiani nella versione latina.\n");
+            printf("La prof ti corregge con inchiostro rosso dappertutto.\n");
+            printf("Voto: 4. 'Almeno ci hai provato' dice sarcasticamente.\n");
+            s->media = (s->media * 4 + 4) / 5;
+            s->stress += 25;
+            s->voglia_vivere -= 10;
+            break;
+            
+        case 3:
+            printf("\nLa prof apprezza l'onestà ma ti mette 2.\n");
+            printf("'Non puoi non sapere nulla dopo un anno di latino!'\n");
+            printf("(Come se un anno bastasse per imparare una lingua morta)\n");
+            s->media = (s->media * 4 + 2) / 5;
+            s->stress += 30;
+            s->voglia_vivere -= 15;
+            break;
+    }
+    
+    mostra_status(s);
+    pausa();
+}
+\end{lstlisting}
+
+\section{Riflessioni e Considerazioni Tecniche}
+
+\subsection{Scelte Implementative}
+
+Nella realizzazione del progetto, ho fatto diverse scelte implementative:
+
+\begin{itemize}
+    \item \textbf{Utilizzo di struct}: Per mantenere i dati del giocatore in modo organizzato
+    \item \textbf{Passaggio per riferimento}: Per modificare i parametri del giocatore nelle varie funzioni
+    \item \textbf{Randomizzazione}: Per rendere ogni partita leggermente diversa (frasi dei professori, situazioni)
+    \item \textbf{Interfaccia basata su terminale}: Per mantenere la semplicità e focalizzarsi sul contenuto
+\end{itemize}
+
+\subsection{Difficoltà Incontrate}
+
+Durante lo sviluppo del progetto, ho affrontato alcune difficoltà:
+
+\begin{itemize}
+    \item Bilanciamento delle meccaniche: trovare il giusto equilibrio tra difficoltà e giocabilità
+    \item Gestione dell'input utente: prevenire input non validi e comportamenti inaspettati
+    \item Aspetti narrativi: creare situazioni realistiche ma anche provocatorie
+\end{itemize}
+
+\subsection{Soluzioni Adottate}
+
+Per risolvere queste difficoltà ho:
+
+\begin{itemize}
+    \item Implementato una funzione robusta per la gestione dell'input utente
+    \item Testato il programma su diverse piattaforme (Windows, Linux)
+    \item Raccolto feedback da altri studenti per calibrare le situazioni di gioco
+    \item Utilizzato array di stringhe per gestire facilmente le frasi e le situazioni random
+\end{itemize}
+
+\section{Valore Educativo e Sociale}
+
+\subsection{Critica Costruttiva}
+
+Sebbene il progetto adotti un tono ironico e provocatorio, non intende essere una semplice critica fine a se stessa. L'obiettivo è stimolare una riflessione su:
+
+\begin{itemize}
+    \item L'impatto psicologico che il sistema attuale può avere sugli studenti
+    \item La discrepanza tra gli obiettivi dichiarati dell'educazione e le pratiche quotidiane
+    \item La mancanza di attenzione verso il benessere psicologico degli studenti
+    \item L'importanza di un approccio più umano e comprensivo nell'educazione
+\end{itemize}
+
+\subsection{Possibili Sviluppi}
+
+Questo progetto potrebbe evolversi in diversi modi:
+
+\begin{itemize}
+    \item Implementazione di una versione grafica con interfaccia più elaborata
+    \item Espansione delle situazioni di gioco per coprire l'intero anno scolastico
+    \item Creazione di una versione "utopica" che simuli un sistema educativo ideale
+    \item Traduzione in formato web per renderlo accessibile a più persone
+    \item Raccolta di dati anonimi per analizzare le scelte più comuni e le situazioni più stressanti
+\end{itemize}
+
+\section{Conclusioni}
+
+\textit{EDU-K.O. - Il Simulatore di Sopravvivenza Scolastica} rappresenta un esempio di come la programmazione possa essere utilizzata non solo per creare applicazioni funzionali, ma anche per esprimere idee, stimolare riflessioni e proporre critiche costruttive.
+
+Attraverso questo progetto, ho voluto dimostrare come le competenze tecniche acquisite durante il mio percorso di studi possano essere applicate in modo creativo e significativo. La programmazione diventa così non solo uno strumento tecnico, ma anche un mezzo di espressione e comunicazione.
+
+In un'epoca in cui il sistema educativo è in continua evoluzione, ritengo che sia importante che noi studenti contribuiamo al dibattito con le nostre prospettive e i nostri talenti. Questo progetto è il mio piccolo contributo a questa importante conversazione.
+
+\section{Bibliografia e Riferimenti}
+
+\begin{enumerate}
+    \item Kernighan, B. W., \& Ritchie, D. M. (1988). \textit{The C Programming Language}. Prentice Hall.
+    \item Ministero dell'Istruzione (2024). \textit{Nota MIM 7557/2024 - Piattaforma UNICA}.
+    \item Adams, S. (1996). \textit{The Dilbert Principle}. Harper Business.
+    \item Prensky, M. (2001). \textit{Digital Game-Based Learning}. McGraw-Hill.
+    \item Robinson, K. (2015). \textit{Creative Schools: The Grassroots Revolution That's Transforming Education}. Viking.
+\end{enumerate}
+
+\appendix
+\section{Codice Completo}
+
+Il codice completo del progetto è disponibile qua sotto ed è possibile eseguire il programma compilando il seguente file:
+
+\begin{lstlisting}[language=C, caption=Codice completo (file Capolavoro2.c)]
+/*
+* EDU-K.O. - Il Simulatore di Sopravvivenza Scolastica
+* Un viaggio interattivo nell'assurda realtà del sistema educativo italiano
+* 
+* "Nel codice, come nella vita: lo studente perde sempre"
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+// Configurazione del gioco
+#define MAX_STRESS 100
+#define MAX_VOTO 10
+#define NOME_LENGTH 50
+
+// Struttura per lo studente virtuale
+typedef struct {
+    char nome[NOME_LENGTH];
+    int stress;
+    float media;
+    int ore_sonno;
+    int assenze;
+    int note_disciplinari;
+    int voglia_vivere;
+} Studente;
+
+// Frasi ironiche del sistema
+char* frasi_prof[] = {
+    "\"Non dovevi studiare solo l'ultima settimana\"",
+    "\"Io alla tua età studiavo 12 ore al giorno\"",
+    "\"Non ho tempo per spiegazioni individuali\"",
+    "\"La creatività non serve, servono le nozioni\"",
+    "\"Non è colpa mia se non capisci\"",
+    "\"Questo lo avete già fatto in precedenza\"",
+    "\"Nel mondo del lavoro non ti passano nulla\"",
+    "\"Dovete imparare a essere autonomi\""
+};
+
+char* situazioni_assurde[] = {
+    "Ti hanno assegnato 8 materie con verifica questa settimana",
+    "Il WiFi non funziona ma pretendono che usi il registro elettronico",
+    "Ti chiedono di essere creativo ma poi ti bocciano se esci dal programma",
+    "Devi fare 30 ore di alternanza scuola-lavoro non retribuite",
+    "Ti fanno studiare poesie del 1200 ma non come fare le tasse",
+    "La prof cambia le regole del compito durante il compito",
+    "Ti chiedono di avere 'spirito critico' ma solo se concordi con loro"
+};
+
+// Prototipi funzioni
+void inizializza_studente(Studente *s);
+void mostra_status(Studente *s);
+void situazione_mattino(Studente *s);
+void situazione_lezione(Studente *s);
+void situazione_verifica(Studente *s);
+void situazione_colloquio(Studente *s);
+void situazione_casa(Studente *s);
+void risultato_finale(Studente *s);
+void intro();
+void pausa();
+int scelta_utente(int min, int max);
+
+int main() {
+    srand(time(NULL));
+    
+    printf("\033[2J\033[1;1H"); // Pulisce lo schermo
+    
+    intro();
+    
+    Studente studente;
+    inizializza_studente(&studente);
+    
+    printf("\n\n=== EDU-K.O. - Il Simulatore di Sopravvivenza Scolastica ===\n");
+    printf("     \"Benvenuto nell'incubo quotidiano\"               \n\n");
+    
+    // Varie situazioni di una giornata scolastica
+    situazione_mattino(&studente);
+    situazione_lezione(&studente);
+    situazione_verifica(&studente);
+    situazione_colloquio(&studente);
+    situazione_casa(&studente);
+    
+    // Risultato finale
+    risultato_finale(&studente);
+    
+    return 0;
+}
+
+void inizializza_studente(Studente *s) {
+    printf("\nInserisci il tuo nome: ");
+    fgets(s->nome, NOME_LENGTH, stdin);
+    s->nome[strcspn(s->nome, "\n")] = 0; // Rimuove newline
+    
+    s->stress = 50;
+    s->media = 6.0;
+    s->ore_sonno = 5; // Realistico per uno studente italiano
+    s->assenze = 0;
+    s->note_disciplinari = 0;
+    s->voglia_vivere = 50;
+    
+    printf("\nBene %s, benvenuto nella macchina tritacarne.\n", s->nome);
+    pausa();
+}
+
+void mostra_status(Studente *s) {
+    printf("\n--- Status di %s ---\n", s->nome);
+    printf("Stress: %d/100 ", s->stress);
+    for(int i = 0; i < s->stress/10; i++) printf("\n");
+    printf("\n");
+    
+    printf("Media scolastica: %.1f\n", s->media);
+    printf("Ore di sonno: %d\n", s->ore_sonno);
+    printf("Assenze: %d\n", s->assenze);
+    printf("Note disciplinari: %d\n", s->note_disciplinari);
+    printf("Voglia di vivere: %d%% ", s->voglia_vivere);
+    for(int i = 0; i < s->voglia_vivere/20; i++) printf("♥");
+    printf("\n-------------------\n");
+}
+
+void situazione_mattino(Studente *s) {
+    printf("\n\n=== ORE 06:30 - LA SVEGLIA SUONA ===\n");
+    printf("Hai dormito %d ore. Ti senti distrutto.\n", s->ore_sonno);
+    
+    // Situazione assurda random
+    printf("\n%s\n", situazioni_assurde[rand() % 7]);
+    
+    printf("\nCosa fai?\n");
+    printf("1. Vai a scuola da zombie\n");
+    printf("2. Fingi di essere malato\n");
+    printf("3. Piangi nel cuscino per 10 minuti e poi vai\n");
+    
+    int scelta = scelta_utente(1, 3);
+    
+    switch(scelta) {
+        case 1:
+            printf("\nArrivi in classe con le occhiaie fino ai piedi.\n");
+            printf("La prof ti guarda e dice: %s\n", frasi_prof[rand() % 8]);
+            s->stress += 15;
+            s->voglia_vivere -= 10;
+            break;
+            
+        case 2:
+            printf("\nTua madre non ci crede e ti obbliga ad andare.\n");
+            printf("Arrivi in ritardo e prendi una nota.\n");
+            s->note_disciplinari++;
+            s->stress += 20;
+s->assenze++; // Contano come assenza anche se vai
+            break;
+            
+        case 3:
+            printf("\nArrivi con gli occhi rossi. Il bidello ti chiede se va tutto bene.\n");
+            printf("È l'unica persona che si preoccupa per te oggi.\n");
+            s->stress += 10;
+            s->voglia_vivere -= 5;
+            break;
+    }
+    
+    mostra_status(s);
+    pausa();
+}
+
+void situazione_lezione(Studente *s) {
+    printf("\n\n=== ORE 08:15 - PRIMA ORA: MATEMATICA ===\n");
+    printf("La prof entra e dice: 'Spero abbiate studiato il capitolo 7'.\n");
+    printf("Tu ovviamente hai studiato il capitolo 6.\n");
+    
+    printf("\nCosa fai?\n");
+    printf("1. Confessi di aver studiato il capitolo sbagliato\n");
+    printf("2. Fingi di sapere e speri di non essere interrogato\n");
+    printf("3. Fingi un malore e vai in infermeria\n");
+    
+    int scelta = scelta_utente(1, 3);
+    
+    switch(scelta) {
+        case 1:
+            printf("\nLa prof: 'COME È POSSIBILE? È SUL REGISTRO DA DUE SETTIMANE!'\n");
+            printf("Vieni interrogato comunque e prendi 3.\n");
+            s->media = (s->media * 4 + 3) / 5;
+            s->stress += 25;
+            s->voglia_vivere -= 15;
+            break;
+            
+        case 2:
+            printf("\nViene chiamato il tuo compagno di banco.\n");
+            printf("Mentre lui balbetta le risposte, la prof nota che stai leggendo sotto il banco.\n");
+            printf("Nota disciplinare per 'comportamento scorretto'.\n");
+            s->note_disciplinari++;
+            s->stress += 20;
+            break;
+            
+        case 3:
+            printf("\nIn infermeria non c'è nessuno (come al solito).\n");
+            printf("Ti siedi e apri il libro di matematica, ma è tardi per recuperare.\n");
+            s->stress += 15;
+            s->ore_sonno--; // Lo stress ti sta consumando
+            break;
+    }
+    
+    mostra_status(s);
+    pausa();
+}
+
+void situazione_verifica(Studente *s) {
+    printf("\n\n=== ORE 10:15 - VERIFICA A SORPRESA DI LATINO ===\n");
+    printf("'Ragazzi, compito in classe! Spero abbiate ripassato.'\n");
+    printf("Nessuno aveva annunciato nulla. Il panico si diffonde.\n");
+    
+    printf("\nCome affronti la situazione?\n");
+    printf("1. Tenti di copiare dal tuo compagno\n");
+    printf("2. Scrivi qualsiasi cosa sperando nella pietà\n");
+    printf("3. Consegni in bianco con dignità\n");
+    
+    int scelta = scelta_utente(1, 3);
+    
+    switch(scelta) {
+        case 1:
+            printf("\nLa prof ti becca dopo 2 minuti.\n");
+            printf("'%s! VERGOGNATI! Voti annullati per entrambi!'\n", s->nome);
+            printf("Il tuo compagno ti odia. Hai perso un amico.\n");
+            s->media = (s->media * 4 + 2) / 5;
+            s->stress += 35;
+            s->voglia_vivere -= 20;
+            s->note_disciplinari++;
+            break;
+            
+        case 2:
+            printf("\nScrivi frasi con errori grammaticali italiani nella versione latina.\n");
+            printf("La prof ti corregge con inchiostro rosso dappertutto.\n");
+            printf("Voto: 4. 'Almeno ci hai provato' dice sarcasticamente.\n");
+            s->media = (s->media * 4 + 4) / 5;
+            s->stress += 25;
+            s->voglia_vivere -= 10;
+            break;
+            
+        case 3:
+            printf("\nLa prof apprezza l'onestà ma ti mette 2.\n");
+            printf("'Non puoi non sapere nulla dopo un anno di latino!'\n");
+            printf("(Come se un anno bastasse per imparare una lingua morta)\n");
+            s->media = (s->media * 4 + 2) / 5;
+            s->stress += 30;
+            s->voglia_vivere -= 15;
+            break;
+    }
+    
+    mostra_status(s);
+    pausa();
+}
+
+void situazione_colloquio(Studente *s) {
+    printf("\n\n=== ORE 13:00 - COLLOQUIO CON LA COORDINATRICE ===\n");
+    printf("'%s, vieni un momento. Dobbiamo parlare.'\n", s->nome);
+    printf("Il cuore ti si ferma. Cosa ho fatto adesso?\n");
+    
+    printf("\nCome ti presenti?\n");
+    printf("1. Umile e pentito (anche se non sai di cosa)\n");
+    printf("2. Sicuro di te e pronto al confronto\n");
+    printf("3. Rassegnato al destino\n");
+    
+    int scelta = scelta_utente(1, 3);
+    
+    switch(scelta) {
+        case 1:
+            printf("\nProf: 'Ho notato un calo nel tuo rendimento.'\n");
+            printf("Tu: 'Ha ragione prof, mi impegnerò di più.'\n");
+            printf("Prof: 'Bene, voglio vedere miglioramenti o chiamo i tuoi genitori.'\n");
+            s->stress += 20;
+            s->voglia_vivere -= 10;
+            break;
+            
+        case 2:
+            printf("\nTu: 'Se c'è un problema, parliamone apertamente.'\n");
+            printf("Prof: 'Il problema è il tuo atteggiamento! Non ti rendi conto della gravità!'\n");
+            printf("Escalation. Nota disciplinare. I tuoi genitori vengono avvisati.\n");
+            s->note_disciplinari++;
+            s->stress += 35;
+            s->voglia_vivere -= 20;
+            break;
+            
+        case 3:
+            printf("\nTu: 'Lo so, sono un fallimento.'\n");
+            printf("Prof: 'Non dire così... ma effettivamente devi reagire.'\n");
+            printf("Ti senti peggio di prima. Almeno non hai preso una nota.\n");
+            s->stress += 15;
+            s->voglia_vivere -= 15;
+            break;
+    }
+    
+    mostra_status(s);
+    pausa();
+}
+
+void situazione_casa(Studente *s) {
+    printf("\n\n=== ORE 15:30 - FINALMENTE A CASA ===\n");
+    printf("Guardi l'agenda: 3 compiti scritti, 4 capitoli da studiare, ricerca di gruppo.\n");
+    printf("Domani interrogazioni in 2 materie.\n");
+    
+    printf("\nCome organizzi il pomeriggio?\n");
+    printf("1. Studio 6 ore filate per recuperare\n");
+    printf("2. Fai una pausa e poi studi (rischi di non finire)\n");
+    printf("3. Ti arrendi e guardi Netflix\n");
+    
+    int scelta = scelta_utente(1, 3);
+    
+    switch(scelta) {
+        case 1:
+            printf("\nStudi fino alle 21:30. Riesci a fare quasi tutto.\n");
+            printf("Ma hai mal di testa e non hai cenato bene.\n");
+            printf("Ti addormenti alle 01:00. Domani saranno 5 ore di sonno.\n");
+            s->stress += 25;
+            s->ore_sonno = 5;
+            s->voglia_vivere -= 15;
+            s->media += 0.2; // Piccolo miglioramento nella media
+            break;
+            
+        case 2:
+            printf("\nTi riposi 1 ora, poi cominci a studiare.\n");
+            printf("Alle 23:00 ti accorgi che hai fatto solo metà.\n");
+            printf("Panico. Studi fino alle 02:00 in ansia.\n");
+            s->stress += 35;
+            s->ore_sonno = 4;
+            s->voglia_vivere -= 20;
+            break;
+            
+        case 3:
+            printf("\nGuardi una serie fino a tardi. Ti senti in colpa.\n");
+            printf("Domani sarà un disastro, ma almeno stasera respiri.\n");
+            printf("Ansia da domani: già pensi alle scuse per i prof.\n");
+            s->stress += 40;
+            s->ore_sonno = 6;
+            s->voglia_vivere -= 10;
+            s->media -= 0.3; // Peggioramento della media
+            break;
+    }
+    
+    mostra_status(s);
+    pausa();
+}
+
+void risultato_finale(Studente *s) {
+    printf("\n\n=== FINE GIORNATA - RIEPILOGO ESISTENZIALE ===\n");
+    
+    printf("\n STATISTICHE DI %s:\n", s->nome);
+    printf("----------------------------------------\n");
+    mostra_status(s);
+    
+    printf("\n ANALISI PSICOLOGICA:\n");
+    if(s->stress >= 90) {
+        printf("Sei vicino al burnout. Il sistema ha quasi vinto.\n");
+    } else if(s->stress >= 70) {
+        printf("Il peso del sistema ti sta schiacciando.\n");
+    } else if(s->stress >= 50) {
+        printf("Sopravvivi, ma a quale prezzo?\n");
+    } else {
+        printf("Hai resistito, ma domani si ricomincia.\n");
+    }
+    
+    printf("\n REPORT GIORNALIERO:\n");
+    printf("- Media scolastica: %.1f (", s->media);
+    if(s->media >= 6.0) printf("Sufficiente, ma a che costo?)\n");
+    else printf("Insufficiente, come prevedibile)\n");
+    
+    printf("- Ore di sonno: %d (", s->ore_sonno);
+    if(s->ore_sonno >= 8) printf("Miracolo!)\n");
+    else if(s->ore_sonno >= 6) printf("Almeno qualcosa)\n");
+    else printf("Zombie mode attivo)\n");
+    
+    printf("- Stress accumulato: %d/100\n", s->stress);
+    printf("- Voglia di vivere: %d%%\n", s->voglia_vivere);
+    
+    printf("\n CONCLUSIONE:\n");
+    printf("----------------------------------------\n");
+    printf("Un'altra giornata di sopravvivenza completata.\n");
+    printf("La scuola ti prepara alla vita... \n");
+    printf("...ti prepara a soffrire.\n\n");
+    
+    printf("Il sistema non è fatto per lo studente,\n");
+    printf("lo studente è fatto per il sistema.\n\n");
+    
+    printf("\"Nel mondo del lavoro sarà uguale\" dicono.\n");
+    printf("E se fosse il momento di cambiare tutto?\n\n");
+    
+    printf("Grazie per aver giocato a EDU-K.O.\n");
+    printf("Domani, stessa ora, stessa sofferenza.\n");
+    printf("----------------------------------------\n");
+}
+
+void intro() {
+    printf("\n");
+    printf("\n");
+    printf("           Il Simulatore di Sopravvivenza Scolastica\n");
+    printf("          \"Benvenuto nel sistema che vuole distruggerti\"\n");
+}
+
+void pausa() {
+    printf("\nPremi INVIO per continuare...");
+    getchar();
+}
+
+int scelta_utente(int min, int max) {
+    int scelta;
+    char buffer[100];
+    
+    while(1) {
+        printf("\nScelta (inserisci il numero): ");
+        if(fgets(buffer, sizeof(buffer), stdin) != NULL) {
+            scelta = atoi(buffer);
+            if(scelta >= min && scelta <= max) {
+                return scelta;
+            }
+        }
+        printf("Scelta non valida. Riprova.\n");
+    }
+}
+\end{lstlisting}
+
+\section{Istruzioni per la Compilazione ed Esecuzione}
+
+Per compilare ed eseguire il programma, seguire questi passaggi:
+
+\begin{enumerate}
+    \item Aprire un terminale
+    \item Navigare nella directory contenente il file sorgente
+    \item Eseguire il comando di compilazione: \texttt{gcc -o edu-ko Capolavoro2.c}
+    \item Eseguire il programma: \texttt{./edu-ko}
+\end{enumerate}
+
+\end{document}
