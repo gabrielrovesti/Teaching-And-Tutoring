@@ -1,0 +1,21 @@
+C:\Users\roves\OneDrive\Desktop\MATLAB Tesi Architettura>tree /f
+Elenco del percorso delle cartelle per il volume Acer
+Numero di serie del volume: 3893-F422
+C:.
+│   Tesi Magistrale MATLAB.txt
+│
+├───Codici creati da me
+│       def_UnioneGrafici.m
+│       Function_def_CompletaPost.m
+│       Function_def_CompletaPre.m
+│       main.m
+│
+└───Codici _vecchi_
+        createfigure.m
+        createfigure2.m
+        Estrazione_valori.m
+        Estrazione_valori2.m
+        Vettori.m
+
+
+C:\Users\roves\OneDrive\Desktop\MATLAB Tesi Architettura>

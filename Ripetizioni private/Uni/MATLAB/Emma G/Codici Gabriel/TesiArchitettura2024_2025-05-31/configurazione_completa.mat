@@ -1,0 +1,195 @@
+# Created by Octave 10.1.0, Sat May 31 08:30:00 2025 UTC <unknown@LAPTOP-B2M6ISQ9>
+# name: config
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 7
+# name: nomeProgetto
+# type: sq_string
+# elements: 1
+# length: 20
+TesiArchitettura2024
+
+
+# name: dataAnalisi
+# type: sq_string
+# elements: 1
+# length: 10
+2025-05-31
+
+
+# name: cartellaP
+# type: sq_string
+# elements: 1
+# length: 103
+C:\Users\roves\OneDrive\Desktop\MATLAB Tesi Architettura\Codici Gabriel\TesiArchitettura2024_2025-05-31
+
+
+# name: sottocartelle
+# type: cell
+# rows: 1
+# columns: 6
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 18
+termografie_grezze
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 17
+grafici_elaborati
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 17
+grafici_confronto
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 18
+visualizzazioni_3d
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 15
+dati_statistici
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 6
+report
+
+
+
+
+
+# name: percorsi
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 6
+# name: termografie
+# type: sq_string
+# elements: 1
+# length: 122
+C:\Users\roves\OneDrive\Desktop\MATLAB Tesi Architettura\Codici Gabriel\TesiArchitettura2024_2025-05-31\termografie_grezze
+
+
+# name: grafici
+# type: sq_string
+# elements: 1
+# length: 121
+C:\Users\roves\OneDrive\Desktop\MATLAB Tesi Architettura\Codici Gabriel\TesiArchitettura2024_2025-05-31\grafici_elaborati
+
+
+# name: confronti
+# type: sq_string
+# elements: 1
+# length: 121
+C:\Users\roves\OneDrive\Desktop\MATLAB Tesi Architettura\Codici Gabriel\TesiArchitettura2024_2025-05-31\grafici_confronto
+
+
+# name: vis3d
+# type: sq_string
+# elements: 1
+# length: 122
+C:\Users\roves\OneDrive\Desktop\MATLAB Tesi Architettura\Codici Gabriel\TesiArchitettura2024_2025-05-31\visualizzazioni_3d
+
+
+# name: statistiche
+# type: sq_string
+# elements: 1
+# length: 119
+C:\Users\roves\OneDrive\Desktop\MATLAB Tesi Architettura\Codici Gabriel\TesiArchitettura2024_2025-05-31\dati_statistici
+
+
+# name: report
+# type: sq_string
+# elements: 1
+# length: 110
+C:\Users\roves\OneDrive\Desktop\MATLAB Tesi Architettura\Codici Gabriel\TesiArchitettura2024_2025-05-31\report
+
+
+
+
+# name: matrici
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 4
+# name: pre_size
+# type: matrix
+# rows: 1
+# columns: 2
+ 300 400
+
+
+# name: post_size
+# type: matrix
+# rows: 1
+# columns: 2
+ 300 400
+
+
+# name: pre_range
+# type: matrix
+# rows: 1
+# columns: 2
+ 14.405231751456975 18.246758723260339
+
+
+# name: post_range
+# type: matrix
+# rows: 1
+# columns: 2
+ 14.306489517938429 16.423827893700988
+
+
+
+
+# name: analisi
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: idCampione
+# type: sq_string
+# elements: 1
+# length: 16
+T04_TestCampione
+
+
+# name: software
+# type: sq_string
+# elements: 1
+# length: 17
+GNU Octave 10.1.0
+
+
+# name: timestamp_inizio
+# type: sq_string
+# elements: 1
+# length: 19
+2025-05-31 08:30:00
+
+
+
+
+
+
