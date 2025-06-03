@@ -1,7 +1,14 @@
-C:\Users\roves\OneDrive\Desktop\MATLAB Tesi Architettura>tree /f
+
+Microsoft Windows [Versione 10.0.26100.4202]
+(c) Microsoft Corporation. Tutti i diritti riservati.
+
+C:\Users\roves\OneDrive\Documenti\GitHub\Teaching-And-Tutoring\Ripetizioni private\Uni\MATLAB\Emma G>tree /f
 Elenco del percorso delle cartelle per il volume Acer
 Numero di serie del volume: 3893-F422
 C:.
+│   Analisi sperimentale -118-132.pdf
+│   Codici Gabriel.zip
+│   Filesystem Structure Codici.txt
 │   Tesi Magistrale MATLAB.txt
 │
 ├───Codici creati da me
@@ -10,12 +17,40 @@ C:.
 │       Function_def_CompletaPre.m
 │       main.m
 │
+├───Codici Gabriel
+│   │   analisiPostMigliorata.m
+│   │   analisiPreMigliorata.m
+│   │   creaDatiTest.m
+│   │   createFigureMigliorata.m
+│   │   esempioUtilizzoCompleto.m
+│   │   generaReport.m
+│   │   graficiConfronto.m
+│   │   mainOctaveSafe.m
+│   │   mainSistemaCompleto.m
+│   │   risultati_T04_TestCampione_2025-05-31_08-34.txt
+│   │   setupAmbienteAnalisi.m
+│   │   T04_1129.mat
+│   │   T04_2_1129.mat
+│   │   utilitàCompatibilità.m
+│   │   visualizzazioni3D.m
+│   │
+│   ├───Guide
+│   │       🎓 GUIDA MIGLIORAMENTO CODICE ESISTENTE.pdf
+│   │       🚀 GUIDA PRATICA - ESECUZIONE SISTEMA ANALISI TERMOGRAFICA.pdf
+│   │
+│   └───TesiArchitettura2024_2025-05-31
+│       │   configurazione_analisi.mat
+│       │   configurazione_completa.mat
+│       │
+│       ├───dati_statistici
+│       ├───grafici_confronto
+│       ├───grafici_elaborati
+│       ├───report
+│       ├───termografie_grezze
+│       └───visualizzazioni_3d
 └───Codici _vecchi_
         createfigure.m
         createfigure2.m
         Estrazione_valori.m
         Estrazione_valori2.m
         Vettori.m
-
-
-C:\Users\roves\OneDrive\Desktop\MATLAB Tesi Architettura>

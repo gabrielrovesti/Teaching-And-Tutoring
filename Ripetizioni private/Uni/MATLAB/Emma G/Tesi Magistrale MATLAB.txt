@@ -14,3 +14,11 @@ Spero di essermi spiegata, non avendo delle conoscenze approfondite di Matlab pr
 
 Codici Matlab
 Ciao Gabriel, ti invio i codici Matlab come da accordo. Ti invio una cartella con il codice che ho creato io, e una con quello che mi era stato precedentemente inviato. Per quanto riguarda il mio codice, dopo aver caricato le matrici numeriche che contengono i valori di temperatura superficiali su ogni punto della termografia, faccio partire il file "Main" che si rifà ad altre Function. Perdonami ma non so spiegarmi molto meglio di così! In caso poi vedremo assieme durante la prossima chiamata. Fammi sapere se visualizzi tutto correttamente! Grazie in anticipo 
+
+Buongiorno Gabriel, perdona il ritardo ma ci ho impiegato un pò per vedere il materiale che mi hai mandato! Ho provato a modificare il mio codice con le indicazioni del pdf, facendo intanto una prova per modificare i titoli e la legenda del primo grafico (temperatura dei profili verticali), ma per qualche motivo il grafico risulta invariato rispetto a come mi usciva prima. Probabilmente sto sbagliando qualcosa io, però a questo punto ti chiederei se possiamo fissare una videochiamata in modo da poter visualizzare assieme il materiale mandato ed provare a farlo funzionare. Inoltre io non ti avevo specificato nel dettaglio come volevo modificare i grafici (ad esempio, inserendo quali titoli, di quali legende ho bisogno) e non avevo specificato che vorrei che i grafici si salvassero automaticamente su delle cartelle già predisposte nel mio OneDrive secondo una nomenclatura già predisposta. Anche i grafici 3D non ti avevo detto rispetto a quali variabili volevo predisporli. Per cui se sei d'accordo io fisserei una chiamata in modo tale che io possa spiegarti meglio esattamente cosa devo fare e vediamo eventualmente di far girare assieme il codice
+
+(Immagine1.jpg)
+Sostanzialmente, il mio obiettivo primario era avere dei grafici stampati con questi titoli e con queste legende che vedi nelle immagini, perché al momento mi vengono stampati senza titolo e con le legende sbagliate. Questa era la cosa più importante per me da modificare perché al momento la correggo manualmente perdendo molto tempo in più diciamo
+
+(Immagine2.jpg)
+(Immagine3.jpg)
