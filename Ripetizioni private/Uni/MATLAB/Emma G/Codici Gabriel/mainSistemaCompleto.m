@@ -1,422 +1,382 @@
-function mainSistemaCompleto(mat_pre, mat_post, nomeProgetto, idCampione)
-    % MAINSISTEMACOMPLETO - Script principale per analisi termografica automatizzata
-    %
-    % Sintassi: mainSistemaCompleto(mat_pre, mat_post, nomeProgetto, idCampione)
+% Parametri
+casoStudio = 1129;
+termografiaID = 'T04';
+localizzazione = 'Ortona (CH)';
+function mainCompleto(mat_pre, mat_post, casoStudio, termografiaID, localizzazione)
+    % MAINCOMPLETO - Funzione principale per l'analisi termografica automatizzatamainCompleto
     %
     % Input:
-    %   mat_pre      - Matrice termografia pre-intervento
-    %   mat_post     - Matrice termografia post-intervento  
-    %   nomeProgetto - Nome del progetto (opzionale)
-    %   idCampione   - Identificativo campione (opzionale)
+    %   mat_pre        - Matrice termografia pre-intervento
+    %   mat_post       - Matrice termografia post-intervento
+    %   casoStudio     - Numero caso studio (es: 1468)
+    %   termografiaID  - ID termografia (es: "T05")
+    %   localizzazione - Localizzazione (es: "Verona (VR)")
     %
-    % Esempio d'uso:
-    %   load('T04_1129.mat');
-    %   load('T04_2_1129.mat');
-    %   mainSistemaCompleto(T04_1129, T04_2_1129, 'StudioUmidita2024', 'T04_Campione');
-    %
-    % Compatibilità: MATLAB e Octave
+    % Esempio:
+    %   mainCompleto(T04_1129, T04_2_1129, 1129, "T04", "Ortona (CH)")
     
-    % === GESTIONE PARAMETRI INPUT ===
+    if nargin < 5
+        localizzazione = "TestLocation";
+    end
     if nargin < 4
-        if exist('OCTAVE_VERSION', 'builtin')
-            idCampione = sprintf('Campione_%s', strftime('%H%M%S', localtime(time)));
-        else
-            idCampione = sprintf('Campione_%s', datestr(now, 'HHMMSS'));
-        end
+        termografiaID = "T04";
     end
-    
     if nargin < 3
-        nomeProgetto = 'AnalisiTermica';
+        casoStudio = 1129;
     end
     
-    if nargin < 2
-        error('Sono necessarie almeno due matrici: mat_pre e mat_post');
+    fprintf('\n=== ANALISI TERMOGRAFICA AUTOMATIZZATA ===\n');
+    fprintf('Caso Studio: %d %s\n', casoStudio, localizzazione);
+    fprintf('Termografia: %s\n\n', termografiaID);
+    
+    % === SETUP PATHS ===
+    % Percorso OneDrive (adatta questo al tuo sistema)
+    basePathOneDrive = fullfile(getenv('USERPROFILE'), 'OneDrive', 'Documenti');
+    if ~exist(basePathOneDrive, 'dir')
+        basePathOneDrive = pwd; % Fallback alla directory corrente
+        fprintf('⚠️  OneDrive non trovato, usando directory corrente\n');
     end
     
-    % === CONTROLLI PRELIMINARI ===
-    fprintf('\n=================================================================\n');
-    fprintf('    SISTEMA AUTOMATIZZATO ANALISI TERMOGRAFICA AVANZATO\n');
-    fprintf('         Studio Umidità di Risalita CNT-APPs\n');
-    fprintf('=================================================================\n\n');
+    % Struttura cartelle come richiesto: "numero localizzazione" / "T+numero"
+    cartellaProgetto = sprintf('%d %s', casoStudio, localizzazione);
+    cartellaTermografia = termografiaID;
     
-    % Verifica presenza matrici
-    if isempty(mat_pre) || isempty(mat_post)
-        error('Le matrici di input non possono essere vuote');
-    end
+    percorsoCompleto = fullfile(basePathOneDrive, cartellaProgetto, cartellaTermografia);
     
-    % Verifica dimensioni matrici
-    fprintf('Controllo matrici input:\n');
-    fprintf('  - Matrice pre-intervento: %dx%d\n', size(mat_pre, 1), size(mat_pre, 2));
-    fprintf('  - Matrice post-intervento: %dx%d\n', size(mat_post, 1), size(mat_post, 2));
-    
-    if size(mat_pre, 1) < 10 || size(mat_pre, 2) < 10
-        warning('Matrice pre-intervento molto piccola - risultati potrebbero essere inaffidabili');
-    end
-    
-    if size(mat_post, 1) < 10 || size(mat_post, 2) < 10
-        warning('Matrice post-intervento molto piccola - risultati potrebbero essere inaffidabili');
-    end
-    
-    % Verifica range temperature
-    range_pre = [min(mat_pre(:)), max(mat_pre(:))];
-    range_post = [min(mat_post(:)), max(mat_post(:))];
-    
-    fprintf('  - Range temperature pre: %.2f - %.2f °C\n', range_pre(1), range_pre(2));
-    fprintf('  - Range temperature post: %.2f - %.2f °C\n', range_post(1), range_post(2));
-    
-    if range_pre(2) - range_pre(1) < 1
-        warning('Range temperature pre-intervento molto limitato (<1°C)');
-    end
-    
-    if range_post(2) - range_post(1) < 1
-        warning('Range temperature post-intervento molto limitato (<1°C)');
-    end
-    
-    fprintf('✓ Controlli preliminari completati\n\n');
-    
-    % === INIZIALIZZAZIONE SISTEMA ===
-    try
-        fprintf('FASE 1: Inizializzazione ambiente analisi...\n');
-        config = setupAmbienteAnalisi(nomeProgetto);
-        fprintf('✓ Ambiente inizializzato: %s\n\n', config.cartellaP);
-        
-        % Salva configurazione estesa
-        config.matrici.pre_size = size(mat_pre);
-        config.matrici.post_size = size(mat_post);
-        config.matrici.pre_range = range_pre;
-        config.matrici.post_range = range_post;
-        config.analisi.idCampione = idCampione;
-        
-        if exist('OCTAVE_VERSION', 'builtin')
-            config.analisi.software = sprintf('GNU Octave %s', version);
-            config.analisi.timestamp_inizio = strftime('%Y-%m-%d %H:%M:%S', localtime(time));
-        else
-            config.analisi.software = sprintf('MATLAB %s', version);
-            config.analisi.timestamp_inizio = datestr(now, 'yyyy-mm-dd HH:MM:SS');
-        end
-        
-        % Salva configurazione estesa
-        save(fullfile(config.cartellaP, 'configurazione_completa.mat'), 'config');
-        
-    catch ME
-        fprintf('❌ ERRORE nell''inizializzazione: %s\n', ME.message);
-        rethrow(ME);
+    % Crea cartelle se non esistono
+    if ~exist(percorsoCompleto, 'dir')
+        mkdir(percorsoCompleto);
+        fprintf('✓ Creata cartella: %s\n', percorsoCompleto);
     end
     
     % === ANALISI PRE-INTERVENTO ===
-    try
-        fprintf('FASE 2: Avvio analisi pre-intervento...\n');
-        risultati_pre = analisiPreMigliorata(mat_pre, config, idCampione);
-        fprintf('✓ Analisi pre-intervento completata\n\n');
-        
-    catch ME
-        fprintf('❌ ERRORE nell''analisi pre-intervento: %s\n', ME.message);
-        
-        % Tentativo di recupero con parametri automatici
-        fprintf('Tentativo recupero con parametri automatici...\n');
-        try
-            risultati_pre = analisiPreAutomatica(mat_pre, config, idCampione);
-            fprintf('✓ Recupero riuscito con parametri automatici\n\n');
-        catch ME2
-            fprintf('❌ Recupero fallito: %s\n', ME2.message);
-            rethrow(ME);
-        end
-    end
+    fprintf('📊 Analisi PRE-intervento...\n');
+    risultati_pre = analisiTermografica(mat_pre, 'PRE', percorsoCompleto, casoStudio, termografiaID);
     
     % === ANALISI POST-INTERVENTO ===
+    fprintf('📊 Analisi POST-intervento...\n');
+    risultati_post = analisiTermografica(mat_post, 'POST', percorsoCompleto, casoStudio, termografiaID);
+    
+    % === CREAZIONE GRAFICI COMBINATI ===
+    fprintf('📈 Creazione grafici combinati...\n');
+    creaGraficiCombinati(risultati_pre, risultati_post, percorsoCompleto, casoStudio, termografiaID);
+    
+    % === SALVATAGGIO EXCEL ===
     try
-        fprintf('FASE 3: Avvio analisi post-intervento...\n');
-        risultati_post = analisiPostMigliorata(mat_post, config, idCampione);
-        fprintf('✓ Analisi post-intervento completata\n\n');
-        
-    catch ME
-        fprintf('❌ ERRORE nell''analisi post-intervento: %s\n', ME.message);
-        
-        % Tentativo di recupero con parametri automatici
-        fprintf('Tentativo recupero con parametri automatici...\n');
-        try
-            risultati_post = analisiPostAutomatica(mat_post, config, idCampione);
-            fprintf('✓ Recupero riuscito con parametri automatici\n\n');
-        catch ME2
-            fprintf('❌ Recupero fallito: %s\n', ME2.message);
-            rethrow(ME);
-        end
+        salvaInExcel(risultati_pre, risultati_post, percorsoCompleto, casoStudio, termografiaID);
+        fprintf('✓ Dati salvati in Excel\n');
+    catch
+        fprintf('⚠️  Salvataggio Excel non riuscito (normale in Octave)\n');
     end
     
-    % === VISUALIZZAZIONI 3D ===
-    try
-        fprintf('FASE 4: Creazione visualizzazioni 3D...\n');
-        visualizzazioni3D(risultati_pre, risultati_post, mat_pre, mat_post, config, idCampione);
-        fprintf('✓ Visualizzazioni 3D completate\n\n');
-        
-        % Carica metriche 3D se disponibili
-        try
-            metriche_file = fullfile(config.percorsi.statistiche, ...
-                                   sprintf('metriche_3D_%s_*.mat', idCampione));
-            file_list = dir(metriche_file);
-            if ~isempty(file_list)
-                % Carica il file più recente
-                [~, idx] = max([file_list.datenum]);
-                load(fullfile(file_list(idx).folder, file_list(idx).name), 'metriche_3d');
-            else
-                metriche_3d = [];
-            end
-        catch
-            metriche_3d = [];
-            fprintf('⚠️  Metriche 3D non disponibili per il report\n');
-        end
-        
-    catch ME
-        fprintf('❌ ERRORE nelle visualizzazioni 3D: %s\n', ME.message);
-        fprintf('Continuando senza visualizzazioni 3D...\n\n');
-        metriche_3d = [];
-    end
+    % === RISULTATI FINALI ===
+    fprintf('\n=== RISULTATI COMPLETATI ===\n');
+    fprintf('PRE:  σV=%.4f | σH=%.4f | ratioD=%.4f | grad=%.6f\n', ...
+            risultati_pre.sigmaV, risultati_pre.sigmaH, risultati_pre.ratioD, risultati_pre.gradiente);
+    fprintf('POST: σV=%.4f | σH=%.4f | ratioD=%.4f | grad=%.6f\n', ...
+            risultati_post.sigmaV, risultati_post.sigmaH, risultati_post.ratioD, risultati_post.gradiente);
     
-    % === GRAFICI DI CONFRONTO ===
-    try
-        fprintf('FASE 5: Generazione grafici di confronto...\n');
-        graficiConfronto(risultati_pre, risultati_post, config, idCampione);
-        fprintf('✓ Grafici di confronto completati\n\n');
-        
-    catch ME
-        fprintf('❌ ERRORE nei grafici di confronto: %s\n', ME.message);
-        fprintf('Continuando senza grafici di confronto dettagliati...\n\n');
-    end
-    
-    % === GENERAZIONE REPORT ===
-    try
-        fprintf('FASE 6: Generazione report automatico...\n');
-        generaReport(risultati_pre, risultati_post, config, idCampione, metriche_3d);
-        fprintf('✓ Report automatico generato\n\n');
-        
-    catch ME
-        fprintf('❌ ERRORE nella generazione report: %s\n', ME.message);
-        fprintf('Continuando senza report automatico...\n\n');
-    end
-    
-    % === RIEPILOGO FINALE ===
-    fprintf('=================================================================\n');
-    fprintf('                    ANALISI COMPLETATA CON SUCCESSO\n');
-    fprintf('=================================================================\n\n');
-    
-    fprintf('RISULTATI PRINCIPALI:\n');
-    fprintf('Progetto: %s\n', nomeProgetto);
-    fprintf('Campione: %s\n', idCampione);
-    fprintf('Directory output: %s\n\n', config.cartellaP);
-    
-    % Calcolo metriche finali
+    % Calcola miglioramenti
     miglioramento_ratioD = ((risultati_pre.ratioD - risultati_post.ratioD) / risultati_pre.ratioD) * 100;
     miglioramento_gradiente = ((abs(risultati_pre.gradiente) - abs(risultati_post.gradiente)) / abs(risultati_pre.gradiente)) * 100;
     
-    fprintf('PARAMETRI PRE-INTERVENTO:\n');
-    fprintf('  σV: %.4f | σH: %.4f | RatioD: %.4f | Gradiente: %.6f\n', ...
-            risultati_pre.sigmaV, risultati_pre.sigmaH, risultati_pre.ratioD, risultati_pre.gradiente);
-    
-    fprintf('PARAMETRI POST-INTERVENTO:\n');
-    fprintf('  σV: %.4f | σH: %.4f | RatioD: %.4f | Gradiente: %.6f\n', ...
-            risultati_post.sigmaV, risultati_post.sigmaH, risultati_post.ratioD, risultati_post.gradiente);
-    
-    fprintf('MIGLIORAMENTI:\n');
-    fprintf('  RatioD: %.2f%% | Gradiente: %.2f%%\n\n', miglioramento_ratioD, miglioramento_gradiente);
-    
-    % Valutazione finale
-    score_globale = (max(0, miglioramento_ratioD) + max(0, miglioramento_gradiente)) / 2;
-    
-    if score_globale > 15
-        valutazione = '🟢 ECCELLENTE';
-    elseif score_globale > 10
-        valutazione = '🟡 BUONO';
-    elseif score_globale > 5
-        valutazione = '🟠 MODERATO';
-    else
-        valutazione = '🔴 LIMITATO';
-    end
-    
-    fprintf('VALUTAZIONE FINALE: %s (Score: %.2f)\n\n', valutazione, score_globale);
-    
-    % Lista file generati
-    fprintf('FILE GENERATI:\n');
-    fprintf('📁 Termografie elaborate: %d file\n', length(dir(fullfile(config.percorsi.termografie, '*.fig'))));
-    fprintf('📊 Grafici elaborati: %d file\n', length(dir(fullfile(config.percorsi.grafici, '*.fig'))));
-    fprintf('📈 Grafici confronto: %d file\n', length(dir(fullfile(config.percorsi.confronti, '*.fig'))));
-    fprintf('🎯 Visualizzazioni 3D: %d file\n', length(dir(fullfile(config.percorsi.vis3d, '*.fig'))));
-    fprintf('📋 Dati statistici: %d file\n', length(dir(fullfile(config.percorsi.statistiche, '*.mat'))));
-    fprintf('📄 Report: %d file\n', length(dir(fullfile(config.percorsi.report, '*.txt'))));
-    
-    fprintf('\n=================================================================\n');
-    fprintf('Per visualizzare i risultati, navigare in: %s\n', config.cartellaP);
-    fprintf('=================================================================\n\n');
-    
-    % Salvataggio risultati principali in workspace
-    if exist('OCTAVE_VERSION', 'builtin')
-        % Octave
-        assignin('base', 'risultati_analisi_pre', risultati_pre);
-        assignin('base', 'risultati_analisi_post', risultati_post);
-        assignin('base', 'config_analisi', config);
-    else
-        % MATLAB
-        assignin('base', 'risultati_analisi_pre', risultati_pre);
-        assignin('base', 'risultati_analisi_post', risultati_post);
-        assignin('base', 'config_analisi', config);
-    end
-    
-    fprintf('✓ Risultati salvati nel workspace come:\n');
-    fprintf('  - risultati_analisi_pre\n');
-    fprintf('  - risultati_analisi_post\n');
-    fprintf('  - config_analisi\n\n');
-    
+    fprintf('\nMIGLIORAMENTI:\n');
+    fprintf('RatioD: %.2f%% | Gradiente: %.2f%%\n', miglioramento_ratioD, miglioramento_gradiente);
+    fprintf('\nTutti i file salvati in: %s\n', percorsoCompleto);
 end
 
-% === FUNZIONI AUSILIARIE DI RECUPERO ===
-
-function risultati_pre = analisiPreAutomatica(mat_pre, config, idCampione)
-    % Versione automatica con parametri predefiniti in caso di errore nell'input
+function risultati = analisiTermografica(termografia, fase, percorsoSalvataggio, casoStudio, termografiaID)
+    % ANALISITERMOGRAFICA - Analisi singola termografia con parametri automatici
     
-    fprintf('Utilizzando parametri automatici per analisi pre-intervento...\n');
+    % Rotazione standard
+    IR = rot90(termografia);
+    [maxY, maxX] = size(IR);
     
-    % Parametri automatici basati sulle dimensioni della matrice
-    [h, w] = size(rot90(mat_pre));
+    % Parametri automatici (80% centrale per evitare input utente)
+    margine_x = round(maxX * 0.1);
+    margine_y = round(maxY * 0.1);
     
-    % Regione automatica (80% centrale)
-    margine_x = round(w * 0.1);
-    margine_y = round(h * 0.1);
+    xi = max(1, margine_x + 1);
+    xf = min(maxX, maxX - margine_x);
+    yi = max(1, margine_y + 1);
+    yf = min(maxY, maxY - margine_y);
     
-    xi = margine_x + 1;
-    xf = w - margine_x;
-    yi = margine_y + 1;
-    yf = h - margine_y;
-    
-    % Calibrazione automatica (stima 1 pixel = 1 cm)
-    fattoreCalibrazione = 1.0;
-    
-    % Continua con l'analisi usando parametri automatici...
-    % (implementazione semplificata)
-    
-    IR = rot90(mat_pre);
+    % Estrazione regione
     subIR = IR(yi:yf, xi:xf);
     
+    % Calibrazione automatica (1 pixel = 1 cm)
+    calibrationFactor = 1.0;
+    
+    % === CALCOLI STATISTICI ===
+    
+    % Profili verticali
     V_AVG = mean(subIR);
     V_dev = std(subIR);
     sigmaV = mean(V_dev);
-    Tot_AVG = mean(subIR(:));
     
+    % Profili orizzontali
     tsubIR = subIR';
     H_AVG = mean(tsubIR);
     H_dev = std(tsubIR);
     sigmaH = mean(H_dev);
     
-    sz = size(subIR);
-    h_subIR = sz(1);
-    
-    dV = linspace(0, (yf-yi)/fattoreCalibrazione, h_subIR);
-    DH_AVG = H_AVG - Tot_AVG;
-    
-    T_int = polyfit(dV, DH_AVG, 1);
-    m = T_int(1);
-    q = T_int(2);
-    
-    L = max(dV);
-    max_DH = max(DH_AVG);
-    min_DH = min(DH_AVG);
-    grad_pre = (max_DH - min_DH) / L;
-    
-    % Timestamp
-    if exist('OCTAVE_VERSION', 'builtin')
-        timestamp = strftime('%H-%M-%S', localtime(time));
-    else
-        timestamp = datestr(now, 'HH-MM-SS');
-    end
-    
-    % Struttura risultati
-    risultati_pre.idCampione = idCampione;
-    risultati_pre.timestamp = timestamp;
-    risultati_pre.sigmaV = sigmaV;
-    risultati_pre.sigmaH = sigmaH;
-    risultati_pre.ratioD = sigmaV / sigmaH;
-    risultati_pre.deltaD = sigmaV - sigmaH;
-    risultati_pre.gradiente = grad_pre;
-    risultati_pre.pendenza = m;
-    risultati_pre.intercetta = q;
-    risultati_pre.fattoreCalibrazione = fattoreCalibrazione;
-    risultati_pre.regione = [xi-1, xf, yi-1, yf];
-    risultati_pre.tempMediaTotale = Tot_AVG;
-    
-    fprintf('Parametri automatici utilizzati: regione [%d,%d,%d,%d], calibrazione %.1f\n', ...
-            xi-1, xf, yi-1, yf, fattoreCalibrazione);
-end
-
-function risultati_post = analisiPostAutomatica(mat_post, config, idCampione)
-    % Versione automatica con parametri predefiniti in caso di errore nell'input
-    
-    fprintf('Utilizzando parametri automatici per analisi post-intervento...\n');
-    
-    % Parametri automatici basati sulle dimensioni della matrice
-    [h, w] = size(rot90(mat_post));
-    
-    % Regione automatica (80% centrale)
-    margine_x = round(w * 0.1);
-    margine_y = round(h * 0.1);
-    
-    xi = margine_x + 1;
-    xf = w - margine_x;
-    yi = margine_y + 1;
-    yf = h - margine_y;
-    
-    % Calibrazione automatica (stima 1 pixel = 1 cm)
-    fattoreCalibrazione = 1.0;
-    
-    % Continua con l'analisi usando parametri automatici...
-    % (implementazione semplificata)
-    
-    IR = rot90(mat_post);
-    subIR = IR(yi:yf, xi:xf);
-    
-    V_AVG = mean(subIR);
-    V_dev = std(subIR);
-    sigmaV = mean(V_dev);
+    % Temperatura media totale
     Tot_AVG = mean(subIR(:));
     
-    tsubIR = subIR';
-    H_AVG = mean(tsubIR);
-    H_dev = std(tsubIR);
-    sigmaH = mean(H_dev);
-    
+    % Dimensioni
     sz = size(subIR);
     h_subIR = sz(1);
+    b_subIR = sz(2);
     
-    dV = linspace(0, (yf-yi)/fattoreCalibrazione, h_subIR);
+    % Coordinate per grafici
+    dH = linspace(0, (xf-xi)/calibrationFactor, b_subIR);  % Profili verticali
+    dV = linspace(0, (yf-yi)/calibrationFactor, h_subIR);  % Profili orizzontali
+    
+    % Normalizzazione
     DH_AVG = H_AVG - Tot_AVG;
     
+    % Interpolazione lineare
     T_int = polyfit(dV, DH_AVG, 1);
     m = T_int(1);
     q = T_int(2);
     
+    % Gradiente
     L = max(dV);
     max_DH = max(DH_AVG);
     min_DH = min(DH_AVG);
-    grad_post = (max_DH - min_DH) / L;
+    gradiente = (max_DH - min_DH) / L;
     
-    % Timestamp
-    if exist('OCTAVE_VERSION', 'builtin')
-        timestamp = strftime('%H-%M-%S', localtime(time));
+    % === CREAZIONE GRAFICI INDIVIDUALI ===
+    colore = strcmp(fase, 'PRE') ? 'r' : 'g';
+    
+    % 1. GRAFICO PROFILI VERTICALI
+    fig1 = figure('Visible', 'off');
+    plot(dH, V_AVG, [colore '-'], 'LineWidth', 2.0);
+    hold on;
+    plot(dH, V_AVG+2*V_dev, 'k--', 'LineWidth', 1.0);
+    plot(dH, V_AVG-2*V_dev, 'k--', 'LineWidth', 1.0);
+    
+    xlabel('Posizione X [cm]');
+    ylabel('Temperatura media [°C]');
+    title('Temperatura profili verticali');
+    if strcmp(fase, 'PRE')
+        legend('μ pre intervento', 'μ+2σ', 'μ-2σ', 'Location', 'best');
     else
-        timestamp = datestr(now, 'HH-MM-SS');
+        legend('μ post intervento', 'μ+2σ', 'μ-2σ', 'Location', 'best');
     end
+    grid on;
     
-    % Struttura risultati
-    risultati_post.idCampione = idCampione;
-    risultati_post.timestamp = timestamp;
-    risultati_post.sigmaV = sigmaV;
-    risultati_post.sigmaH = sigmaH;
-    risultati_post.ratioD = sigmaV / sigmaH;
-    risultati_post.deltaD = sigmaV - sigmaH;
-    risultati_post.gradiente = grad_post;
-    risultati_post.pendenza = m;
-    risultati_post.intercetta = q;
-    risultati_post.fattoreCalibrazione = fattoreCalibrazione;
-    risultati_post.regione = [xi-1, xf, yi-1, yf];
-    risultati_post.tempMediaTotale = Tot_AVG;
+    % Salva con nomenclatura richiesta
+    nomeFile1 = sprintf('PV_%s_%d.fig', termografiaID, casoStudio);
+    savefig(fig1, fullfile(percorsoSalvataggio, nomeFile1));
+    close(fig1);
     
-    fprintf('Parametri automatici utilizzati: regione [%d,%d,%d,%d], calibrazione %.1f\n', ...
-            xi-1, xf, yi-1, yf, fattoreCalibrazione);
+    % 2. GRAFICO PROFILI ORIZZONTALI
+    fig2 = figure('Visible', 'off');
+    plot(dV, H_AVG, [colore '-'], 'LineWidth', 2.0);
+    hold on;
+    plot(dV, H_AVG+2*H_dev, 'k--', 'LineWidth', 1.0);
+    plot(dV, H_AVG-2*H_dev, 'k--', 'LineWidth', 1.0);
+    
+    xlabel('Posizione Y [cm]');
+    ylabel('Temperatura media [°C]');
+    title('Temperatura profili orizzontali');
+    if strcmp(fase, 'PRE')
+        legend('μ pre intervento', 'μ+2σ', 'μ-2σ', 'Location', 'best');
+    else
+        legend('μ post intervento', 'μ+2σ', 'μ-2σ', 'Location', 'best');
+    end
+    grid on;
+    
+    nomeFile2 = sprintf('PO_%s_%d.fig', termografiaID, casoStudio);
+    savefig(fig2, fullfile(percorsoSalvataggio, nomeFile2));
+    close(fig2);
+    
+    % 3. GRAFICO TEMPERATURA NORMALIZZATA
+    fig3 = figure('Visible', 'off');
+    plot(dV, DH_AVG, [colore '-'], 'LineWidth', 2.0);
+    hold on;
+    plot(dV, DH_AVG+2*H_dev, 'k--', 'LineWidth', 1.0);
+    plot(dV, DH_AVG-2*H_dev, 'k--', 'LineWidth', 1.0);
+    
+    xlabel('Posizione Y [cm]');
+    ylabel('Temperatura normalizzata [°C]');
+    title('Temperatura normalizzata profili orizzontali');
+    if strcmp(fase, 'PRE')
+        legend('μ pre intervento', 'μ+2σ', 'μ-2σ', 'Location', 'best');
+    else
+        legend('μ post intervento', 'μ+2σ', 'μ-2σ', 'Location', 'best');
+    end
+    grid on;
+    
+    nomeFile3 = sprintf('TN_%s_%d.fig', termografiaID, casoStudio);
+    savefig(fig3, fullfile(percorsoSalvataggio, nomeFile3));
+    close(fig3);
+    
+    % 4. GRAFICO INTERPOLAZIONE LINEARE
+    r_int = T_int(2) + T_int(1) * dV;
+    fig4 = figure('Visible', 'off');
+    plot(dV, r_int, [colore '-'], 'LineWidth', 2.0);
+    hold on;
+    plot(dV, DH_AVG, [colore '--'], 'LineWidth', 1.0);
+    
+    xlabel('Posizione Y [cm]');
+    ylabel('Temperatura normalizzata [°C]');
+    title('Interpolazione lineare temperatura');
+    if strcmp(fase, 'PRE')
+        legend('interpolazione lineare pre intervento', 'μ pre intervento', 'Location', 'best');
+    else
+        legend('interpolazione lineare post intervento', 'μ post intervento', 'Location', 'best');
+    end
+    grid on;
+    
+    nomeFile4 = sprintf('I_%s_%d.fig', termografiaID, casoStudio);
+    savefig(fig4, fullfile(percorsoSalvataggio, nomeFile4));
+    close(fig4);
+    
+    % === RISULTATI ===
+    risultati.fase = fase;
+    risultati.sigmaV = sigmaV;
+    risultati.sigmaH = sigmaH;
+    risultati.ratioD = sigmaV / sigmaH;
+    risultati.deltaD = sigmaV - sigmaH;
+    risultati.gradiente = gradiente;
+    risultati.m = m;
+    risultati.q = q;
+    risultati.tempMedia = Tot_AVG;
+    risultati.dH = dH;
+    risultati.dV = dV;
+    risultati.V_AVG = V_AVG;
+    risultati.V_dev = V_dev;
+    risultati.H_AVG = H_AVG;
+    risultati.H_dev = H_dev;
+    risultati.DH_AVG = DH_AVG;
+    risultati.r_int = r_int;
+    
+    % Output console come richiesto
+    fprintf('  %s: σV=%.4f | σH=%.4f | m=%.4f | q=%.4f | grad=%.6f\n', ...
+            fase, sigmaV, sigmaH, m, q, gradiente);
+end
+
+function creaGraficiCombinati(risultati_pre, risultati_post, percorsoSalvataggio, casoStudio, termografiaID)
+    % CREAGRAFICICOMBINATI - Crea i 4 grafici combinati come mostrato nelle immagini
+    
+    % 1. PROFILI VERTICALI COMBINATI
+    fig1 = figure('Position', [100, 100, 800, 600]);
+    plot(risultati_pre.dH, risultati_pre.V_AVG, 'r-', 'LineWidth', 2.0);
+    hold on;
+    plot(risultati_pre.dH, risultati_pre.V_AVG+2*risultati_pre.V_dev, 'k--', 'LineWidth', 1.0);
+    plot(risultati_pre.dH, risultati_pre.V_AVG-2*risultati_pre.V_dev, 'k--', 'LineWidth', 1.0);
+    plot(risultati_post.dH, risultati_post.V_AVG, 'g-', 'LineWidth', 2.0);
+    plot(risultati_post.dH, risultati_post.V_AVG+2*risultati_post.V_dev, 'k--', 'LineWidth', 1.0);
+    plot(risultati_post.dH, risultati_post.V_AVG-2*risultati_post.V_dev, 'k--', 'LineWidth', 1.0);
+    
+    xlabel('Posizione X [cm]');
+    ylabel('Temperatura media [°C]');
+    title('Temperatura profili verticali');
+    legend('μ pre intervento', 'μ+2σ', 'μ-2σ', 'μ post intervento', 'Location', 'best');
+    grid on;
+    
+    nomeFile1 = sprintf('PV_%s_%d_combinato.fig', termografiaID, casoStudio);
+    savefig(fig1, fullfile(percorsoSalvataggio, nomeFile1));
+    close(fig1);
+    
+    % 2. PROFILI ORIZZONTALI COMBINATI
+    fig2 = figure('Position', [100, 100, 800, 600]);
+    plot(risultati_pre.dV, risultati_pre.H_AVG, 'r-', 'LineWidth', 2.0);
+    hold on;
+    plot(risultati_pre.dV, risultati_pre.H_AVG+2*risultati_pre.H_dev, 'k--', 'LineWidth', 1.0);
+    plot(risultati_pre.dV, risultati_pre.H_AVG-2*risultati_pre.H_dev, 'k--', 'LineWidth', 1.0);
+    plot(risultati_post.dV, risultati_post.H_AVG, 'g-', 'LineWidth', 2.0);
+    plot(risultati_post.dV, risultati_post.H_AVG+2*risultati_post.H_dev, 'k--', 'LineWidth', 1.0);
+    plot(risultati_post.dV, risultati_post.H_AVG-2*risultati_post.H_dev, 'k--', 'LineWidth', 1.0);
+    
+    xlabel('Posizione Y [cm]');
+    ylabel('Temperatura media [°C]');
+    title('Temperatura profili orizzontali');
+    legend('μ pre intervento', 'μ+2σ', 'μ-2σ', 'μ post intervento', 'Location', 'best');
+    grid on;
+    
+    nomeFile2 = sprintf('PO_%s_%d_combinato.fig', termografiaID, casoStudio);
+    savefig(fig2, fullfile(percorsoSalvataggio, nomeFile2));
+    close(fig2);
+    
+    % 3. TEMPERATURA NORMALIZZATA COMBINATA
+    fig3 = figure('Position', [100, 100, 800, 600]);
+    plot(risultati_pre.dV, risultati_pre.DH_AVG, 'r-', 'LineWidth', 2.0);
+    hold on;
+    plot(risultati_pre.dV, risultati_pre.DH_AVG+2*risultati_pre.H_dev, 'k--', 'LineWidth', 1.0);
+    plot(risultati_pre.dV, risultati_pre.DH_AVG-2*risultati_pre.H_dev, 'k--', 'LineWidth', 1.0);
+    plot(risultati_post.dV, risultati_post.DH_AVG, 'g-', 'LineWidth', 2.0);
+    plot(risultati_post.dV, risultati_post.DH_AVG+2*risultati_post.H_dev, 'k--', 'LineWidth', 1.0);
+    plot(risultati_post.dV, risultati_post.DH_AVG-2*risultati_post.H_dev, 'k--', 'LineWidth', 1.0);
+    
+    xlabel('Posizione Y [cm]');
+    ylabel('Temperatura normalizzata [°C]');
+    title('Temperatura normalizzata profili orizzontali');
+    legend('μ pre intervento', 'μ+2σ', 'μ-2σ', 'μ post intervento', 'Location', 'best');
+    grid on;
+    
+    nomeFile3 = sprintf('TN_%s_%d_combinato.fig', termografiaID, casoStudio);
+    savefig(fig3, fullfile(percorsoSalvataggio, nomeFile3));
+    close(fig3);
+    
+    % 4. INTERPOLAZIONE LINEARE COMBINATA
+    fig4 = figure('Position', [100, 100, 800, 600]);
+    plot(risultati_pre.dV, risultati_pre.r_int, 'r-', 'LineWidth', 2.0);
+    hold on;
+    plot(risultati_pre.dV, risultati_pre.DH_AVG, 'r--', 'LineWidth', 1.0);
+    plot(risultati_post.dV, risultati_post.r_int, 'g-', 'LineWidth', 2.0);
+    plot(risultati_post.dV, risultati_post.DH_AVG, 'g--', 'LineWidth', 1.0);
+    
+    xlabel('Posizione Y [cm]');
+    ylabel('Temperatura normalizzata [°C]');
+    title('Interpolazione lineare temperatura');
+    legend('interpolazione lineare pre intervento', 'μ pre intervento', ...
+           'interpolazione lineare post intervento', 'μ post intervento', 'Location', 'best');
+    grid on;
+    
+    nomeFile4 = sprintf('I_%s_%d_combinato.fig', termografiaID, casoStudio);
+    savefig(fig4, fullfile(percorsoSalvataggio, nomeFile4));
+    close(fig4);
+    
+    fprintf('✓ Grafici combinati salvati\n');
+end
+
+function salvaInExcel(risultati_pre, risultati_post, percorsoSalvataggio, casoStudio, termografiaID)
+    % SALVAINEXCEL - Salva i risultati in formato Excel (solo MATLAB)
+    
+    % Prepara i dati
+    dati = {
+        casoStudio, termografiaID, ...
+        risultati_pre.sigmaV, risultati_pre.sigmaH, risultati_pre.deltaD, risultati_pre.ratioD, ...
+        risultati_pre.m, risultati_pre.q, risultati_pre.gradiente, ...
+        risultati_post.sigmaV, risultati_post.sigmaH, risultati_post.deltaD, risultati_post.ratioD, ...
+        risultati_post.m, risultati_post.q, risultati_post.gradiente
+    };
+    
+    % Headers
+    headers = {
+        'CasoStudio', 'Termografia', ...
+        'sigmaV_pre', 'sigmaH_pre', 'deltaD_pre', 'ratioD_pre', 'm_pre', 'q_pre', 'grad_pre', ...
+        'sigmaV_post', 'sigmaH_post', 'deltaD_post', 'ratioD_post', 'm_post', 'q_post', 'grad_post'
+    };
+    
+    % Crea tabella
+    tabella = [headers; dati];
+    
+    % Salva in Excel
+    nomeFileExcel = sprintf('Risultati_%s_%d.xlsx', termografiaID, casoStudio);
+    percorsoExcel = fullfile(percorsoSalvataggio, nomeFileExcel);
+    
+    if exist('OCTAVE_VERSION', 'builtin')
+        % Octave - salva in CSV
+        percorsoCSV = strrep(percorsoExcel, '.xlsx', '.csv');
+        writecell(tabella, percorsoCSV);
+        fprintf('✓ Dati salvati in CSV: %s\n', percorsoCSV);
+    else
+        % MATLAB - salva in Excel
+        writecell(tabella, percorsoExcel);
+        fprintf('✓ Dati salvati in Excel: %s\n', percorsoExcel);
+    end
 end
