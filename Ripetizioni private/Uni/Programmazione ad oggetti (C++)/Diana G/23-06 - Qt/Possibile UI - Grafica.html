@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Multimediale - UI Design Study</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .design-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .screen {
+            margin: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: #fafafa;
+            padding: 15px;
+        }
+
+        .screen-title {
+            background: #333;
+            color: white;
+            padding: 10px;
+            margin: -15px -15px 15px -15px;
+            font-weight: bold;
+        }
+
+        /* MAIN WINDOW */
+        .main-window {
+            background: white;
+            border: 1px solid #ccc;
+            min-height: 500px;
+            position: relative;
+        }
+
+        .menu-bar {
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+
+        .menu-item {
+            display: inline-block;
+            margin-right: 20px;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .menu-item:hover {
+            background: #e9ecef;
+        }
+
+        .toolbar {
+            background: #ffffff;
+            border-bottom: 1px solid #dee2e6;
+            padding: 12px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: 1px solid #dee2e6;
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: #f8f9fa;
+            border-color: #adb5bd;
+        }
+
+        .btn-primary {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+
+        .main-content {
+            display: flex;
+            height: 400px;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: #f8f9fa;
+            border-right: 1px solid #dee2e6;
+            padding: 20px;
+        }
+
+        .category-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 8px;
+            border: 1px solid #dee2e6;
+            background: white;
+            border-radius: 6px;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .category-btn:hover {
+            background: #e3f2fd;
+            border-color: #2196f3;
+        }
+
+        .category-btn.active {
+            background: #2196f3;
+            color: white;
+            border-color: #2196f3;
+        }
+
+        .content-area {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* CATEGORY VIEW */
+        .search-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+        }
+
+        .items-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .items-list {
+            flex: 1;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            background: white;
+            max-height: 280px;
+            overflow-y: auto;
+        }
+
+        .item-row {
+            padding: 12px;
+            border-bottom: 1px solid #f1f3f4;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .item-row:hover {
+            background: #f8f9fa;
+        }
+
+        .item-row.selected {
+            background: #e3f2fd;
+            border-left: 3px solid #2196f3;
+        }
+
+        .item-title {
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .item-subtitle {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .actions-panel {
+            width: 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* DETAIL VIEW */
+        .detail-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .detail-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+
+        .detail-image {
+            width: 150px;
+            height: 200px;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+
+        .detail-info {
+            display: grid;
+            gap: 12px;
+        }
+
+        .info-row {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 10px;
+        }
+
+        .info-label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .info-value {
+            color: #666;
+        }
+
+        /* EDIT FORM */
+        .form-grid {
+            display: grid;
+            gap: 16px;
+            max-width: 600px;
+        }
+
+        .form-group {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .form-label {
+            font-weight: 500;
+        }
+
+        .form-input {
+            padding: 8px 12px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+        }
+
+        .form-textarea {
+            padding: 8px 12px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .status-bar {
+            background: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+            padding: 8px 12px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* FLOW ARROWS */
+        .flow-arrow {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .annotations {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 4px;
+        }
+
+        .annotation-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #856404;
+        }
+
+        .annotation-list {
+            font-size: 14px;
+            color: #856404;
+        }
+
+        .annotation-list li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="design-container">
+        <div class="header">
+            <h1>📚 Biblioteca Multimediale - Studio UI Design</h1>
+            <p>Progetto Programmazione ad Oggetti - Università di Padova</p>
+        </div>
+
+        <!-- SCHERMATA PRINCIPALE -->
+        <div class="screen">
+            <div class="screen-title">🏠 SCHERMATA PRINCIPALE - MainWindow</div>
+            
+            <div class="main-window">
+                <div class="menu-bar">
+                    <span class="menu-item"><strong>File</strong></span>
+                    <span class="menu-item"><strong>Modifica</strong></span>
+                    <span class="menu-item"><strong>Visualizza</strong></span>
+                    <span class="menu-item"><strong>Aiuto</strong></span>
+                </div>
+                
+                <div class="toolbar">
+                    <button class="btn">📂 Nuovo</button>
+                    <button class="btn">📁 Apri</button>
+                    <button class="btn">💾 Salva</button>
+                    <button class="btn">📤 Esporta</button>
+                    <div style="margin-left: auto;">
+                        <span style="color: #666; font-size: 14px;">Biblioteca Multimediale v1.0</span>
+                    </div>
+                </div>
+                
+                <div class="main-content">
+                    <div class="sidebar">
+                        <h3 style="margin-top: 0; font-size: 16px; color: #333;">Categorie Media</h3>
+                        <button class="category-btn active">📚 Libri</button>
+                        <button class="category-btn">🎬 Film</button>
+                        <button class="category-btn">💭 Fumetti</button>
+                        <button class="category-btn">📰 Riviste</button>
+                        <button class="category-btn">📺 Serie TV</button>
+                    </div>
+                    
+                    <div class="content-area">
+                        <h2 style="margin-top: 0;">📚 Gestione Libri</h2>
+                        
+                        <div class="search-bar">
+                            <input type="text" class="search-input" placeholder="Cerca per titolo, autore, ISBN...">
+                            <button class="btn">🔍 Cerca</button>
+                            <button class="btn">🔄 Reset</button>
+                        </div>
+                        
+                        <div class="items-container">
+                            <div class="items-list">
+                                <div class="item-row selected">
+                                    <div class="item-title">Il Nome della Rosa</div>
+                                    <div class="item-subtitle">Umberto Eco • 1980 • ISBN: 978-88-452-0000-1</div>
+                                </div>
+                                <div class="item-row">
+                                    <div class="item-title">1984</div>
+                                    <div class="item-subtitle">George Orwell • 1949 • ISBN: 978-88-452-0000-2</div>
+                                </div>
+                                <div class="item-row">
+                                    <div class="item-title">Il Signore degli Anelli</div>
+                                    <div class="item-subtitle">J.R.R. Tolkien • 1954 • ISBN: 978-88-452-0000-3</div>
+                                </div>
+                            </div>
+                            
+                            <div class="actions-panel">
+                                <button class="btn btn-primary">➕ Nuovo</button>
+                                <button class="btn">👁️ Visualizza</button>
+                                <button class="btn">✏️ Modifica</button>
+                                <button class="btn">🗑️ Elimina</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="status-bar">
+                    Elementi trovati: 3 | Selezionato: Il Nome della Rosa | File: biblioteca_demo.json
+                </div>
+            </div>
+        </div>
+
+        <div class="flow-arrow">⬇️ Click su "Visualizza" ⬇️</div>
+
+        <!-- SCHERMATA DETTAGLIO -->
+        <div class="screen">
+            <div class="screen-title">👁️ VISUALIZZAZIONE DETTAGLIO - DetailView</div>
+            
+            <div class="main-window">
+                <div class="menu-bar">
+                    <span class="menu-item"><strong>File</strong></span>
+                    <span class="menu-item"><strong>Modifica</strong></span>
+                    <span class="menu-item"><strong>Visualizza</strong></span>
+                    <span class="menu-item"><strong>Aiuto</strong></span>
+                </div>
+                
+                <div style="padding: 20px;">
+                    <div class="detail-header">
+                        <h2>📚 Dettaglio Libro</h2>
+                        <div>
+                            <button class="btn">⬅️ Indietro</button>
+                            <button class="btn">✏️ Modifica</button>
+                            <button class="btn">🗑️ Elimina</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-content">
+                        <div class="detail-image">
+                            📖<br>Copertina<br>Libro
+                        </div>
+                        
+                        <div class="detail-info">
+                            <div class="info-row">
+                                <span class="info-label">Titolo:</span>
+                                <span class="info-value">Il Nome della Rosa</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Autore:</span>
+                                <span class="info-value">Umberto Eco</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">ISBN:</span>
+                                <span class="info-value">978-88-452-0000-1</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Editore:</span>
+                                <span class="info-value">Bompiani</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Anno:</span>
+                                <span class="info-value">1980</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Pagine:</span>
+                                <span class="info-value">503</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Genere:</span>
+                                <span class="info-value">Romanzo storico</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Descrizione:</span>
+                                <span class="info-value">Un monaco francescano indaga su misteriosi omicidi in un'abbazia medievale...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="status-bar">
+                    Modalità visualizzazione | ID: 001 | Ultimo aggiornamento: 15/01/2025
+                </div>
+            </div>
+        </div>
+
+        <div class="flow-arrow">⬇️ Click su "Modifica" ⬇️</div>
+
+        <!-- SCHERMATA MODIFICA -->
+        <div class="screen">
+            <div class="screen-title">✏️ MODIFICA/CREAZIONE - EditView</div>
+            
+            <div class="main-window">
+                <div class="menu-bar">
+                    <span class="menu-item"><strong>File</strong></span>
+                    <span class="menu-item"><strong>Modifica</strong></span>
+                    <span class="menu-item"><strong>Visualizza</strong></span>
+                    <span class="menu-item"><strong>Aiuto</strong></span>
+                </div>
+                
+                <div style="padding: 20px;">
+                    <div class="detail-header">
+                        <h2>✏️ Modifica Libro</h2>
+                        <div>
+                            <button class="btn">❌ Annulla</button>
+                            <button class="btn btn-primary">💾 Salva</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Titolo:</label>
+                            <input type="text" class="form-input" value="Il Nome della Rosa">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Autore:</label>
+                            <input type="text" class="form-input" value="Umberto Eco">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">ISBN:</label>
+                            <input type="text" class="form-input" value="978-88-452-0000-1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Editore:</label>
+                            <input type="text" class="form-input" value="Bompiani">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Anno:</label>
+                            <input type="number" class="form-input" value="1980">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Pagine:</label>
+                            <input type="number" class="form-input" value="503">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Genere:</label>
+                            <input type="text" class="form-input" value="Romanzo storico">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Descrizione:</label>
+                            <textarea class="form-textarea">Un monaco francescano indaga su misteriosi omicidi in un'abbazia medievale...</textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="status-bar">
+                    Modalità modifica | Modifiche non salvate | Validazione: ✅ Tutti i campi validi
+                </div>
+            </div>
+        </div>
+
+        <!-- ANNOTAZIONI DESIGN -->
+        <div class="annotations">
+            <div class="annotation-title">🎯 Note di Design e Conformità alle Specifiche</div>
+            <ul class="annotation-list">
+                <li><strong>Vincolo 14:</strong> Navigazione unica finestra con QStackedWidget - no finestre multiple</li>
+                <li><strong>Vincolo 13:</strong> Dialoghi file integrati nel menu File (Apri/Salva) - no percorsi hardcoded</li>
+                <li><strong>Vincolo 11:</strong> CRUD completo tramite bottoni intuitivi (Nuovo/Visualizza/Modifica/Elimina)</li>
+                <li><strong>Polimorfismo:</strong> Form specifici per tipo via Visitor pattern (Book form ≠ Movie form)</li>
+                <li><strong>Usabilità:</strong> Ricerca in tempo reale, validazione form, feedback visivo, status bar informatica</li>
+                <li><strong>Responsive:</strong> Layout grid/flex per adattamento finestra, scrolling automatico</li>
+                <li><strong>Standard moderni:</strong> Icone intuitive, colori contrastati, typography leggibile</li>
+                <li><strong>Persistenza:</strong> Indicatori file corrente, stato modifiche, validazione pre-salvataggio</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
