@@ -1,0 +1,29 @@
+Chrome con JAWS:
+
+- H: Headings (Intestazioni)
+- U: Link
+- E: Elenchi
+- I: Pagina corrente
+- Shift+Tab = Indietro
+- N: Lettura contenuto pagina
+- Alt + Dx / Alt + Sx = Avanti / Indietro
+- CTRL + A / CTRL + C = Copiare pagina 
+- Ins + F7 = Lista dei link della pagina (Comando di JAWS)
+- Esc
+
+Gmail:
+- Disattivare cursore (non virtuale) - INS + Z
+- G+I = Modalità focus (entrare dentro Inbox - Posta Arrivo)
+Successivamente si attivano le scorciatoie da tastiera
+Lista scorciatoie: https://support.google.com/mail/answer/6594?sjid=13930823064370805640-EU
+
+Caso generale: G+L e si scrive il nome della casella
+
+Moodle: 
+
+Shift + Tab per dare focus alla pagina corrente
+Pagina corrente (Home) / Dashboard (Tab 1) / I miei corsi (Tab 2)
+
+Siti utili:
+- didattica.unipd.it
+- Moodle Scienze Umane
