@@ -1,0 +1,11 @@
+Ins + F7 = 
+(1) Ricerca anno (es. 2024/25)
+(2) Scelta del corso (se triennale, magistrale o magistrale a ciclo unico)
+(3) Ricerca del corso di laurea (es. Ingegneria Informatica)
+
+Non è possibile cercare i singoli corsi; esiste infatti il codice delle sole coorti dei corsi e non dei singoli insegnamenti, che è di fatto un problema.
+
+Ovviare al problema: Ins + F7, poi:
+(1) Ricerca del corso singolo per professore
+(2) Andare su didattica dell'anno corrente
+(3) Recuperare dati di quella, eventuali stampe e similari
