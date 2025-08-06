@@ -1,0 +1,6 @@
+Ins + F7 = Login
+Ins + F7 = SingleSignOn - UniPD
+Ins + F7 = Salta I miei corsi e poi si scorre su un corso inteso
+
+
+

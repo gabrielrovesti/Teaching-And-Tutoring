@@ -1,0 +1,17 @@
+Disattivare cursore e poi
+
+G + I = Posta in arrivo
+G + T = Inviati
+G + S = Speciali
+G + B = Posticipati
+G + D = Bozze
+G + L = Scorciatoia etichette
+C = Scrivi messaggio
+G + A = Tutti
+X = Selezione
+
+Esc per uscire da tutto
+
+INS + F7 = Lista dei link -> Cestino
+
+Cursore attivo - CTRL + F - Etichette - Spostarsi con Tab -> Vecchi
