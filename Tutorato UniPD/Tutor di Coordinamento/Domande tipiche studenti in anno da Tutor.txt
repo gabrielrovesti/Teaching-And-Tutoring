@@ -1,13 +1,14 @@
-- sito del corso: https://informatica.math.unipd.it/laurea/ e singoli corsi con contenuti singoli: https://didattica.unipd.it/off/2025/LT/SC/SC2987
-- gruppo generale: https://t.me/FIUPd e gruppi interni: https://t.me/fiup_menu
-- accesso al materiale tramite MEGA, dove sono presenti appunti, lezioni e chi più ne ha e più ne metta: https://goo.gl/forms/e1q9GhYeqwEh4uNn1
-- collezione di appunti e tutto da me realizzati, essendo stato di fatto il maggior contributore durante questi anni, anche di MEGA stesso: https://gabrielrovesti.github.io/#notes
+- Sito del corso: https://informatica.math.unipd.it/laurea/ e singoli corsi con contenuti singoli: https://didattica.unipd.it/off/2025/LT/SC/SC2987
+- Gruppo generale: https://t.me/FIUPd e gruppi interni: https://t.me/fiup_menu
+- Accesso al materiale tramite MEGA, dove sono presenti appunti, lezioni e chi più ne ha e più ne metta: https://goo.gl/forms/e1q9GhYeqwEh4uNn1
+- Collezione di appunti e tutto da me realizzati, essendo stato di fatto il maggior contributore durante questi anni, anche di MEGA stesso: https://gabrielrovesti.github.io/#notes - vedrai vari FAQ sempre da me realizzati anche su CS come corso e simili volendo
+- Link di altri corsi, tra cui DEI o Simili: https://t.me/UniPdNetworkLinks
 - Moodle corsi: https://stem.elearning.unipd.it/
-- backoffice Carriere Studenti approvazione requisiti: https://www.unipd.it/backoffice-carriere-studenti
-- mail segreteria studenti: didattica@math.unipd.it
-- gruppo magistrale CS: https://t.me/computerScienceUNIPD
-- info lavoro e studenti lavoratori: https://www.unipd.it/sites/unipd.it/files/2024/OK%20FAQ%20TEMPO%20PARZIALE.pdf e https://www.unipd.it/sites/unipd.it/files/2024/OK%20FAQ%20TEMPO%20PARZIALE.pdf
-- iscrizione corsi singoli: https://www.unipd.it/corsi-singoli
+- Backoffice Carriere Studenti approvazione requisiti: https://www.unipd.it/backoffice-carriere-studenti
+- Mail segreteria studenti: didattica@math.unipd.it
+- Gruppo magistrale CS: https://t.me/computerScienceUNIPD
+- Info lavoro e studenti lavoratori: https://www.unipd.it/sites/unipd.it/files/2024/OK%20FAQ%20TEMPO%20PARZIALE.pdf e https://www.unipd.it/sites/unipd.it/files/2024/OK%20FAQ%20TEMPO%20PARZIALE.pdf
+- Iscrizione corsi singoli: https://www.unipd.it/corsi-singoli
 
 Contatti di riferimento: didattica@math.unipd.it
 Presidente CCS: palazzi@math.unipd.it
