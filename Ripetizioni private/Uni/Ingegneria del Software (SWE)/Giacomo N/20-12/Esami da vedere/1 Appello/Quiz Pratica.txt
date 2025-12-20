@@ -1,0 +1,28 @@
+Si scelgano tra le seguenti le affermazioni corrette.
+
+Domanda 1Risposta
+
+a.
+I microservizi sono un tipo di architettura che per funzionare al meglio dovrebbe rispecchiare l'organigramma dell'azienda che li utilizza.
+
+
+b.
+Nell'architettura di tipo layered, la business logic dipende direttamente dalla persistence logic.
+
+
+c.
+Con un tipo di architettura di tipo monolitico è semplice aggiornare l'applicazione evitando qualsiasi periodo offline.
+
+
+d.
+In un tipo di architettura esagonale, l'application logic dipende direttamente dalla business logic.
+
+
+e.
+Un monolite deve sempre essere implementato internamente utilizzando un'architettura di tipo layered.
+
+
+f.
+I microservizi sono un tipo di architettura logica, ossia che specifica le relazioni tra le tre tipologie di logica dell'applicazione.
+
+Una funzionalità può aderire al principio Open-Closed in modo assoluto, anche in caso di variazione dei requisiti. V/F

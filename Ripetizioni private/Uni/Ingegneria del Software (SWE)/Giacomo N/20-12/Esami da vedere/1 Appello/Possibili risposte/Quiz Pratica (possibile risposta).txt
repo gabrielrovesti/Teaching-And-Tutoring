@@ -1,0 +1,59 @@
+Domanda 1
+Si scelgano tra le seguenti le affermazioni corrette
+
+a.
+I microservizi sono un tipo di architettura che per funzionare al meglio dovrebbe rispecchiare l'organigramma dell'azienda che li utilizza.
+✅
+Legge di Conway: "Ogni organizzazione che progetta un sistema (informativo o di altro tipo) produrrà un progetto la cui struttura è una copia della struttura di comunicazione dell'organizzazione stessa."
+
+
+b.
+Nell'architettura di tipo layered, la business logic dipende direttamente dalla persistent logic.
+✅
+Infatti, nella Layered Architecture un Service ha una associazione diretta verso un Repository.
+
+
+c.
+Con un tipo di architettura di tipo monolitico è semplice aggiornare l'applicazione evitando qualsiasi periodo offline.
+❌
+E' l'esatto opposto, l'architettura monolitica per qualsiasi aggiornamento, anche solo a una piccola parte del codice, costringe l'applicazione a trascorrere un periodo offline.
+
+
+d.
+In un tipo di architettura esagonale, l'application logic dipende direttamente dalla business logic.
+✅
+L'architettura esagonale ha l'obiettivo di isolare la business logic, ma non necessariamente l'application logic. Nella sua interpretazione più comune, l'architettura esagonale isola sia la business logic (utilizzando le porte), sia l'application logic (utilizzando gli use cases), ma nulla vieta che sia possibile una interpretazione dell'architettura esagonale in cui un Controller ha una associazione diretta verso un Service, e quindi in cui l'application logic dipende direttamente dalla business logic.
+L'architettura esagonale NON sarebbe invece rispettata in caso di associazione diretta da un Service verso un Repository, poiché in tal caso la business logic dipenderebbe direttamente dalla persistent logic.
+
+
+e.
+Un monolite deve sempre essere implementato internamente utilizzando un'architettura di tipo layered.
+❌
+Come affermato dal professor Cardin, ogni architettura di deployment è combinabile con ogni architettura logica. Dunque, è tranquillamente possibile che un monolite sia implementato internamente utilizzando un'architettura logica di tipo esagonale, ad esempio.
+
+
+f.
+I microservizi sono un tipo di architettura logica, ossia che specifica le relazioni tra le tre tipologie di logica dell'applicazione.
+❌
+I microservizi sono un tipo di architettura di deployment, ossia che specifica come un sistema software viene distribuito e reso disponibile per l'uso in un ambiente di produzione o di test.
+
+
+
+
+Domanda 2
+Vero o falso
+
+Una funzionalità può aderire al principio Open-Closed in modo assoluto, anche in caso di variazione dei requisiti. 
+V/F
+❌
+Falso
+Se i requisiti cambiano in modo radicale, potrebbe essere necessario modificare il codice esistente, anche se era stato progettato per essere solo estendibile.
+
+
+
+
+Domanda 3
+Modellazione di un design pattern
+
+Si modelli un esempio pratico di applicazione del design pattern Abstract Factory.
+(Un possibile diagramma si trova in un'immagine qua accanto nella stessa cartella).
