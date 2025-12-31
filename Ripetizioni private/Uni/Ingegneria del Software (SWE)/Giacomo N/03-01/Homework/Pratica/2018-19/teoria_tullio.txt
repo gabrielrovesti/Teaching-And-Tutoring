@@ -1,0 +1,5 @@
+Non erano scritte esattamete così ma chiedeva queste cose:
+
+1) Immaginando di dover redigere un glossario come quello del progetto, dare una definizione dei seguenti termini: progetto, processo, attività, fase. Ove possibile citare fonti autorevoli.
+
+2) Dare una definizione ben fondata del concetto di "architettura software". In relazione a tale concetto, dare una definizione ai termini "framework" e "design pattern" spiegando come questi si integrino fra loro E all'interno di una architettura. 
