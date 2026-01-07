@@ -1,10 +1,3 @@
-**Anno Accademico 2025-2026**  
-**Docente:** Dott.ssa Sonia Montemurro  
-**Corso di Laurea:** Scienze Psicologiche Sociali e del Lavoro  
-**Università degli Studi di Padova**
-
----
-
 ## INDICE
 
 ### PARTE A - FONDAMENTI EPISTEMOLOGICI
