@@ -5,6 +5,8 @@
 - **Favorire la condivisione** con studenti e colleghi docenti, garantendo versionamento e aggiornamenti continui.
 - **Promuovere il riuso** del materiale in contesti didattici differenti (scuola secondaria di I e II grado, esami di stato, corsi universitari).
 
+La raccolta comprende la maggior parte del lavoro svolto negli ultimi anni ad UniPD; non è pertanto (purtroppo) una raccolta completa al 100%, è tuttavia molto estensiva e comprende tutto il periodo di lavoro di almeno 5 anni (finalmente concluso con l'inizio lavoro).
+
 ## Struttura sintetica
 ```text
 Ripetizioni private/
@@ -35,12 +37,6 @@ Tutorato-UniPD/
 2. Naviga nei moduli di interesse.  
 3. I sorgenti Java/C++ sono organizzati come progetti minimal; compila con `make` o con l’IDE preferito.  
 4. Le slide sono in PDF; alcuni file `.drawio` possono essere aperti via [draw.io](https://app.diagrams.net).
-
-## Contributi
-Pull‑request e segnalazioni sono benvenute purché:
-- Mantengano la coerenza della struttura.
-- Contengano materiale originale o liberamente distribuibile (licenza compatibile con **CC BY‑NC 4.0**).
-- Vengano corredate da un breve sommario nel messaggio di commit.
 
 ## Licenza
 Il contenuto è distribuito sotto **Creative Commons Attribution‑NonCommercial 4.0 International**.  
